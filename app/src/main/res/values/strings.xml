@@ -11,4 +11,5 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="change_language">LT</string>
+    <string name="main_menu">Main menu</string>
 </resources>
