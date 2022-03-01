@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alias</string>
+    <string name="action_settings">Nustatymai</string>
+    <string name="first_fragment_label">Pirmas fragmentas</string>
+    <string name="second_fragment_label">Antras fragmentas</string>
+    <string name="next">Kitas</string>
+    <string name="previous">Ankstesnis</string>
+    <string name="Start_game">Pradėti</string>
+    <string name="ALIAS_Start">ALIAS</string>
+    <string name="hello_first_fragment">Labas, pirmas fragmente</string>
+    <string name="hello_second_fragment">Labas, antras fragmente</string>
+    <string name="change_language">EN</string>
+</resources>
