@@ -12,4 +12,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="change_language">LT</string>
     <string name="main_menu">Main menu</string>
+    <string name="number_of_teams_label">How many teams will play?</string>
+    <string name="number_of_teams_input_validation_explain">*Number is not between 1 and 10</string>
 </resources>
