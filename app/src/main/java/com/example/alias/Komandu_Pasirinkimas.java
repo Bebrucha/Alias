@@ -2,6 +2,7 @@ package com.example.alias;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class Komandu_Pasirinkimas extends AppCompatActivity {
         Atgal.setOnClickListener(v -> finish());
         //mygtukas Atgal
 
+
         EditText num_of_teams_label = findViewById(R.id.num_of_teams);
         Button next_num_of_teams = findViewById(R.id.button_next_num_of_teams);
 
@@ -33,8 +35,9 @@ public class Komandu_Pasirinkimas extends AppCompatActivity {
                 if(num_of_teams >= 1 && num_of_teams <= 10){
                     validation.setVisibility(View.INVISIBLE);
 
-                    // let go to another page
-                    // COMPLETE THIS PLACE
+                    // Button to go settings page
+                    //Button Next = findViewById(R.id.button_next_num_of_teams);
+                    //Next.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Settings.class)));
                 }
                 else
                 {
