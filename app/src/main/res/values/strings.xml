@@ -18,4 +18,5 @@
     <string name="medium">Medium</string>
     <string name="senior">Senior</string>
     <string name="junior">Junior</string>
+    <string name="difficulty_selection">Difficulty</string>
 </resources>

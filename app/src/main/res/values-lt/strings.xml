@@ -18,4 +18,5 @@
     <string name="medium">Patyręs</string>
     <string name="senior">Ekspertas</string>
     <string name="junior">Jaunėlis</string>
+    <string name="difficulty_selection">Sudėtingumas</string>
 </resources>
