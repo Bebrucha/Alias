@@ -19,4 +19,7 @@
     <string name="senior">Senior</string>
     <string name="junior">Junior</string>
     <string name="difficulty_selection">Difficulty</string>
+    <string name="time">Time</string>
+    <string name="time_left">Time left:</string>
+    <string name="start">Start</string>
 </resources>

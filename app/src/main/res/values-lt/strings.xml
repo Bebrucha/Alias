@@ -19,4 +19,7 @@
     <string name="senior">Ekspertas</string>
     <string name="junior">Jaunėlis</string>
     <string name="difficulty_selection">Sudėtingumas</string>
+    <string name="time">Laikas</string>
+    <string name="time_left">Likęs laikas:</string>
+    <string name="start">Pradėti</string>
 </resources>

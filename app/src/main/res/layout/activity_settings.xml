@@ -51,5 +51,18 @@
             android:layout_height="48dp"
             android:text="@string/senior" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="110dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="88dp"
+        android:ems="10"
+        android:hint="enter time"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     //difficulty selection
 </androidx.constraintlayout.widget.ConstraintLayout>
