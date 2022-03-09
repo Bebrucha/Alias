@@ -16,7 +16,7 @@ public class Team_Scores_5 extends AppCompatActivity{
 
         Button Previous = findViewById(R.id.button_previous_5);
         Previous.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, Settings_4.class)));
-
+        Previous.setOnClickListener(v -> finish());
 
         Start.setOnClickListener(new View.OnClickListener() {
             @Override
