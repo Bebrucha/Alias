@@ -36,8 +36,8 @@ public class Komandu_Pasirinkimas extends AppCompatActivity {
                     validation.setVisibility(View.INVISIBLE);
 
                     // Button to go settings page
-                    //Button Next = findViewById(R.id.button_next_num_of_teams);
-                    //Next.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Settings.class)));
+                    Button Next = findViewById(R.id.button_next_num_of_teams);
+                    Next.setOnClickListener(v -> startActivity(new Intent(Komandu_Pasirinkimas.this, settings.class)));
                 }
                 else
                 {
