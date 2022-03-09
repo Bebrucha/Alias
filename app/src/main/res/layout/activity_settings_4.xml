@@ -75,10 +75,21 @@
         android:id="@+id/textView_seek_bar_length"
         android:layout_width="37dp"
         android:layout_height="22dp"
-        android:layout_marginTop="276dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="120dp"
         android:text="@string/zero"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="320dp"
+        android:text="@string/points_required"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
@@ -86,7 +97,18 @@
         android:layout_width="218dp"
         android:layout_height="33dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="368dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="344dp"
+        android:text="@string/to_win_the_game"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,29 +116,18 @@
         android:id="@+id/textView_seek_bar_points"
         android:layout_width="37dp"
         android:layout_height="19dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="120dp"
         android:text="@string/zero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_seek_bar_length" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="208dp"
-        android:text="@string/points_required"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="212dp"
         android:text="@string/round_timer"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,20 +137,9 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="328dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="236dp"
         android:text="@string/length_in_seconds"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="232dp"
-        android:text="@string/to_win_the_game"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -148,31 +148,9 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="288dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="232dp"
         android:text="@string/skip_penalty"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="272dp"
-        android:text="@string/every_skipped_word"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="224dp"
-        android:text="@string/ingame_sounds"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -181,30 +159,52 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="152dp"
         android:text="@string/turn_on_sound"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/switch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="272dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="152dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Switch
-        android:id="@+id/switch2"
+        android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="216dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="168dp"
+        android:text="@string/ingame_sounds"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="216dp"
+        android:text="@string/every_skipped_word"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     //difficulty selection
 </androidx.constraintlayout.widget.ConstraintLayout>
