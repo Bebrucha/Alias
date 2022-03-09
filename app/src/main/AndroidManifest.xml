@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Alias">
         <activity
-            android:name=".PlayingPhase"
+            android:name=".PlayingPhase_6"
             android:exported="false" />
         <activity
-            android:name=".settings"
+            android:name=".Settings_4"
             android:exported="false" />
         <activity
-            android:name=".Komandu_Pasirinkimas"
+            android:name=".Team_Count_3"
             android:exported="false" />
         <activity
-            android:name=".Instrukcija"
+            android:name=".HowToPlay_2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

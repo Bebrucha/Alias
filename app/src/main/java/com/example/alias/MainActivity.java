@@ -6,26 +6,17 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.alias.databinding.ActivityMainBinding;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -33,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+    private com.example.alias.databinding.ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = com.example.alias.databinding.ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
@@ -53,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         //mygtukas start
         Button Start = findViewById(R.id.button_start);
-        Start.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Komandu_Pasirinkimas.class)));
+        Start.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Team_Count_3.class)));
         //mygtukas start
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();

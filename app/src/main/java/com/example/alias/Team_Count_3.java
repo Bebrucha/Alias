@@ -9,12 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Komandu_Pasirinkimas extends AppCompatActivity {
+public class Team_Count_3 extends AppCompatActivity {
     public static int num_of_teams = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_komandu_pasirinkimas);
+        setContentView(R.layout.activity_team_count_3);
 
         //mygtukas Atgal
         Button Atgal = findViewById(R.id.button_MainMenu);
@@ -37,7 +37,7 @@ public class Komandu_Pasirinkimas extends AppCompatActivity {
 
                     // Button to go settings page
                     Button Next = findViewById(R.id.button_next_num_of_teams);
-                    Next.setOnClickListener(v -> startActivity(new Intent(Komandu_Pasirinkimas.this, settings.class)));
+                    Next.setOnClickListener(v -> startActivity(new Intent(Team_Count_3.this, Settings_4.class)));
                 }
                 else
                 {

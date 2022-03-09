@@ -2,19 +2,18 @@ package com.example.alias;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class PlayingPhase extends AppCompatActivity {
+public class PlayingPhase_6 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_playing_phase);
+        setContentView(R.layout.activity_playing_phase_6);
         TextView Timer=findViewById(R.id.timer);
         //mygtukas pradeti timer
         Button Start_Timer = findViewById(R.id.Start_True);
