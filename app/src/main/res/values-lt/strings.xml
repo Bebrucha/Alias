@@ -22,4 +22,13 @@
     <string name="time">Laikas</string>
     <string name="time_left">Likęs laikas:</string>
     <string name="start">Pradėti</string>
+    <string name="zero">0</string>
+    <string name="points_required">Taškų kiekis</string>
+    <string name="to_win_the_game">žaidimo laimėjimui</string>
+    <string name="round_timer">Ėjimo laikas</string>
+    <string name="length_in_seconds">nurodytas sekundėmis</string>
+    <string name="skip_penalty">Baudos taškai</string>
+    <string name="every_skipped_word">kiekvienas praleistas žodis nuima po tašką</string>
+    <string name="ingame_sounds">Žaidimo garsai</string>
+    <string name="turn_on_sound">įjungti garso efektus</string>
 </resources>
