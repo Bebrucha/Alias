@@ -13,6 +13,9 @@
             android:name=".PlayingPhase_6"
             android:exported="false" />
         <activity
+            android:name=".Team_Scores_5"
+            android:exported="false" />
+        <activity
             android:name=".Settings_4"
             android:exported="false" />
         <activity

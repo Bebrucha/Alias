@@ -13,7 +13,7 @@ public class Team_Scores_5 extends AppCompatActivity{
         Button Start = findViewById(R.id.button_start_game_5);
         Start.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, PlayingPhase_6.class)));
 
-        Button Previous = findViewById(R.id.button_start_game_5);
+        Button Previous = findViewById(R.id.button_previous_5);
         Previous.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, Settings_4.class)));
     }
 
