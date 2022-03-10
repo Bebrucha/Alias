@@ -24,7 +24,7 @@ public class Settings_4 extends AppCompatActivity {
 
 
         SeekBar seekBarLength = findViewById(R.id.seekBar_settings_round_length);
-        seekBarLength.setProgress(0);
+        seekBarLength.setProgress(10);
         seekBarLength.setMax(100);
         TextView seekBarL = findViewById(R.id.textView_seek_bar_length);
 

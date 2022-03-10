@@ -77,7 +77,7 @@
         android:layout_height="22dp"
         android:layout_marginTop="272dp"
         android:layout_marginEnd="120dp"
-        android:text="@string/zero"
+        android:text="@string/ten"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

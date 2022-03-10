@@ -23,6 +23,7 @@
     <string name="time_left">Time left:</string>
     <string name="start">Start</string>
     <string name="zero">0</string>
+    <string name="ten">10</string>
     <string name="points_required">Points required</string>
     <string name="to_win_the_game">to win the game</string>
     <string name="round_timer">Round timer</string>

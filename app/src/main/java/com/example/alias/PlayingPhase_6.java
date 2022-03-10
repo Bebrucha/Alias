@@ -20,6 +20,7 @@ public class PlayingPhase_6 extends AppCompatActivity {
         int timer;
         timer=timeris.getInt("timer");
         TextView Timer=findViewById(R.id.timer);
+        Timer.setText(String.valueOf(timer));
         //mygtukas pradeti timer
         Button Start_Timer = findViewById(R.id.Start_True);
         Start_Timer.setOnClickListener(new View.OnClickListener() {
