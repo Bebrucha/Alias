@@ -39,5 +39,7 @@
     <string name="htp_rule2">Žaidėjai negali paaiškinti žodžio kita kalba.</string>
     <string name="htp_rule3">Pirmoji komanda pasiekusi taisyklėse nustatyta limitą laimi.</string>
     <string name="htp_rule4">Kiekvienas atspėtas žodis komandai prideda 1 balą. Praleidus žodį atimamas taisyklėse nustatytas taškų kiekis.</string>
+    <string name="stop">Stop</string>
+    <string name="continue_button">Tęsti</string>
 
 </resources>
