@@ -18,16 +18,15 @@ public class PlayingPhase_6 extends AppCompatActivity {
     TextView Timer;
     long timer=0;
     Button Start_Timer;
+    Button continue2;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        if(timer>0)
-            startCDTimer();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing_phase_6);
+
+
         Bundle timeris = getIntent().getExtras();
         //int timer;
         timer=timeris.getInt("timer");
@@ -56,16 +55,35 @@ public class PlayingPhase_6 extends AppCompatActivity {
 
         //STOP mygtukas
         Button stop_button =findViewById(R.id.button_stop);
+        //Continue button
+        continue2=(Button) findViewById(R.id.button_continue2);
 
         stop_button.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             stopCDTimer();
-            Intent intent = new Intent(PlayingPhase_6.this, StoppedPhase_7.class);
-            startActivity(intent);
+            //Intent intent = new Intent(PlayingPhase_6.this, StoppedPhase_7.class);
+            //startActivity(intent);
+
+            //continue2=(Button) findViewById(R.id.button_continue2);
+            continue2.setVisibility(View.VISIBLE);
+            stop_button.setVisibility(View.INVISIBLE);
         }
         });
-        //stop_button.setOnClickListener(v -> startActivity(new Intent(PlayingPhase_6.this, StoppedPhase_7.class)));
+
+        //button "continue" to resume timer
+        continue2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startCDTimer();
+                //Intent intent = new Intent(PlayingPhase_6.this, StoppedPhase_7.class);
+                //startActivity(intent);
+
+                //continue2=(Button) findViewById(R.id.button_continue2);
+                continue2.setVisibility(View.INVISIBLE);
+                stop_button.setVisibility(View.VISIBLE);
+            }
+        });
 
     }
     //timer end
@@ -78,7 +96,7 @@ public class PlayingPhase_6 extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 Timer.setText(" "+millisUntilFinished / 1000+" ");
                 Start_Timer.setVisibility(View.INVISIBLE);
-                timer=millisUntilFinished;
+                timer=millisUntilFinished/1000;
             }
             public void onFinish() { Timer.setText("Time is up!");
             }
@@ -88,7 +106,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
 
     //timer is stopped
     private void stopCDTimer(){
+
         cdTimer.cancel();
+
     }
 
 }
