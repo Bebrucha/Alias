@@ -32,4 +32,11 @@
     <string name="every_skipped_word">every skipped word deducts one point</string>
     <string name="ingame_sounds">In-game sounds</string>
     <string name="turn_on_sound">turn on sound effects</string>
+    <string name="how_to_play">How to play</string>
+    <string name="htp_header">An exciting co-op game!</string>
+    <string name="htp_goal">The goal of the game is to explain as many words as possible to your team in a limited time.</string>
+    <string name="htp_rule1">Players can\'t use items to show shape or detail of resulting word.</string>
+    <string name="htp_rule2">Players can\'t explain the word in another language.</string>
+    <string name="htp_rule3">The first team to reach the specified limit of points in the rules wins.</string>
+    <string name="htp_rule4">Each guessed word adds 1 point to the team. Skipping a word deducts number of points specified in the rules.</string>
 </resources>

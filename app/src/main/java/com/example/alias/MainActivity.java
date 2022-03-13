@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setTitle(getResources().getString(R.string.app_name));
 
+
+
         //mygtukas start
         Button Start = findViewById(R.id.button_start);
         Start.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Team_Count_3.class)));
@@ -53,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
         // Change language
         Button button_lang = findViewById(R.id.button_lang);
         button_lang.setOnClickListener(view -> changeLanguage(button_lang));
+
+        //how_to_play button action
+        Button HowToPlay =findViewById(R.id.button_howtoplay);
+        HowToPlay.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, HowToPlay_2.class)));
+
+
     }
 
     private void changeLanguage(Button button) {

@@ -32,4 +32,12 @@
     <string name="every_skipped_word">kiekvienas praleistas žodis nuima po tašką</string>
     <string name="ingame_sounds">Žaidimo garsai</string>
     <string name="turn_on_sound">įjungti garso efektus</string>
+    <string name="how_to_play">Žaidimo instrukcija</string>
+    <string name="htp_header">Įtraukiantis komandinis žaidimas!</string>
+    <string name="htp_goal">Žaidimo tikslas yra paaiškinti kuo daugiau žodžių savo komandai per ribotą laiką.</string>
+    <string name="htp_rule1">Žaidėjai negali naudoti daiktų, kurie apibūdintų gautojo žodžio formą, dalis.</string>
+    <string name="htp_rule2">Žaidėjai negali paaiškinti žodžio kita kalba.</string>
+    <string name="htp_rule3">Pirmoji komanda pasiekusi taisyklėse nustatyta limitą laimi.</string>
+    <string name="htp_rule4">Kiekvienas atspėtas žodis komandai prideda 1 balą. Praleidus žodį atimamas taisyklėse nustatytas taškų kiekis.</string>
+
 </resources>

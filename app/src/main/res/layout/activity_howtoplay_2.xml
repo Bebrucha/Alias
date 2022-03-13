@@ -11,22 +11,24 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
         android:fontFamily="sans-serif"
-        android:text="Įtraukiantis komandinis žaidimas"
+        android:text="@string/htp_header"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Žaidimo tikslas paaiškinti kuo daugiau žodžių savo komandai per ribotą laiką."
+        android:layout_marginTop="24dp"
+        android:text="@string/htp_goal"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -37,8 +39,8 @@
         android:id="@+id/textView3"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Žaidėjai negali naudoti daiktų, kurie apibūdintų gautojo žodžio formą, dalis."
+        android:layout_marginTop="24dp"
+        android:text="@string/htp_rule1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,32 +50,44 @@
         android:id="@+id/textView4"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Žaidėjai negali paaiškinti žodžio kita kalba."
+        android:layout_marginTop="24dp"
+        android:text="@string/htp_rule2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Kiekvienas atspėtas žodis komandai prideda 1 balą. Praleidus žodį atemamas taisyklėse nustatytas taškų kiekis."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Pirmoji komanda pasiekusi taisyklėse nustatyta limitą laimi."
+        android:layout_marginTop="24dp"
+        android:text="@string/htp_rule3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/htp_rule4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/button_howtoplay_to_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
 </androidx.constraintlayout.widget.ConstraintLayout>
