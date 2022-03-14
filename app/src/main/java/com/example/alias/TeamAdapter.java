@@ -53,7 +53,7 @@ public class TeamAdapter extends
         textView.setText(team.getName());
 
         TextView textView2 = holder.pointsTextView;
-        textView2.setText(team.getPoints());
+        textView2.setText(team.pointsToString());
 
     }
 

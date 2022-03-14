@@ -14,6 +14,8 @@ import java.util.ArrayList;
 public class Team_Scores_5 extends AppCompatActivity{
 
     ArrayList<Team> teams;
+
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_scores_5);
@@ -26,14 +28,16 @@ public class Team_Scores_5 extends AppCompatActivity{
         Previous.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, Settings_4.class)));
         Previous.setOnClickListener(v -> finish());
 
-        //initiating teams
+        //initiating teams and laying scores
         RecyclerView rvTeams = (RecyclerView) findViewById(R.id.rv_teams);
-        teams=Team.createTeamList(Team_Count_3.num_of_teams);
-       TeamAdapter adapter =new TeamAdapter(teams);
+
+        //Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+        //       .getBoolean("isFirstRun", true);
+        //if(isFirstRun)
+        teams = Team.createTeamList(Team_Count_3.num_of_teams - 1);
+        TeamAdapter adapter = new TeamAdapter(teams);
         rvTeams.setAdapter(adapter);
-        //setContentView(R.layout.item_team);
         rvTeams.setLayoutManager(new LinearLayoutManager(this));
-        //setContentView(R.layout.activity_team_scores_5);
 
         Start.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,6 +14,13 @@ public class Team {
     public String getName(){return mName;}
     public int getPoints(){return mPoints;}
 
+    public String pointsToString() {
+        return ":    "+mPoints;
+    }
+    public String nameToString() {
+        return ""+mName;
+    }
+
     static int lastTeamId=0;
 
     public static ArrayList<Team> createTeamList(int numTeams){
