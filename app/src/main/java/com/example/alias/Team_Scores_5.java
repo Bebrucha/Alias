@@ -35,29 +35,21 @@ public class Team_Scores_5 extends AppCompatActivity{
         RecyclerView rvTeams = (RecyclerView) findViewById(R.id.rv_teams);
 
         //initiating teams and laying scores
-        if(MainActivity.teams.isEmpty()) {
+        if(MainMenu_1.teams.isEmpty()) {
 
 
-            MainActivity.teams = Team.createTeamList(Team_Count_3.num_of_teams - 1);
-            MainActivity.teamTurns = Team.createTeamList(Team_Count_3.num_of_teams - 1);
-            for(int i=0;i<MainActivity.teams.size();i++)
-                MainActivity.teamTurns.get(i).mPoints=i;
+            MainMenu_1.teams = Team.createTeamList(Team_Count_3.num_of_teams - 1);
+            MainMenu_1.teamTurns = Team.createTeamList(Team_Count_3.num_of_teams - 1);
+            for(int i=0;i<MainMenu_1.teams.size();i++)
+                MainMenu_1.teamTurns.get(i).mPoints=i;
         }
 
-        TeamAdapter adapter = new TeamAdapter(MainActivity.teams);
+        TeamAdapter adapter = new TeamAdapter(MainMenu_1.teams);
         rvTeams.setAdapter(adapter);
-
+        rvTeams.setLayoutManager(new LinearLayoutManager(this));
 
         //printing which team is next
         nextTeamId();
-
-
-
-
-
-        rvTeams.setLayoutManager(new LinearLayoutManager(this));
-
-
 
         Start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,24 +61,26 @@ public class Team_Scores_5 extends AppCompatActivity{
             }
         });
     }
+    //finds lowest id
     public void nextTeamId() {
         int min_num=99999;
-        for(int i=0;i<MainActivity.teamTurns.size();i++)
+        for(int i=0;i<MainMenu_1.teamTurns.size();i++)
         {
-            if(MainActivity.teamTurns.get(i).mPoints<min_num)
-                min_num=MainActivity.teamTurns.get(i).mPoints;
+            if(MainMenu_1.teamTurns.get(i).mPoints<min_num)
+                min_num=MainMenu_1.teamTurns.get(i).mPoints;
         }
         printNextTeam(min_num);
 
     }
+    //prints team with lowest id(next turn)
     public void printNextTeam(int min_num){
         TextView teamNameText=findViewById(R.id.textView_nextTeam);
-        for(int i=0;i<MainActivity.teamTurns.size();i++)
+        for(int i=0;i<MainMenu_1.teamTurns.size();i++)
         {
-            if(MainActivity.teamTurns.get(i).mPoints==min_num)
+            if(MainMenu_1.teamTurns.get(i).mPoints==min_num)
             {
-                teamNameText.setText(MainActivity.teamTurns.get(i).nameToString());
-                MainActivity.teamTurns.get(i).mPoints+=Team_Count_3.num_of_teams;
+                teamNameText.setText(MainMenu_1.teamTurns.get(i).nameToString());
+                MainMenu_1.teamTurns.get(i).mPoints+=Team_Count_3.num_of_teams;
             }
         }
     }

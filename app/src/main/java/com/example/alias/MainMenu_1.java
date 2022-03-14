@@ -9,10 +9,13 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.Button;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class MainMenu_1 extends AppCompatActivity {
 
+    public static ArrayList<Team> teams;
+    public static ArrayList<Team> teamTurns;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
