@@ -33,12 +33,14 @@ public class Team_Scores_5 extends AppCompatActivity{
         Previous.setOnClickListener(v -> finish());
 
         RecyclerView rvTeams = (RecyclerView) findViewById(R.id.rv_teams);
-            //initiating teams and laying scores
+
+        //initiating teams and laying scores
         if(MainActivity.teams.isEmpty()) {
+
 
             MainActivity.teams = Team.createTeamList(Team_Count_3.num_of_teams - 1);
             MainActivity.teamTurns = Team.createTeamList(Team_Count_3.num_of_teams - 1);
-            for(int i=0;i<MainActivity.teamTurns.size();i++)
+            for(int i=0;i<MainActivity.teams.size();i++)
                 MainActivity.teamTurns.get(i).mPoints=i;
         }
 
