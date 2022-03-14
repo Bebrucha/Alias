@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private com.example.alias.databinding.ActivityMainBinding binding;
+
+    public static ArrayList<Team> teams;
+    public static ArrayList<Team> teamTurns;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

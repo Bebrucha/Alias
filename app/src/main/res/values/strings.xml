@@ -41,5 +41,8 @@
     <string name="htp_rule4">Each guessed word adds 1 point to the team. Skipping a word deducts number of points specified in the rules.</string>
     <string name="stop">Stop</string>
     <string name="continue_button">Continue</string>
+    <string name="get_ready_to_play">Get ready to play!</string>
+    <string name="round">Round</string>
+    <string name="team_name">Team name</string>
 
 </resources>

@@ -9,8 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class Team_Count_3 extends AppCompatActivity {
     public static int num_of_teams = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,7 @@ public class Team_Count_3 extends AppCompatActivity {
         //mygtukas Atgal
 
 
+
         EditText num_of_teams_label = findViewById(R.id.num_of_teams);
         Button next_num_of_teams = findViewById(R.id.button_next_num_of_teams);
 
@@ -29,6 +33,9 @@ public class Team_Count_3 extends AppCompatActivity {
         next_num_of_teams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //create team arrayList
+                MainActivity.teams = Team.createTeamList(Team_Count_3.num_of_teams - 1);
+
                 num_of_teams = Integer.parseInt(num_of_teams_label.getText().toString());
                 TextView validation = findViewById(R.id.num_of_teams_validation_label);
 
