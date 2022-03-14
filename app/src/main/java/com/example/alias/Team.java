@@ -21,13 +21,13 @@ public class Team {
         return ""+mName;
     }
 
-    static int lastTeamId=0;
+
 
     public static ArrayList<Team> createTeamList(int numTeams){
         ArrayList<Team> teams = new ArrayList<Team>();
-
+        int lastTeamId=0;
         for(int i=0; i<=numTeams;i++)
-            teams.add(new Team("Team name"+ ++lastTeamId, 0));
+            teams.add(new Team("Team "+ ++lastTeamId, 0));
             return teams;
     }
 }

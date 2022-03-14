@@ -41,5 +41,8 @@
     <string name="htp_rule4">Kiekvienas atspėtas žodis komandai prideda 1 balą. Praleidus žodį atimamas taisyklėse nustatytas taškų kiekis.</string>
     <string name="stop">Stop</string>
     <string name="continue_button">Tęsti</string>
+    <string name="get_ready_to_play">Pasiruoškite žaisti!</string>
+    <string name="round">Raundas</string>
+    <string name="team_name">Komandos vardas</string>
 
 </resources>
