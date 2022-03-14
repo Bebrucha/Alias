@@ -118,7 +118,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="88dp"
         android:layout_marginEnd="120dp"
-        android:text="@string/zero"
+        android:text="@string/ten"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_seek_bar_length" />
 

@@ -44,8 +44,7 @@ public class Team_Count_3 extends AppCompatActivity {
                     // Button to go settings page
                     Button Next = findViewById(R.id.button_next_num_of_teams);
                     Next.setOnClickListener(v -> startActivity(new Intent(Team_Count_3.this, Settings_4.class)));
-                }
-                else
+                } else
                 {
                     validation.setVisibility(View.VISIBLE);
                 }

@@ -42,6 +42,7 @@
         android:layout_height="63dp"
         android:ems="10"
         android:inputType="number"
+        android:text="3"
         android:textAlignment="center"
         android:textColor="#050505"
         android:textSize="34sp"

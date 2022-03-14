@@ -28,7 +28,7 @@ public class Settings_4 extends AppCompatActivity {
         seekBarLength.setMax(100);
         TextView seekBarL = findViewById(R.id.textView_seek_bar_length);
 
-        //Laiko vienas ejimui seekbaras
+        //Laiko vienam ejimui seekbaras
         seekBarLength.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -46,7 +46,7 @@ public class Settings_4 extends AppCompatActivity {
 
         //Maximumo tasku seekbaras
         SeekBar seekBarPoints = findViewById(R.id.seekBar_settings_max_points);
-        seekBarPoints.setProgress(0);
+        seekBarPoints.setProgress(10);
         seekBarPoints.setMax(100);
         TextView seekBarP = findViewById(R.id.textView_seek_bar_points);
 
