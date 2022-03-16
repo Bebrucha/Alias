@@ -1,9 +1,11 @@
 package com.example.alias;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +16,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class Team_Scores_5 extends AppCompatActivity{
-
-
-
-
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -31,6 +29,7 @@ public class Team_Scores_5 extends AppCompatActivity{
         Button Previous = findViewById(R.id.button_previous_5);
         Previous.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, Settings_4.class)));
         Previous.setOnClickListener(v -> finish());
+
 
         RecyclerView rvTeams = (RecyclerView) findViewById(R.id.rv_teams);
 
@@ -60,6 +59,13 @@ public class Team_Scores_5 extends AppCompatActivity{
                 startActivity(x);
             }
         });
+
+        // čia sutvarkyytiiiii
+        // button -> go to 11th
+     //   Button end_game = findViewById(R.id.button_end_game);
+      //  end_game.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, Team_Scores11.class)));
+      //  end_game.setOnClickListener(v -> finish());
+
     }
     //finds lowest id
     public void nextTeamId() {

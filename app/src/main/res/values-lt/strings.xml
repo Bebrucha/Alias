@@ -44,5 +44,8 @@
     <string name="get_ready_to_play">Pasiruoškite žaisti!</string>
     <string name="round">Raundas</string>
     <string name="team_name">Komandos vardas</string>
-
+    <string name="end_game_button">Baigti</string>
+    <string name="end_of_the_game">ŽAIDIMO PABAIGA</string>
+    <string name="points_scored">Surinkti taškai</string>
+    <string name="play_again">Žaisti iš naujo</string>
 </resources>

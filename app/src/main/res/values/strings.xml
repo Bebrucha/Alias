@@ -44,5 +44,8 @@
     <string name="get_ready_to_play">Get ready to play!</string>
     <string name="round">Round</string>
     <string name="team_name">Team name</string>
-
+    <string name="end_game_button">End</string>
+    <string name="end_of_the_game">END OF THE GAME</string>
+    <string name="points_scored">Points scored</string>
+    <string name="play_again">Play again</string>
 </resources>
