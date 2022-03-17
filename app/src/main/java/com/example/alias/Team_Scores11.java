@@ -16,6 +16,7 @@ public class Team_Scores11 extends AppCompatActivity {
         // button -> come back to the main menu
         Button play_again = findViewById(R.id.button_play_again);
         play_again.setOnClickListener(v -> startActivity(new Intent(Team_Scores11.this, MainMenu_1.class)));
+        //play_again.setOnClickListener(v -> finish()); // jauciu sitaip turetu buti
 
     }
 
