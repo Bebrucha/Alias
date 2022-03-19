@@ -48,4 +48,8 @@
     <string name="end_of_the_game">ŽAIDIMO PABAIGA</string>
     <string name="points_scored">Surinkti taškai</string>
     <string name="play_again">Žaisti iš naujo</string>
+    <string name="lets_go">PRADĖKIME!</string>
+    <string name="the_winner_is">Žaidimą laimėjo:</string>
+    <string name="guessed">Atspėtas</string>
+    <string name="skipped">Praleistas</string>
 </resources>

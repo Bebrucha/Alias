@@ -31,8 +31,8 @@ public class Team_Count_3 extends AppCompatActivity {
         next_num_of_teams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //netrinti!!!
-                //create team arrayList
+                // netrinti!!!
+                // create team arrayList
                 MainMenu_1.teams = Team.createTeamList(Team_Count_3.num_of_teams - 1);
 
                 num_of_teams = Integer.parseInt(num_of_teams_label.getText().toString());

@@ -48,4 +48,8 @@
     <string name="end_of_the_game">END OF THE GAME</string>
     <string name="points_scored">Points scored</string>
     <string name="play_again">Play again</string>
+    <string name="lets_go">LET\'S GO!</string>
+    <string name="the_winner_is">The winner is:</string>
+    <string name="guessed">Guessed</string>
+    <string name="skipped">Skipped</string>
 </resources>
