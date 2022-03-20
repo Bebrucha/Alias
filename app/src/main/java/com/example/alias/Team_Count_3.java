@@ -47,18 +47,13 @@ public class Team_Count_3 extends AppCompatActivity {
                     validation.setVisibility(View.INVISIBLE);
 
                     // Button to go settings page
-                    Button Next = findViewById(R.id.button_next_num_of_teams);
-                    Next.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
                             Intent intent = new Intent(getApplicationContext(), Settings_4.class);
                             Bundle extra = new Bundle();
                             extra.putBoolean("language", en_language);
                             intent.putExtra("extra", extra);
                             startActivity(intent);
                             finish();
-                        }
-                    });
+
                 } else
                 {
                     validation.setVisibility(View.VISIBLE);
