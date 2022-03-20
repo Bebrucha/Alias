@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
@@ -16,20 +17,40 @@ public class MainMenu_1 extends AppCompatActivity {
 
     public static ArrayList<Team> teams;
     public static ArrayList<Team> teamTurns;
+    boolean en_language=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu_1);
         loadLocale();
 
+        Button button_lang = findViewById(R.id.button_lang);
         //mygtukas start
         Button Start = findViewById(R.id.button_start);
-        Start.setOnClickListener(v -> startActivity(new Intent(MainMenu_1.this, Team_Count_3.class)));
+        Start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Team_Count_3.class);
+                Bundle extra = new Bundle();
+                extra.putBoolean("language", en_language);
+                intent.putExtra("extra", extra);
+                startActivity(intent);
+                finish();
+            }
+        });
         //mygtukas start
 
         // Change language
-        Button button_lang = findViewById(R.id.button_lang);
-        button_lang.setOnClickListener(view -> changeLanguage(button_lang));
+
+        //button_lang.setOnClickListener(view -> changeLanguage(button_lang));
+
+        button_lang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeLanguage(button_lang);
+               en_language=false;
+            }
+        });
 
         //how_to_play button action
         Button HowToPlay =findViewById(R.id.button_howtoplay);
@@ -40,10 +61,12 @@ public class MainMenu_1 extends AppCompatActivity {
         if (button.getText().equals("LT")){
 
             setLocale("lt");
+            en_language=false;
             recreate();
         }
         else {
             setLocale("en");
+            en_language=true;
             recreate();
         }
     }

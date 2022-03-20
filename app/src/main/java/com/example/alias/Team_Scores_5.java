@@ -17,6 +17,7 @@ public class Team_Scores_5 extends AppCompatActivity{
         setContentView(R.layout.activity_team_scores_5);
         //setContentView(R.layout.item_team);
 
+
         Button Start = findViewById(R.id.button_start_game_5);
        // Start.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, PlayingPhase_6.class)));
 
@@ -54,6 +55,7 @@ public class Team_Scores_5 extends AppCompatActivity{
                 Intent x = new Intent(view.getContext(),PlayingPhase_6.class);
                 Bundle extras = getIntent().getExtras();
                 x.putExtra("timer",extras.getInt("timer"));
+                x.putExtra("language",extras.getBoolean("language"));
                 startActivity(x);
             }
         });

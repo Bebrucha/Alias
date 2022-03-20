@@ -19,7 +19,13 @@ public class PlayingPhase_6 extends AppCompatActivity {
     long timer=0;
     Button Start_Timer;
     Button continue2;
-
+    Button button_guessed;
+    Button button_skipped;
+    int guessed_amount=0;
+    int skipped_amount=0;
+    TextView label_num_of_guessed_words;
+    TextView label_num_of_skipped_words;
+    boolean en_language;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,32 @@ public class PlayingPhase_6 extends AppCompatActivity {
         timer=timeris.getInt("timer");
         Timer=findViewById(R.id.timer);
         Timer.setText(String.valueOf(timer));
+
+        en_language=timeris.getBoolean("language");
+
+        label_num_of_guessed_words=findViewById(R.id.label_num_of_guessed_words_6);
+        button_guessed =findViewById(R.id.button_guessed);
+        button_guessed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                guessed_amount++;
+                label_num_of_guessed_words.setText(Integer.toString(guessed_amount));
+            }
+        });
+        label_num_of_skipped_words=findViewById(R.id.label_num_of_skipped_words_6);
+        button_skipped=findViewById(R.id.button_skipped);
+        button_skipped.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                skipped_amount++;
+                label_num_of_skipped_words.setText(Integer.toString(skipped_amount));
+            }
+        });
+
+        button_guessed.setEnabled(false);
+        button_skipped.setEnabled(false);
         //mygtukas pradeti timer
         Start_Timer = findViewById(R.id.Start_True);
         Start_Timer.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +72,8 @@ public class PlayingPhase_6 extends AppCompatActivity {
 
                 //enabling button "stop"
                 ((Button) findViewById(R.id.button_stop)).setEnabled(true);
-
+                button_guessed.setEnabled(true);
+                button_skipped.setEnabled(true);
                 Start_Timer.setEnabled(false);
                 startCDTimer();
             }
@@ -68,6 +101,8 @@ public class PlayingPhase_6 extends AppCompatActivity {
             //continue2=(Button) findViewById(R.id.button_continue2);
             continue2.setVisibility(View.VISIBLE);
             stop_button.setVisibility(View.INVISIBLE);
+            button_guessed.setEnabled(false);
+            button_skipped.setEnabled(false);
         }
         });
 
@@ -78,7 +113,8 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 startCDTimer();
                 //Intent intent = new Intent(PlayingPhase_6.this, StoppedPhase_7.class);
                 //startActivity(intent);
-
+                button_guessed.setEnabled(true);
+                button_skipped.setEnabled(true);
                 //continue2=(Button) findViewById(R.id.button_continue2);
                 continue2.setVisibility(View.INVISIBLE);
                 stop_button.setVisibility(View.VISIBLE);
@@ -98,7 +134,11 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 Start_Timer.setVisibility(View.INVISIBLE);
                 timer=millisUntilFinished/1000;
             }
-            public void onFinish() { Timer.setText("Time is up!");
+            public void onFinish() {
+                if(en_language)
+                Timer.setText("Last word!");
+                else
+                    Timer.setText("Paskutinis žodis!");
             }
 
         }.start();

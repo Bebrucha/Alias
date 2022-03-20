@@ -19,6 +19,9 @@ public class Settings_4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_4);
 
+        Bundle extra = getIntent().getBundleExtra("extra");
+        boolean en_language = extra.getBoolean("language");
+
         Button Next = findViewById(R.id.button_settings_next_4);
        // Next.setOnClickListener(v -> startActivity(new Intent(Settings_4.this, Team_Scores_5.class)));
 
@@ -68,6 +71,7 @@ public class Settings_4 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent x = new Intent(view.getContext(),Team_Scores_5.class);
                 x.putExtra("timer",Integer.valueOf(seekBarL.getText().toString()));
+                x.putExtra("language",en_language);
                 startActivity(x);
             }
         });

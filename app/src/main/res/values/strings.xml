@@ -52,4 +52,5 @@
     <string name="the_winner_is">The winner is:</string>
     <string name="guessed">Guessed</string>
     <string name="skipped">Skipped</string>
+    <string name="last_word">Last word!</string>
 </resources>

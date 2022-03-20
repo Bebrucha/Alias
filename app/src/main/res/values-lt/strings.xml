@@ -52,4 +52,5 @@
     <string name="the_winner_is">Žaidimą laimėjo:</string>
     <string name="guessed">Atspėtas</string>
     <string name="skipped">Praleistas</string>
+    <string name="last_word">Paskutinis žodis!</string>
 </resources>
