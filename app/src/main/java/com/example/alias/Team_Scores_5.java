@@ -55,7 +55,7 @@ public class Team_Scores_5 extends AppCompatActivity{
                 Intent x = new Intent(view.getContext(),PlayingPhase_6.class);
                 Bundle extras = getIntent().getExtras();
                 x.putExtra("timer",extras.getInt("timer"));
-                x.putExtra("language",extras.getBoolean("language"));
+                //x.putExtra("language",extras.getBoolean("language"));
                 startActivity(x);
             }
         });

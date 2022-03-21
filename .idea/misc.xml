@@ -5,11 +5,12 @@
       <map>
         <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_howtoplay_2.xml" value="0.33" />
         <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_pakeisit_pavadinima_7.xml" value="0.1" />
+        <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_pakeisit_pavadinima_7.xml" value="0.33" />
         <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_playing_phase_6.xml" value="0.33" />
         <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_settings_4.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_stopped_phase_7.xml" value="0.33" />
         <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_team_count_3.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_team_scores_11.xml" value="0.33" />
         <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/activity_team_scores_5.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Justis/AndroidStudioProjects/Alias/app/src/main/res/layout/fragment_first.xml" value="0.33" />
@@ -18,12 +19,10 @@
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_komandu_pasirinkimas.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_main_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_main_menu_1.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_pakeisit_pavadinima_7.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_playing_phase_6.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_settings_4.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_team_count_3.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_team_scores_11.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/activity_team_scores_5.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias/app/src/main/res/layout/item_team.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kompiuteris/Desktop/Alias1/app/src/main/res/layout/activity_komandu_pasirinkimas.xml" value="0.36666666666666664" />
@@ -38,9 +37,8 @@
         <entry key="..\:/Users/aromi/AndroidStudioProjects/Alias3/app/src/main/res/layout/activity_main_menu_1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/aromi/AndroidStudioProjects/Alias3/app/src/main/res/layout/activity_pakeisit_pavadinima_7.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/aromi/AndroidStudioProjects/Alias3/app/src/main/res/layout/activity_playing_phase_6.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/aromi/AndroidStudioProjects/Alias3/app/src/main/res/layout/activity_settings_4.xml" value="0.264" />
+        <entry key="..\:/Users/aromi/AndroidStudioProjects/Alias3/app/src/main/res/layout/activity_settings_4.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/aromi/AndroidStudioProjects/Alias3/app/src/main/res/layout/activity_team_count_3.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/aromi/AndroidStudioProjects/Alias3/app/src/main/res/layout/activity_team_scores_11.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/aromi/AndroidStudioProjects/Alias3/app/src/main/res/layout/activity_team_scores_5.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/aromi/AndroidStudioProjects/Alias3/app/src/main/res/layout/item_team.xml" value="0.25416666666666665" />
       </map>
