@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Locale;
 import java.util.Timer;
 
 public class PlayingPhase_6 extends AppCompatActivity {
@@ -25,7 +26,6 @@ public class PlayingPhase_6 extends AppCompatActivity {
     int skipped_amount=0;
     TextView label_num_of_guessed_words;
     TextView label_num_of_skipped_words;
-    boolean en_language;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,6 @@ public class PlayingPhase_6 extends AppCompatActivity {
         Timer=findViewById(R.id.timer);
         Timer.setText(String.valueOf(timer));
 
-        en_language=timeris.getBoolean("language");
 
         label_num_of_guessed_words=findViewById(R.id.label_num_of_guessed_words_6);
         button_guessed =findViewById(R.id.button_guessed);
@@ -127,6 +126,7 @@ public class PlayingPhase_6 extends AppCompatActivity {
     //timer starts counting/resumes counting
     private void startCDTimer(){
 
+        String language= String.valueOf(getResources().getConfiguration().locale);
        cdTimer= new CountDownTimer(timer*1000+50, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -135,10 +135,10 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 timer=millisUntilFinished/1000;
             }
             public void onFinish() {
-                if(en_language)
-                Timer.setText("Last word!");
-                else
+                if(language.equals("lt_LT"))
                     Timer.setText("Paskutinis žodis!");
+                else
+                    Timer.setText("Last word!");
             }
 
         }.start();

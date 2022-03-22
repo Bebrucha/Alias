@@ -17,7 +17,6 @@ public class MainMenu_1 extends AppCompatActivity {
 
     public static ArrayList<Team> teams;
     public static ArrayList<Team> teamTurns;
-    boolean en_language=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +30,6 @@ public class MainMenu_1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Team_Count_3.class);
-                Bundle extra = new Bundle();
-                extra.putBoolean("language", en_language);
-                intent.putExtra("extra", extra);
                 startActivity(intent);
                 finish();
             }
@@ -48,7 +44,6 @@ public class MainMenu_1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 changeLanguage(button_lang);
-               en_language=false;
             }
         });
 
@@ -61,12 +56,10 @@ public class MainMenu_1 extends AppCompatActivity {
         if (button.getText().equals("LT")){
 
             setLocale("lt");
-            en_language=false;
             recreate();
         }
         else {
             setLocale("en");
-            en_language=true;
             recreate();
         }
     }

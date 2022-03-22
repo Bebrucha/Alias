@@ -19,10 +19,6 @@ public class Team_Count_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_count_3);
 
-      // Bundle extra = getIntent().getBundleExtra("extra");
-       //boolean en_language = extra.getBoolean("language");
-       //System.out.println(en_language);
-      //System.out.println(en_language);
 
         //mygtukas Atgal
         Button Atgal = findViewById(R.id.button_MainMenu);
@@ -48,9 +44,6 @@ public class Team_Count_3 extends AppCompatActivity {
 
                     // Button to go settings page
                             Intent intent = new Intent(getApplicationContext(), Settings_4.class);
-                            //Bundle extra = new Bundle();
-                           // extra.putBoolean("language", en_language);
-                            //intent.putExtra("extra", extra);
                             startActivity(intent);
                             finish();
 
