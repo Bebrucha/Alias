@@ -4,26 +4,46 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.fragment.NavHostFragment;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Settings_4 extends AppCompatActivity {
 
     int time;
 
+    boolean sound_state;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_4);
-
+        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
         Button Next = findViewById(R.id.button_settings_next_4);
        // Next.setOnClickListener(v -> startActivity(new Intent(Settings_4.this, Team_Scores_5.class)));
 
-
-
+        Switch sound = findViewById(R.id.switch2);
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sound_state=sound.isChecked();
+                if(sound_state==true)
+                    sound_effect.start();
+            }
+        });
+        Switch penalty = findViewById(R.id.switch1);
+        penalty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(sound_state){
+                    sound_effect.start();
+                }
+            }
+        });
 
         SeekBar seekBarLength = findViewById(R.id.seekBar_settings_round_length);
         seekBarLength.setProgress(10);
@@ -68,6 +88,9 @@ public class Settings_4 extends AppCompatActivity {
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(sound_state){
+                    sound_effect.start();
+                }
                 Intent x = new Intent(view.getContext(),Team_Scores_5.class);
                 x.putExtra("timer",Integer.valueOf(seekBarL.getText().toString()));
                 startActivity(x);
@@ -75,6 +98,19 @@ public class Settings_4 extends AppCompatActivity {
         });
 
         Button Previous = findViewById(R.id.button_4_previous);
-        Previous.setOnClickListener(v -> startActivity(new Intent(Settings_4.this, Team_Count_3.class)));
+        //Previous.setOnClickListener(v -> startActivity(new Intent(Settings_4.this, Team_Count_3.class)));
+        Previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(sound_state){
+                    sound_effect.start();
+                }
+                Intent x = new Intent(view.getContext(),Team_Count_3.class);
+                Bundle extra = new Bundle();
+                extra.putBoolean("sound", sound_state);
+                x.putExtra("extra", extra);
+                startActivity(x);
+            }
+        });
     }
 }

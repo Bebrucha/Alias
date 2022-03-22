@@ -3,6 +3,7 @@ package com.example.alias;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,9 @@ public class Team_Count_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_count_3);
 
-
+        //MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
+        //Bundle extra = getIntent().getBundleExtra("extra");
+       // boolean sound_state = extra.getBoolean("sound");
         //mygtukas Atgal
         Button Atgal = findViewById(R.id.button_MainMenu);
         Atgal.setOnClickListener(v -> startActivity(new Intent(Team_Count_3.this, MainMenu_1.class)));
@@ -32,6 +35,9 @@ public class Team_Count_3 extends AppCompatActivity {
         next_num_of_teams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+              //  if(sound_state){
+              //      sound_effect.start();
+               // }
                 // netrinti!!!
                 // create team arrayList
                 MainMenu_1.teams = Team.createTeamList(Team_Count_3.num_of_teams - 1);
