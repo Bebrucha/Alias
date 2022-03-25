@@ -20,12 +20,23 @@ public class Team_Count_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_count_3);
 
-        //MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
-        //Bundle extra = getIntent().getBundleExtra("extra");
-       // boolean sound_state = extra.getBoolean("sound");
+        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
+        Bundle extra = getIntent().getBundleExtra("extra");
+        boolean sound_state = extra.getBoolean("sound");
         //mygtukas Atgal
         Button Atgal = findViewById(R.id.button_MainMenu);
-        Atgal.setOnClickListener(v -> startActivity(new Intent(Team_Count_3.this, MainMenu_1.class)));
+        //Atgal.setOnClickListener(v -> startActivity(new Intent(Team_Count_3.this, MainMenu_1.class)));
+        Atgal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(sound_state)
+                    sound_effect.start();
+                Intent intent = new Intent(getApplicationContext(), MainMenu_1.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         //mygtukas Atgal
 
         EditText num_of_teams_label = findViewById(R.id.num_of_teams);
@@ -35,9 +46,9 @@ public class Team_Count_3 extends AppCompatActivity {
         next_num_of_teams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  if(sound_state){
-              //      sound_effect.start();
-               // }
+                if(sound_state){
+                    sound_effect.start();
+                }
                 // netrinti!!!
                 // create team arrayList
                 MainMenu_1.teams = Team.createTeamList(Team_Count_3.num_of_teams - 1);
@@ -49,9 +60,12 @@ public class Team_Count_3 extends AppCompatActivity {
                     validation.setVisibility(View.INVISIBLE);
 
                     // Button to go settings page
-                            Intent intent = new Intent(getApplicationContext(), Settings_4.class);
-                            startActivity(intent);
-                            finish();
+                    Intent intent = new Intent(getApplicationContext(), Settings_4.class);
+                    Bundle extra = new Bundle();
+                    extra.putBoolean("sound", sound_state);
+                    intent.putExtra("extra", extra);
+                    startActivity(intent);
+                    finish();
 
                 } else
                 {

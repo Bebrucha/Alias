@@ -30,7 +30,8 @@
     <string name="length_in_seconds">nurodytas sekundėmis</string>
     <string name="skip_penalty">Baudos taškai</string>
     <string name="every_skipped_word">kiekvienas praleistas žodis nuima po tašką</string>
-    <string name="ingame_sounds">Žaidimo garsai</string>
+    <string name="sounds">Garsai</string>
+    <string name="music">Muzika</string>
     <string name="turn_on_sound">įjungti garso efektus</string>
     <string name="how_to_play">Žaidimo instrukcija</string>
     <string name="htp_header">Įtraukiantis komandinis žaidimas!</string>
@@ -53,4 +54,6 @@
     <string name="guessed">Atspėtas</string>
     <string name="skipped">Praleistas</string>
     <string name="last_word">Paskutinis žodis!</string>
+    <string name="off">Išjungta</string>
+    <string name="off_ti">Išjungti</string>
 </resources>

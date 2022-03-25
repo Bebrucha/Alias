@@ -17,25 +17,16 @@ public class Settings_4 extends AppCompatActivity {
 
     int time;
 
-    boolean sound_state;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_4);
         MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
         Button Next = findViewById(R.id.button_settings_next_4);
-       // Next.setOnClickListener(v -> startActivity(new Intent(Settings_4.this, Team_Scores_5.class)));
+        Bundle extra = getIntent().getBundleExtra("extra");
+        boolean sound_state = extra.getBoolean("sound");
 
-        Switch sound = findViewById(R.id.switch2);
-        sound.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sound_state=sound.isChecked();
-                if(sound_state==true)
-                    sound_effect.start();
-            }
-        });
-        Switch penalty = findViewById(R.id.switch1);
+        Switch penalty = findViewById(R.id.penalty_switch);
         penalty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,8 +82,12 @@ public class Settings_4 extends AppCompatActivity {
                 if(sound_state){
                     sound_effect.start();
                 }
+
                 Intent x = new Intent(view.getContext(),Team_Scores_5.class);
                 x.putExtra("timer",Integer.valueOf(seekBarL.getText().toString()));
+                Bundle extra = new Bundle();
+                extra.putBoolean("sound", sound_state);
+                x.putExtra("extra", extra);
                 startActivity(x);
             }
         });
@@ -105,11 +100,11 @@ public class Settings_4 extends AppCompatActivity {
                 if(sound_state){
                     sound_effect.start();
                 }
-                Intent x = new Intent(view.getContext(),Team_Count_3.class);
+                Intent intent = new Intent(view.getContext(),Team_Count_3.class);
                 Bundle extra = new Bundle();
                 extra.putBoolean("sound", sound_state);
-                x.putExtra("extra", extra);
-                startActivity(x);
+                intent.putExtra("extra", extra);
+                startActivity(intent);
             }
         });
     }

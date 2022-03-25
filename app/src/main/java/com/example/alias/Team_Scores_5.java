@@ -5,10 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Set;
 
 public class Team_Scores_5 extends AppCompatActivity{
 
@@ -17,14 +20,31 @@ public class Team_Scores_5 extends AppCompatActivity{
         setContentView(R.layout.activity_team_scores_5);
         //setContentView(R.layout.item_team);
 
+        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
+        Bundle extra = getIntent().getBundleExtra("extra");
+        boolean sound_state = extra.getBoolean("sound");
 
         Button Start = findViewById(R.id.button_start_game_5);
        // Start.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, PlayingPhase_6.class)));
 
 
         Button Previous = findViewById(R.id.button_previous_5);
-        Previous.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, Settings_4.class)));
-        Previous.setOnClickListener(v -> finish());
+
+       // Previous.setOnClickListener(v -> startActivity(new Intent(Team_Scores_5.this, Settings_4.class)));
+       // Previous.setOnClickListener(v -> finish());
+        Previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(sound_state){
+                    sound_effect.start();
+                }
+                Intent intent = new Intent(view.getContext(), Settings_4.class);
+                Bundle extra = new Bundle();
+                extra.putBoolean("sound", sound_state);
+                intent.putExtra("extra", extra);
+                startActivity(intent);
+            }
+        });
 
         // End_game button
         //Button end_game = findViewById(R.id.button_end_game_5);
@@ -52,9 +72,15 @@ public class Team_Scores_5 extends AppCompatActivity{
         Start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(sound_state){
+                    sound_effect.start();
+                }
                 Intent x = new Intent(view.getContext(),PlayingPhase_6.class);
                 Bundle extras = getIntent().getExtras();
                 x.putExtra("timer",extras.getInt("timer"));
+                Bundle extra = new Bundle();
+                extra.putBoolean("sound", sound_state);
+                x.putExtra("extra", extra);
                 startActivity(x);
             }
         });

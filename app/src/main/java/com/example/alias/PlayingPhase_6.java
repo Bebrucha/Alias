@@ -3,6 +3,7 @@ package com.example.alias;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing_phase_6);
 
+        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
+        Bundle extra = getIntent().getBundleExtra("extra");
+        boolean sound_state = extra.getBoolean("sound");
 
         Bundle timeris = getIntent().getExtras();
         //int timer;
@@ -45,7 +49,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
         button_guessed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(sound_state){
+                    sound_effect.start();
+                }
                 guessed_amount++;
                 label_num_of_guessed_words.setText(Integer.toString(guessed_amount));
             }
@@ -55,7 +61,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
         button_skipped.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(sound_state){
+                    sound_effect.start();
+                }
                 skipped_amount++;
                 label_num_of_skipped_words.setText(Integer.toString(skipped_amount));
             }
@@ -68,7 +76,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
         Start_Timer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(sound_state){
+                    sound_effect.start();
+                }
                 //enabling button "stop"
                 ((Button) findViewById(R.id.button_stop)).setEnabled(true);
                 button_guessed.setEnabled(true);
@@ -93,6 +103,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
         stop_button.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            if(sound_state){
+                sound_effect.start();
+            }
             stopCDTimer();
             //Intent intent = new Intent(PlayingPhase_6.this, StoppedPhase_7.class);
             //startActivity(intent);
@@ -109,6 +122,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
         continue2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(sound_state){
+                    sound_effect.start();
+                }
                 startCDTimer();
                 //Intent intent = new Intent(PlayingPhase_6.this, StoppedPhase_7.class);
                 //startActivity(intent);

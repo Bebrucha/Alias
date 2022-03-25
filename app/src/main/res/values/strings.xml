@@ -30,7 +30,8 @@
     <string name="length_in_seconds">length in seconds</string>
     <string name="skip_penalty">Skip penalty</string>
     <string name="every_skipped_word">every skipped word deducts one point</string>
-    <string name="ingame_sounds">In-game sounds</string>
+    <string name="sounds">Sounds</string>
+    <string name="music">Music</string>
     <string name="turn_on_sound">turn on sound effects</string>
     <string name="how_to_play">How to play</string>
     <string name="htp_header">An exciting co-op game!</string>
@@ -53,4 +54,6 @@
     <string name="guessed">Guessed</string>
     <string name="skipped">Skipped</string>
     <string name="last_word">Last word!</string>
+    <string name="off">OFF</string>
+    <string name="off_ti">OFF</string>
 </resources>
