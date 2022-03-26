@@ -169,4 +169,8 @@ public class MainMenu_1 extends AppCompatActivity {
         setLocale(language);
     }
 
+    public ArrayList<Team> getTeamsList(){
+        return teams;
+    }
+
 }

@@ -21,8 +21,6 @@ public class Team {
         return ""+mName;
     }
 
-
-
     public static ArrayList<Team> createTeamList(int numTeams){
         ArrayList<Team> teams = new ArrayList<Team>();
         int lastTeamId=0;
