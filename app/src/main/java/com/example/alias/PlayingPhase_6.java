@@ -118,17 +118,20 @@ public class PlayingPhase_6 extends AppCompatActivity {
                     sound_effect.start();
                 }
 
-                if(game_word_list.size()>0)
-                {
-                    int random_num = random.nextInt(game_word_list.size());
-                    word.setText(game_word_list.get(random_num));
-                    game_word_list.remove(random_num);
-                }
-                else word.setText("OutOfWords:(");
-
                 if (!timerIsFinished){
                     guessed_amount++;
                     label_num_of_guessed_words.setText(Integer.toString(guessed_amount));
+
+
+                    if(game_word_list.size()>0)
+                    {
+                        int random_num = random.nextInt(game_word_list.size());
+                        word.setText(game_word_list.get(random_num));
+                        game_word_list.remove(random_num);
+                    }
+                    else word.setText("OutOfWords:(");
+
+
                 }
                 else
                 {
@@ -146,17 +149,20 @@ public class PlayingPhase_6 extends AppCompatActivity {
                     sound_effect.start();
                 }
 
-                if(game_word_list.size()>0)
-                {
-                    int random_num = random.nextInt(game_word_list.size());
-                    word.setText(game_word_list.get(random_num));
-                    game_word_list.remove(random_num);
-                }
-                else word.setText("OutOfWords:(");
 
                 if(!timerIsFinished){
                     skipped_amount++;
                     label_num_of_skipped_words.setText(Integer.toString(skipped_amount));
+
+
+                    if(game_word_list.size()>0)
+                    {
+                        int random_num = random.nextInt(game_word_list.size());
+                        word.setText(game_word_list.get(random_num));
+                        game_word_list.remove(random_num);
+                    }
+                    else word.setText("OutOfWords:(");
+
                 }
                 else
                 {
