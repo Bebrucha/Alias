@@ -1,8 +1,12 @@
 package com.example.alias;
 
+import java.util.ArrayList;
+
 public class Game {
+    public static boolean is_english=true;
+    public static int difficulty=1;//1- junior; 2- medium; 3-godlike
     int num_of_teams = Team_Count_3.num_of_teams;
-    String[] words_junior_lt = {"Kaukė",        "Citrina",      "Užtvanka",     "Medus",
+    public static String[] words_junior_lt = {"Kaukė",        "Citrina",      "Užtvanka",     "Medus",
                                 "Kiaulė",       "Rašysena",     "Kaklas",       "Arbatinukas",
                                 "Arbūzas",      "Žingsnis",     "Instrukcija",  "Mėdaus mėnuo",
                                 "Klasė",        "Inžinierius",  "Sodas",        "Dangtelis",
@@ -18,7 +22,7 @@ public class Game {
                                 "Eilė",         "Planas",       "Cirkas",       "Kodas",
                                 "Linija",       "Svetainė",     "Pietūs",       "Gyvatė"};
 
-    String[] words_junior_en = {"Mask",         "Lemon",        "Embankment",   "Honey",
+    public static String[] words_junior_en = {"Mask",         "Lemon",        "Embankment",   "Honey",
                                 "Cow",          "Handwriting",  "Neck",         "Teapot",
                                 "Watermelon",   "Footstep",     "Instruction",  "Honeymoon",
                                 "Classroom",    "Engineer",     "Garden",       "Lid",
@@ -34,7 +38,7 @@ public class Game {
                                 "Queue",        "Plan",         "Castle",       "Code",
                                  "Line",         "Web",         "Breathing",    "Snake"};
 
-    String[] words_medium_lt = {"Liokajus",         "Šturmanas",        "Išdavystė",
+    public static String[] words_medium_lt = {"Liokajus",         "Šturmanas",        "Išdavystė",
                                 "Našta",            "Migracija",        "Kalakutas",
                                 "Pakartojimas",     "Guma",             "Mantija",
                                 "Čiužinys",         "Sutrikimas",       "Santykis",
@@ -51,7 +55,7 @@ public class Game {
                                 "Diagrama",         "Nelaimė",          "Vaiduoklis",
                                 "Angelas",          "Atsarginė kopija", "Grąžtas"};
 
-    String[] words_medium_en = {"Butler",           "Navigator",        "Betrayal",
+    public static String[] words_medium_en = {"Butler",           "Navigator",        "Betrayal",
                                 "Burden",           "Migration",        "Turkey",
                                 "Repetition",       "Rubber",           "Mantle",
                                 "Mattress",         "Sutrikimas",       "Relation",
@@ -68,7 +72,7 @@ public class Game {
                                 "Chart",            "Disaster",         "Ghost",
                                 "Angel",            "Backup",           "Drill"};
 
-    String[] words_senior_lt = {"Vikrumas",          "Saugotojas",      "Filharmonija",
+    public static String[] words_senior_lt = {"Vikrumas",          "Saugotojas",      "Filharmonija",
                                 "Atrologija",        "Valda",           "Terariumas",
                                 "Gynėjas",           "Antena",          "Pramoga",
                                 "Poliglotas",        "Vaisingumas",     "Samurajus",
@@ -82,7 +86,7 @@ public class Game {
                                 "Lokatorius",        "Sąjunga",         "Eržilas",
                                 "Prižiūrėtojas",     "Frakas",          "Ekscelencija"};
 
-    String[] words_senior_en = {"Dexterity",        "Protector",        "Philharmonic",
+    public static String[] words_senior_en = {"Dexterity",        "Protector",        "Philharmonic",
                                 "Astrology",        "Possession",       "Terrarium",
                                 "Defender",         "Antenna",          "Pastime",
                                 "Polyglot",         "Fruitfulness",     "Samurai",

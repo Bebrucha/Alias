@@ -74,11 +74,11 @@
 
     <TextView
         android:id="@+id/word_to_display_6"
-        android:layout_width="294dp"
-        android:layout_height="88dp"
+        android:layout_width="357dp"
+        android:layout_height="92dp"
         android:text="WORD"
         android:textAlignment="center"
-        android:textSize="50sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button_continue2"
         app:layout_constraintEnd_toEndOf="parent"

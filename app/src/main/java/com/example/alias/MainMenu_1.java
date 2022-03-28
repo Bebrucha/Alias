@@ -137,10 +137,12 @@ public class MainMenu_1 extends AppCompatActivity {
         if (button.getText().equals("LT")){
 
             setLocale("lt");
+            Game.is_english=false;
             recreate();
         }
         else {
             setLocale("en");
+            Game.is_english=true;
             recreate();
         }
     }

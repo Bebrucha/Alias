@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.Random;
 import java.util.ArrayList;
 
 public class PlayingPhase_6 extends AppCompatActivity {
@@ -29,6 +30,12 @@ public class PlayingPhase_6 extends AppCompatActivity {
     TextView label_num_of_guessed_words;
     TextView label_num_of_skipped_words;
     boolean timerIsFinished =false;
+    String []game_words;
+    Random random=new Random();
+    ArrayList<String> game_word_list=new ArrayList<String>();
+
+
+
 
     // -----------Alert Dialogue -- 9 fragment
     private AlertDialog.Builder dialogueBuilder;
@@ -54,6 +61,54 @@ public class PlayingPhase_6 extends AppCompatActivity {
 
 
 
+
+        //Atrenka zodzius pagal kalba ir sudetinguma
+        TextView word=findViewById(R.id.word_to_display_6);
+        if(Game.is_english)
+        {
+            switch (Game.difficulty)
+            {
+                case 1:
+                   game_words=Game.words_junior_en;
+                    word.setText("EN - junior");
+                    addWordsToArrayList(game_words);
+                    break;
+                case 2:
+                    game_words=Game.words_medium_en;
+                    word.setText("EN - medium");
+                    addWordsToArrayList(game_words);
+                    break;
+                case 3:
+                   game_words=Game.words_senior_en;
+                    word.setText("EN - senior");
+                    addWordsToArrayList(game_words);
+                    break;
+            }
+        }
+        else
+        {
+            switch (Game.difficulty)
+            {
+                case 1:
+                    game_words=Game.words_junior_lt;
+                    word.setText("LT - junior");
+                    addWordsToArrayList(game_words);
+                    break;
+                case 2:
+                    game_words=Game.words_medium_lt;
+                    word.setText("LT - medium");
+                    addWordsToArrayList(game_words);
+                    break;
+                case 3:
+                    game_words=Game.words_senior_lt;
+                    word.setText("LT - senior");
+                    addWordsToArrayList(game_words);
+                    break;
+            }
+        }
+
+
+
         label_num_of_guessed_words=findViewById(R.id.label_num_of_guessed_words_6);
         button_guessed =findViewById(R.id.button_guessed);
         button_guessed.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +117,14 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 if(sound_state){
                     sound_effect.start();
                 }
+
+                if(game_word_list.size()>0)
+                {
+                    int random_num = random.nextInt(game_word_list.size());
+                    word.setText(game_word_list.get(random_num));
+                    game_word_list.remove(random_num);
+                }
+                else word.setText("OutOfWords:(");
 
                 if (!timerIsFinished){
                     guessed_amount++;
@@ -82,6 +145,14 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 if(sound_state){
                     sound_effect.start();
                 }
+
+                if(game_word_list.size()>0)
+                {
+                    int random_num = random.nextInt(game_word_list.size());
+                    word.setText(game_word_list.get(random_num));
+                    game_word_list.remove(random_num);
+                }
+                else word.setText("OutOfWords:(");
 
                 if(!timerIsFinished){
                     skipped_amount++;
@@ -106,6 +177,15 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 if(sound_state){
                     sound_effect.start();
                 }
+
+                if(game_word_list.size()>0)
+                {
+                    int random_num = random.nextInt(game_word_list.size());
+                    word.setText(game_word_list.get(random_num));
+                    game_word_list.remove(random_num);
+                }
+                else word.setText("OutOfWords:(");
+
                 //enabling button "stop"
                 ((Button) findViewById(R.id.button_stop)).setEnabled(true);
                 button_guessed.setEnabled(true);
@@ -152,6 +232,7 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 if(sound_state){
                     sound_effect.start();
                 }
+
                 startCDTimer();
                 //Intent intent = new Intent(PlayingPhase_6.this, StoppedPhase_7.class);
                 //startActivity(intent);
@@ -227,6 +308,13 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 // padaryti, kad pasirinktai komandai prie bendru tasku butu pridedas taskas
             }
         });
+    }
+    public void addWordsToArrayList(String[]words)
+    {
+        for(int i=0;i<words.length;i++)
+        {
+            game_word_list.add(words[i]);
+        }
     }
 
 }
