@@ -3,6 +3,7 @@ package com.example.alias;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Bundle;
@@ -33,8 +34,7 @@ public class PlayingPhase_6 extends AppCompatActivity {
     String []game_words;
     Random random=new Random();
     ArrayList<String> game_word_list=new ArrayList<String>();
-
-
+    int team_points=0;
 
 
     // -----------Alert Dialogue -- 9 fragment
@@ -166,6 +166,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 }
                 else
                 {
+                    Intent intent = new Intent(getApplicationContext(), Kokiaciaklase_10.class);
+                    startActivity(intent);
+                    finish();
                     // padaryti, kad eitu i 10 langa
                     // nera dar 10 lango
                 }
@@ -271,6 +274,12 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 else
                     Timer.setText("Last word!");
 
+                team_points=guessed_amount-skipped_amount;
+                if(team_points<0){
+                    team_points=0;
+                }
+                Button stop_button =findViewById(R.id.button_stop);
+                stop_button.setEnabled(false);
                 timerIsFinished = true;
             }
 
@@ -312,6 +321,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 // padaryti, kad eitu 10
                 // 10 dar nera lango
                 // padaryti, kad pasirinktai komandai prie bendru tasku butu pridedas taskas
+                Intent intent = new Intent(getApplicationContext(), Kokiaciaklase_10.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

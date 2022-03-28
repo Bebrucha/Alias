@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Alias">
         <activity
+            android:name=".Kokiaciaklase_10"
+            android:exported="false" />
+        <activity
             android:name=".PlayingPhase_6"
             android:exported="false" />
         <activity
