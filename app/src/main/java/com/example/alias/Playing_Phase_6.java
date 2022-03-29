@@ -213,10 +213,6 @@ public class Playing_Phase_6 extends AppCompatActivity {
                 sound_effect.start();
             }
             stopCDTimer();
-            //Intent intent = new Intent(PlayingPhase_6.this, StoppedPhase_7.class);
-            //startActivity(intent);
-
-            //continue2=(Button) findViewById(R.id.button_continue2);
             continue2.setVisibility(View.VISIBLE);
             stop_button.setVisibility(View.INVISIBLE);
             button_guessed.setEnabled(false);
@@ -234,11 +230,8 @@ public class Playing_Phase_6 extends AppCompatActivity {
                 }
 
                 startCDTimer();
-                //Intent intent = new Intent(PlayingPhase_6.this, StoppedPhase_7.class);
-                //startActivity(intent);
                 button_guessed.setEnabled(true);
                 button_skipped.setEnabled(true);
-                //continue2=(Button) findViewById(R.id.button_continue2);
                 continue2.setVisibility(View.INVISIBLE);
                 stop_button.setVisibility(View.VISIBLE);
             }
@@ -250,7 +243,6 @@ public class Playing_Phase_6 extends AppCompatActivity {
     //timer starts counting/resumes counting
     private void startCDTimer(){
 
-        String language= String.valueOf(getResources().getConfiguration().locale);
         timerIsFinished = false;
        cdTimer= new CountDownTimer(timer*1000+50, 1000) {
 
@@ -260,15 +252,11 @@ public class Playing_Phase_6 extends AppCompatActivity {
                 timer=millisUntilFinished/1000;
             }
             public void onFinish() {
-                if(language.equals("lt_LT"))
+                if(!Main.game.getIsEnglish())
                     Timer.setText("Paskutinis\nžodis!");
                 else
                     Timer.setText("Last word!");
 
-//                team_points=guessed_amount-skipped_amount;
-//                if(team_points<0){
-//                    team_points=0;
-//                }
                 Button stop_button =findViewById(R.id.button_stop);
                 stop_button.setEnabled(false);
                 timerIsFinished = true;
