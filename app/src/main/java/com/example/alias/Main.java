@@ -131,6 +131,9 @@ public class Main extends AppCompatActivity {
                 }
             }
         });
+        if(music_effect.isPlaying()){
+            music.setChecked(true);
+        }
     }
 
     private void changeLanguage(Button button) {

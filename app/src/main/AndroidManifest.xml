@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Alias">
         <activity
+            android:name=".Team_Scores_11"
+            android:exported="false" />
+        <activity
             android:name=".Team_Scores_10"
             android:exported="false" />
         <activity

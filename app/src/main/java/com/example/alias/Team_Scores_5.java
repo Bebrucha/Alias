@@ -61,7 +61,7 @@ public class Team_Scores_5 extends AppCompatActivity{
 
                 Intent x = new Intent(view.getContext(), Playing_Phase_6.class);
                 Bundle extras = getIntent().getExtras();
-                x.putExtra("timer",extras.getInt("timer"));
+                x.putExtra("timer",Main.game.getTimeOfOneRound());
                 Bundle extra = new Bundle();
                 extra.putBoolean("sound", Main.game.getIsSound());
                 x.putExtra("extra", extra);
