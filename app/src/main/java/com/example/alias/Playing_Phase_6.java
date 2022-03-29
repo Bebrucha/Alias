@@ -16,10 +16,9 @@ import android.widget.TextView;
 import java.util.Random;
 import java.util.ArrayList;
 
-public class PlayingPhase_6 extends AppCompatActivity {
-    //timer variables
+public class Playing_Phase_6 extends AppCompatActivity {
+
     CountDownTimer cdTimer;
-    //long timeLeftInMillis;
     TextView Timer;
     long timer=0;
     Button Start_Timer;
@@ -34,8 +33,6 @@ public class PlayingPhase_6 extends AppCompatActivity {
     String []game_words;
     Random random=new Random();
     ArrayList<String> game_word_list=new ArrayList<String>();
-    int team_points=0;
-
 
     // -----------Alert Dialogue -- 9 fragment
     private AlertDialog.Builder dialogueBuilder;
@@ -50,36 +47,34 @@ public class PlayingPhase_6 extends AppCompatActivity {
         setContentView(R.layout.activity_playing_phase_6);
 
         MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
-        Bundle extra = getIntent().getBundleExtra("extra");
-        boolean sound_state = extra.getBoolean("sound");
 
         Bundle timeris = getIntent().getExtras();
-        //int timer;
         timer=timeris.getInt("timer");
         Timer=findViewById(R.id.timer);
         Timer.setText(String.valueOf(timer));
 
+        /// Write the name of currently playing team
+        TextView label_currently_playing_team = findViewById(R.id.label_name_of_currently_playing_team_6);
+        label_currently_playing_team.setText(Main.game.getCurrentlyPlayingTeam().getName());
 
-
-
-        //Atrenka zodzius pagal kalba ir sudetinguma
+        // Select words by language and difficulty
         TextView word=findViewById(R.id.word_to_display_6);
-        if(Game.is_english)
+        if(Main.game.getIsEnglish())
         {
-            switch (Game.difficulty)
+            switch (Main.game.getDifficulty())
             {
                 case 1:
-                   game_words=Game.words_junior_en;
+                   game_words = Main.game.getWordsJunior_en();
                     word.setText("EN - junior");
                     addWordsToArrayList(game_words);
                     break;
                 case 2:
-                    game_words=Game.words_medium_en;
+                    game_words = Main.game.getWordsMedium_en();
                     word.setText("EN - medium");
                     addWordsToArrayList(game_words);
                     break;
                 case 3:
-                   game_words=Game.words_senior_en;
+                   game_words = Main.game.getWordsSenior_en();
                     word.setText("EN - senior");
                     addWordsToArrayList(game_words);
                     break;
@@ -87,51 +82,48 @@ public class PlayingPhase_6 extends AppCompatActivity {
         }
         else
         {
-            switch (Game.difficulty)
+            switch (Main.game.getDifficulty())
             {
                 case 1:
-                    game_words=Game.words_junior_lt;
+                    game_words = Main.game.getWordsJunior_lt();
                     word.setText("LT - junior");
                     addWordsToArrayList(game_words);
                     break;
                 case 2:
-                    game_words=Game.words_medium_lt;
+                    game_words = Main.game.getWordsMedium_lt();
                     word.setText("LT - medium");
                     addWordsToArrayList(game_words);
                     break;
                 case 3:
-                    game_words=Game.words_senior_lt;
+                    game_words = Main.game.getWordsSenior_lt();
                     word.setText("LT - senior");
                     addWordsToArrayList(game_words);
                     break;
             }
         }
 
-
-
-        label_num_of_guessed_words=findViewById(R.id.label_num_of_guessed_words_6);
-        button_guessed =findViewById(R.id.button_guessed);
+        // GUESSED button --------------------------------------------------------------------------
+        label_num_of_guessed_words = findViewById(R.id.label_num_of_guessed_words_6);
+        button_guessed = findViewById(R.id.button_guessed);
         button_guessed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sound_state){
+                if(Main.game.getIsSound()){
                     sound_effect.start();
                 }
 
                 if (!timerIsFinished){
                     guessed_amount++;
                     label_num_of_guessed_words.setText(Integer.toString(guessed_amount));
+                    Main.game.getCurrentlyPlayingTeam().updatePoints(1);
 
-
-                    if(game_word_list.size()>0)
+                    if(game_word_list.size() > 0)
                     {
                         int random_num = random.nextInt(game_word_list.size());
                         word.setText(game_word_list.get(random_num));
                         game_word_list.remove(random_num);
                     }
                     else word.setText("OutOfWords:(");
-
-
                 }
                 else
                 {
@@ -140,22 +132,25 @@ public class PlayingPhase_6 extends AppCompatActivity {
 
             }
         });
-        label_num_of_skipped_words=findViewById(R.id.label_num_of_skipped_words_6);
-        button_skipped=findViewById(R.id.button_skipped);
+
+        // SKIPPED button --------------------------------------------------------------------------
+        label_num_of_skipped_words = findViewById(R.id.label_num_of_skipped_words_6);
+        button_skipped = findViewById(R.id.button_skipped);
         button_skipped.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sound_state){
+                if(Main.game.getIsSound()){
                     sound_effect.start();
                 }
-
 
                 if(!timerIsFinished){
                     skipped_amount++;
                     label_num_of_skipped_words.setText(Integer.toString(skipped_amount));
 
+                    if(Main.game.getIsSkipPenalty())
+                        Main.game.getCurrentlyPlayingTeam().updatePoints(-1);
 
-                    if(game_word_list.size()>0)
+                    if(game_word_list.size() > 0)
                     {
                         int random_num = random.nextInt(game_word_list.size());
                         word.setText(game_word_list.get(random_num));
@@ -166,11 +161,9 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 }
                 else
                 {
-                    Intent intent = new Intent(getApplicationContext(), Kokiaciaklase_10.class);
+                    Intent intent = new Intent(getApplicationContext(), Team_Scores_10.class);
                     startActivity(intent);
                     finish();
-                    // padaryti, kad eitu i 10 langa
-                    // nera dar 10 lango
                 }
 
             }
@@ -178,12 +171,13 @@ public class PlayingPhase_6 extends AppCompatActivity {
 
         button_guessed.setEnabled(false);
         button_skipped.setEnabled(false);
-        //mygtukas pradeti timer
+
+        // START TIMER button ----------------------------------------------------------------------
         Start_Timer = findViewById(R.id.Start_True);
         Start_Timer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sound_state){
+                if(Main.game.getIsSound()){
                     sound_effect.start();
                 }
 
@@ -210,16 +204,12 @@ public class PlayingPhase_6 extends AppCompatActivity {
        // new CountDownTimer(timer*1000, 1000) { // 1 - sekundziu skaicius, 2- mazejimo zingsnis
 
 
-
-        //STOP mygtukas
+        // STOP button -----------------------------------------------------------------------------
         Button stop_button =findViewById(R.id.button_stop);
-        //Continue button
-        continue2=(Button) findViewById(R.id.button_continue2);
-
         stop_button.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if(sound_state){
+            if(Main.game.getIsSound()){
                 sound_effect.start();
             }
             stopCDTimer();
@@ -234,11 +224,12 @@ public class PlayingPhase_6 extends AppCompatActivity {
         }
         });
 
-        //button "continue" to resume timer
+        // CONTINUE button "continue" to resume timer ----------------------------------------------
+        continue2=(Button) findViewById(R.id.button_continue2);
         continue2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sound_state){
+                if(Main.game.getIsSound()){
                     sound_effect.start();
                 }
 
@@ -274,10 +265,10 @@ public class PlayingPhase_6 extends AppCompatActivity {
                 else
                     Timer.setText("Last word!");
 
-                team_points=guessed_amount-skipped_amount;
-                if(team_points<0){
-                    team_points=0;
-                }
+//                team_points=guessed_amount-skipped_amount;
+//                if(team_points<0){
+//                    team_points=0;
+//                }
                 Button stop_button =findViewById(R.id.button_stop);
                 stop_button.setEnabled(false);
                 timerIsFinished = true;
@@ -289,6 +280,7 @@ public class PlayingPhase_6 extends AppCompatActivity {
     //timer is stopped
     private void stopCDTimer(){
 
+        timerIsFinished = false;
         cdTimer.cancel();
 
     }
@@ -304,8 +296,8 @@ public class PlayingPhase_6 extends AppCompatActivity {
         dialogue.show();
 
         ArrayList<String> spinnerArray = new ArrayList<>();
-        for(int i = 0; i < MainMenu_1.teams.size(); i++)
-            spinnerArray.add(MainMenu_1.teams.get(i).mName);
+        for(int i = 0; i < Main.game.getNumOfTeams(); i++)
+            spinnerArray.add(Main.game.getTeam(i).getName());
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
@@ -318,10 +310,13 @@ public class PlayingPhase_6 extends AppCompatActivity {
         button_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // padaryti, kad eitu 10
-                // 10 dar nera lango
-                // padaryti, kad pasirinktai komandai prie bendru tasku butu pridedas taskas
-                Intent intent = new Intent(getApplicationContext(), Kokiaciaklase_10.class);
+                // Find the team by its' name and add give a point
+                String team_guessed_word = spinner_teamNames.getSelectedItem().toString();
+                for (int i = 0; i < Main.game.getNumOfTeams(); i++)
+                    if(team_guessed_word.equals(Main.game.getTeam(i).getName()))
+                        Main.game.getTeam(i).updatePoints(1);
+
+                Intent intent = new Intent(getApplicationContext(), Team_Scores_10.class);
                 startActivity(intent);
                 finish();
             }
@@ -329,7 +324,7 @@ public class PlayingPhase_6 extends AppCompatActivity {
     }
     public void addWordsToArrayList(String[]words)
     {
-        for(int i=0;i<words.length;i++)
+        for(int i = 0; i < words.length; i++)
         {
             game_word_list.add(words[i]);
         }

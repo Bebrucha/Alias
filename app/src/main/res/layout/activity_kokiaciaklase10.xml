@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Kokiaciaklase_10">
+    tools:context=".Team_Scores_10">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_next_10"
         android:layout_width="118dp"
         android:layout_height="66dp"
         android:layout_marginBottom="36dp"
@@ -20,7 +20,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="317dp"
         android:layout_height="289dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/button_next_10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

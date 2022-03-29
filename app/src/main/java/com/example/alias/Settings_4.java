@@ -16,24 +16,23 @@ import android.widget.Toast;
 
 public class Settings_4 extends AppCompatActivity {
 
-    int time;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_4);
         MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
         Button Next = findViewById(R.id.button_settings_next_4);
-        Bundle extra = getIntent().getBundleExtra("extra");
-        boolean sound_state = extra.getBoolean("sound");
 
+        /// SKIP PENALTY ---------------------------------------------------------------------------
         Switch penalty = findViewById(R.id.penalty_switch);
         penalty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sound_state){
+                if(Main.game.getIsSound()){
                     sound_effect.start();
                 }
+
+                Main.game.setIsSkipPenalty(penalty.isChecked());
             }
         });
 
@@ -42,7 +41,7 @@ public class Settings_4 extends AppCompatActivity {
         seekBarLength.setMax(100);
         TextView seekBarL = findViewById(R.id.textView_seek_bar_length);
 
-        //Laiko vienam ejimui seekbaras
+        /// TIME FOR ONE ROUND seekbar -------------------------------------------------------------
         seekBarLength.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -53,12 +52,11 @@ public class Settings_4 extends AppCompatActivity {
             }
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+                Main.game.setTimeOfOneRound(Integer.parseInt((String) seekBarL.getText()));
             }
         });
 
-
-
-        //Maximumo tasku seekbaras
+        /// NUM OF POINTS TO WIN THE GAME ----------------------------------------------------------
         SeekBar seekBarPoints = findViewById(R.id.seekBar_settings_max_points);
         seekBarPoints.setProgress(10);
         seekBarPoints.setMax(100);
@@ -74,49 +72,52 @@ public class Settings_4 extends AppCompatActivity {
             }
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+                Main.game.setMaxPointsToWinGame(Integer.parseInt((String) seekBarP.getText()));
             }
         });
 
+        /// NEXT button ----------------------------------------------------------------------------
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sound_state){
+                if(Main.game.getIsSound()){
                     sound_effect.start();
                 }
 
                 Intent x = new Intent(view.getContext(),Team_Scores_5.class);
                 x.putExtra("timer",Integer.valueOf(seekBarL.getText().toString()));
                 Bundle extra = new Bundle();
-                extra.putBoolean("sound", sound_state);
+                extra.putBoolean("sound", Main.game.getIsSound());
                 x.putExtra("extra", extra);
                 startActivity(x);
             }
         });
 
+        /// PREVIOUS button ------------------------------------------------------------------------
         Button Previous = findViewById(R.id.button_4_previous);
         //Previous.setOnClickListener(v -> startActivity(new Intent(Settings_4.this, Team_Count_3.class)));
         Previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sound_state){
+                if(Main.game.getIsSound()){
                     sound_effect.start();
                 }
                 Intent intent = new Intent(view.getContext(),Team_Count_3.class);
                 Bundle extra = new Bundle();
-                extra.putBoolean("sound", sound_state);
+                extra.putBoolean("sound", Main.game.getIsSound());
                 intent.putExtra("extra", extra);
                 startActivity(intent);
             }
         });
 
-        //difficulties
+        /// DIFFICULTIES ---------------------------------------------------------------------------
         RadioButton junior =findViewById(R.id.Junior);
         junior.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Game.difficulty=1;
+                Main.game.setDifficulty(1);
             }
         });
         RadioButton medium =findViewById(R.id.Medium);
@@ -125,7 +126,7 @@ public class Settings_4 extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Game.difficulty=2;
+                Main.game.setDifficulty(2);
             }
         });
         RadioButton senior =findViewById(R.id.Senior);
@@ -134,7 +135,7 @@ public class Settings_4 extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Game.difficulty=3;
+                Main.game.setDifficulty(3);
             }
         });
     }

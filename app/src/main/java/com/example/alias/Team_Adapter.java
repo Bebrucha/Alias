@@ -4,15 +4,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class TeamAdapter extends
-        RecyclerView.Adapter<TeamAdapter.ViewHolder>{
+public class Team_Adapter extends
+        RecyclerView.Adapter<Team_Adapter.ViewHolder>{
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView nameTextView;
@@ -26,12 +25,12 @@ public class TeamAdapter extends
     }
     private List<Team> mTeams;
 
-    public TeamAdapter(List<Team>teams){
+    public Team_Adapter(List<Team>teams){
         mTeams=teams;
     }
 
     @Override
-    public TeamAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public Team_Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
@@ -44,7 +43,7 @@ public class TeamAdapter extends
     }
 
     @Override
-    public void onBindViewHolder(TeamAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(Team_Adapter.ViewHolder holder, int position) {
         // Get the data model based on position
         Team team = mTeams.get(position);
 

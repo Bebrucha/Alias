@@ -3,29 +3,67 @@ package com.example.alias;
 import java.util.ArrayList;
 
 public class Team {
-    String mName;
-    int mPoints;
+    /// CLASS VARIABLES ----------------------------------------------------------------------------
+    private String mName;
+    private int mPoints;
+    private int mPointsReceivedInThisRound;
+    private int mId;
 
-    public Team(String name,int points){
-        mName=name;
-        mPoints=points;
+    /// CONSTRUCTORS -------------------------------------------------------------------------------
+    public Team(int id){
+        this.mName = "Team " + id;
+        this.mPoints = 0;
+        this.mPointsReceivedInThisRound = 0;
+        this.mId = id;
     }
 
-    public String getName(){return mName;}
-    public int getPoints(){return mPoints;}
+    public Team(String name, int id, int points, int roundPoints){
+        this.mName = name;
+        this.mPoints = points;
+        this.mPointsReceivedInThisRound = roundPoints;
+        this.mId = id;
+    }
 
+    /// GET methods --------------------------------------------------------------------------------
+    public String getName(){return mName;}
+    public int getTotalPoints(){return mPoints;}
+    public int getRoundPoints(){return mPointsReceivedInThisRound;}
+    public int getId() { return this.mId; }
+
+
+    /// SET methods --------------------------------------------------------------------------------
+    public void setmName(String name) { this.mName = name; }
+    public void setmPoints(int points) { this.mPoints = points; }
+
+
+    /// ADDITIONAL methods -------------------------------------------------------------------------
     public String pointsToString() {
-        return ":    "+mPoints;
+        return ":    " + this.mPoints;
     }
     public String nameToString() {
-        return ""+mName;
+        return "" + this.mName;
     }
 
-    public static ArrayList<Team> createTeamList(int numTeams){
-        ArrayList<Team> teams = new ArrayList<Team>();
-        int lastTeamId=0;
-        for(int i=0; i<=numTeams;i++)
-            teams.add(new Team("Team "+ ++lastTeamId, 0));
-            return teams;
+    /**
+     * Updates points when increase or decrease is required
+     * @param difference int: can be either negative or positive number
+     */
+    public void updatePoints(int difference) {
+        mPointsReceivedInThisRound += difference;
+        this.mPoints += difference;
     }
+
+    public void newRoundIsStarted() { mPointsReceivedInThisRound = 0; }
+
+//    public static ArrayList<Team> createTeamList(int numTeams){
+//        ArrayList<Team> teams = new ArrayList<Team>();
+//        int lastTeamId=0;
+//        for(int i=0; i<=numTeams;i++)
+//        {
+//            ++lastTeamId;
+//            teams.add(new Team(lastTeamId));
+//        }
+//
+//            return teams;
+//    }
 }

@@ -63,16 +63,16 @@
         app:layout_constraintVertical_bias="0.381" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
+        android:id="@+id/imageView4"
+        android:layout_width="32dp"
+        android:layout_height="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinner_team_guessed_9"
         app:layout_constraintEnd_toEndOf="@+id/spinner_team_guessed_9"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/spinner_team_guessed_9"
         app:layout_constraintTop_toTopOf="@+id/spinner_team_guessed_9"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        app:layout_constraintVertical_bias="0.214"
+        app:srcCompat="@drawable/dropdownlist_logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

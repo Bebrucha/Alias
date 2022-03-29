@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Alias">
         <activity
-            android:name=".Kokiaciaklase_10"
+            android:name=".Team_Scores_10"
             android:exported="false" />
         <activity
-            android:name=".PlayingPhase_6"
+            android:name=".Playing_Phase_6"
             android:exported="false" />
         <activity
             android:name=".Team_Scores_5"
@@ -25,10 +25,10 @@
             android:name=".Team_Count_3"
             android:exported="false" />
         <activity
-            android:name=".HowToPlay_2"
+            android:name=".How_To_Play_2"
             android:exported="false" />
         <activity
-            android:name=".MainMenu_1"
+            android:name=".Main"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Alias.NoActionBar">
@@ -38,7 +38,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PakeisitPavadinima_7" />
     </application>
 
 </manifest>

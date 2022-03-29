@@ -13,15 +13,14 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.Locale;
-import java.util.Timer;
 
-public class MainMenu_1 extends AppCompatActivity {
+public class Main extends AppCompatActivity {
 
-    public static ArrayList<Team> teams;
-    public static ArrayList<Team> teamTurns;
-    boolean sound_state;
+    // --------main game variable ----- public, thus we can use it everywhere----
+    public static Game game = new Game();
+    //--------------------------------------------------------------------------
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,61 +31,62 @@ public class MainMenu_1 extends AppCompatActivity {
         MediaPlayer music_effect=MediaPlayer.create(this,R.raw.music_effect);
 
         Button button_lang = findViewById(R.id.button_lang);
-        //mygtukas start
+
+        // START button ----------------------------------------------------------------------------
         Button Start = findViewById(R.id.button_start);
         Start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sound_state==true)
+                if(game.getIsSound() == true)
                     sound_effect.start();
                 Intent intent = new Intent(getApplicationContext(), Team_Count_3.class);
                 Bundle extra = new Bundle();
-                extra.putBoolean("sound", sound_state);
+                extra.putBoolean("sound", game.getIsSound());
                 intent.putExtra("extra", extra);
                 startActivity(intent);
                 finish();
             }
         });
-        //mygtukas start
 
-        // Change language
 
-        //button_lang.setOnClickListener(view -> changeLanguage(button_lang));
-
+        // LANGUAGE button -------------------------------------------------------------------------
         button_lang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 changeLanguage(button_lang);
-                if(sound_state)
+                if(game.getIsSound())
                     sound_effect.start();
             }
         });
 
-        //how_to_play button action
+        // HOW TO PLAY button ----------------------------------------------------------------------
         Button HowToPlay =findViewById(R.id.button_howtoplay);
-        //HowToPlay.setOnClickListener(v -> startActivity(new Intent(MainMenu_1.this, HowToPlay_2.class)));
+
         HowToPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(), HowToPlay_2.class);
-                if(sound_state)
+                Intent intent = new Intent(getApplicationContext(), How_To_Play_2.class);
+                if(game.getIsSound())
                     sound_effect.start();
                 Bundle extra = new Bundle();
-                extra.putBoolean("sound", sound_state);
+                extra.putBoolean("sound", game.getIsSound());
                 intent.putExtra("extra", extra);
                 startActivity(intent);
             }
         });
         String language= String.valueOf(getResources().getConfiguration().locale);
+
+        // SOUND switch ----------------------------------------------------------------------------
         TextView sound_off = findViewById(R.id.sounds_off_textview);
         Switch sound = findViewById(R.id.sound_effect_switch);
         sound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sound_state=sound.isChecked();
-                if(sound_state) {
+                game.setIsSound(sound.isChecked());
+             //   sound_state=sound.isChecked();
+                if(game.getIsSound()) {
                     if(language.equals("lt_LT")){
                         sound_effect.start();
                         sound_off.setText("Įjungti");}
@@ -103,13 +103,16 @@ public class MainMenu_1 extends AppCompatActivity {
                 }
             }
         });
+
+        // MUSIC switch ----------------------------------------------------------------------------
         TextView music_off = findViewById(R.id.music_off_textview);
         Switch music = findViewById(R.id.Music_switch);
         music.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sound_state=music.isChecked();
-                if(sound_state) {
+                game.setIsMusic(music.isChecked());
+               // sound_state=music.isChecked();
+                if(game.getIsMusic()) {
                     if(language.equals("lt_LT"))
                         music_off.setText("Įjungta");
                     else
@@ -128,21 +131,18 @@ public class MainMenu_1 extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
     }
+
     private void changeLanguage(Button button) {
         if (button.getText().equals("LT")){
 
             setLocale("lt");
-            Game.is_english=false;
+            game.setLanguage(false);
             recreate();
         }
         else {
             setLocale("en");
-            Game.is_english=true;
+            game.setLanguage(true);
             recreate();
         }
     }
@@ -155,7 +155,6 @@ public class MainMenu_1 extends AppCompatActivity {
 
         Locale locale = new Locale(lang, country);
         Locale.setDefault(locale);
-        //  Configuration config = new Configuration();
         Configuration config = new Configuration();
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
@@ -170,9 +169,4 @@ public class MainMenu_1 extends AppCompatActivity {
         String language = prefs.getString("My_Lang", "");
         setLocale(language);
     }
-
-    public ArrayList<Team> getTeamsList(){
-        return teams;
-    }
-
 }
