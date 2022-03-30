@@ -90,25 +90,15 @@
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ScrollView
-        android:id="@+id/teams_total_points"
-        android:layout_width="324dp"
-        android:layout_height="154dp"
-        android:layout_marginTop="39dp"
-        android:saveEnabled="true"
-        android:scrollbarAlwaysDrawVerticalTrack="true"
-        android:soundEffectsEnabled="true"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_teams2"
+        android:layout_width="261dp"
+        android:layout_height="157dp"
         app:layout_constraintBottom_toTopOf="@+id/button_play_again"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21"
-        app:layout_constraintVertical_bias="0.0">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+        app:layout_constraintVertical_bias="0.518" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

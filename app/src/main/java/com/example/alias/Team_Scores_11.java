@@ -1,6 +1,8 @@
 package com.example.alias;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -20,6 +22,14 @@ public class Team_Scores_11 extends AppCompatActivity {
         label_winner_team.setText(Main.game.getWinnerTeam().getName());
 
         Button main_menu = findViewById(R.id.button_play_again);
+
+
+        //recyclerview of teams
+        RecyclerView rvTeams = (RecyclerView) findViewById(R.id.rv_teams2);
+        Team_Adapter adapter = new Team_Adapter(Main.game.getAll_teams(), false);
+        rvTeams.setAdapter(adapter);
+        rvTeams.setLayoutManager(new LinearLayoutManager(this));
+
         main_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
