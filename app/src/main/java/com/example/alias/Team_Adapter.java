@@ -24,9 +24,10 @@ public class Team_Adapter extends
         }
     }
     private List<Team> mTeams;
-
-    public Team_Adapter(List<Team>teams){
+    boolean mAfterRound;
+    public Team_Adapter(List<Team>teams,boolean afterround){
         mTeams=teams;
+        mAfterRound=afterround;
     }
 
     @Override
@@ -51,8 +52,15 @@ public class Team_Adapter extends
         TextView textView = holder.nameTextView;
         textView.setText(team.getName());
 
-        TextView textView2 = holder.pointsTextView;
-        textView2.setText(team.pointsToString());
+        if(mAfterRound){
+            TextView textView2 = holder.pointsTextView;
+            textView2.setText(team.roundPointsToString());
+            //AfterRound=false;
+        }else{
+            TextView textView2 = holder.pointsTextView;
+            textView2.setText(team.pointsToString());
+        }
+
 
     }
 

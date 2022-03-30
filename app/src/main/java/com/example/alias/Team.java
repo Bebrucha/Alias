@@ -34,11 +34,15 @@ public class Team {
     /// SET methods --------------------------------------------------------------------------------
     public void setmName(String name) { this.mName = name; }
     public void setmPoints(int points) { this.mPoints = points; }
+    //public void setmPointsReceivedInThisRound(int points) { this.mPointsReceivedInThisRound = points; }
 
 
     /// ADDITIONAL methods -------------------------------------------------------------------------
     public String pointsToString() {
         return ":    " + this.mPoints;
+    }
+    public String roundPointsToString() {
+        return ":    " + this.mPointsReceivedInThisRound;
     }
     public String nameToString() {
         return "" + this.mName;

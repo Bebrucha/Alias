@@ -38,7 +38,7 @@ public class Team_Scores_5 extends AppCompatActivity{
 
         RecyclerView rvTeams = (RecyclerView) findViewById(R.id.rv_teams);
 
-        Team_Adapter adapter = new Team_Adapter(Main.game.getAll_teams());
+        Team_Adapter adapter = new Team_Adapter(Main.game.getAll_teams(), false);
         rvTeams.setAdapter(adapter);
         rvTeams.setLayoutManager(new LinearLayoutManager(this));
 

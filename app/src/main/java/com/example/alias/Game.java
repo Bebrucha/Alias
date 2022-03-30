@@ -15,6 +15,7 @@ public class Game {
     private boolean is_music;
     private int id_currently_playing_team;
     private ArrayList<Team> all_teams;
+    private ArrayList<Team> all_teams_current_round;
 
     /// CONSTRUCTORS -------------------------------------------------------------------------------
     Game() {
@@ -60,7 +61,18 @@ public class Game {
             all_teams.add(new Team(lastTeamId));
             lastTeamId++;
         }
+        //this.all_teams_current_round=all_teams;
     }
+
+
+//    public ArrayList<Team> setAllTeamsCurrentRound() {
+//        for(int i=0;i<all_teams_current_round.size();i++){
+//            all_teams_current_round.add()
+//
+//        }
+//        return this.all_teams_current_round;
+//    }
+
 
     public void setNumOfTeams(int num) { this.num_of_teams = num ;}
     public void setDifficulty(int level) { this.difficulty = level; }
@@ -79,6 +91,7 @@ public class Game {
      * @return
      */
     public ArrayList<Team> getAll_teams() { return this.all_teams; }
+    //public ArrayList<Team> getAll_teams_current_round() { return this.all_teams_current_round; }
     public int getNumOfTeams() { return this.num_of_teams; }
     public int getCurrentRoundNum() { return this.current_round_num; }
     public boolean getIsEnglish() { return this.is_english; }
@@ -140,6 +153,7 @@ public class Game {
         }
         return this.all_teams.get(maxId);
     }
+
 
 
 
