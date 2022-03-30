@@ -1,13 +1,14 @@
 package com.example.alias;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class Team_Scores_10 extends AppCompatActivity {
 
@@ -18,6 +19,11 @@ public class Team_Scores_10 extends AppCompatActivity {
 
         MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
 
+
+        RecyclerView rvTeams = (RecyclerView) findViewById(R.id.rv_teams_10);
+        Team_Adapter adapter = new Team_Adapter(Main.game.getAll_teams());
+        rvTeams.setAdapter(adapter);
+        rvTeams.setLayoutManager(new LinearLayoutManager(this));
         /// NEXT button ----------------------------------------------------------------------------
         Button next = findViewById(R.id.button_next_10);
 
@@ -34,6 +40,8 @@ public class Team_Scores_10 extends AppCompatActivity {
                     intent = new Intent(getApplicationContext(), Team_Scores_11.class);
 
                     // !!!!!! cia reikia eiti i 11-a fragmenta, bet man kazkodel uzlusta vis!!!!!!!!!!!!!!!!!
+                    //Man atrodo cia jau viskas gerai, bet palikau komentara nes ne as rasiau :)
+                    //Jei trinsit ana istrinkit ir situos
                 }
                 else
                 {

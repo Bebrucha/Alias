@@ -141,6 +141,8 @@ public class Game {
         return this.all_teams.get(maxId);
     }
 
+
+
     /// WORDS' LISTS -------------------------------------------------------------------------------
     public String[] getWordsJunior_lt() { return this.words_junior_lt; }
     public String[] getWordsJunior_en() { return this.words_junior_en; }

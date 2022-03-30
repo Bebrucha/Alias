@@ -42,13 +42,17 @@ public class Team_Scores_5 extends AppCompatActivity{
         rvTeams.setAdapter(adapter);
         rvTeams.setLayoutManager(new LinearLayoutManager(this));
 
-
         // -----------------------------------------------------------------------------------------
         Main.game.updateCurrentRoundNum(); // ---------------------- veeeery important method
         // -----------------------------------------------------------------------------------------
 
+
         TextView label_next_team = findViewById(R.id.textView_nextTeam);
         label_next_team.setText(Main.game.getCurrentlyPlayingTeam().getName());
+
+        TextView label_round = findViewById(R.id.textView_round);
+        label_round.setText("ROUNDAS " + Integer.toString(Main.game.getCurrentRoundNum()));
+
 
         // START button ----------------------------------------------------------------------------
         Button Start = findViewById(R.id.button_start_game_5);
