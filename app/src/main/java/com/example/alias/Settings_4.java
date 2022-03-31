@@ -60,6 +60,7 @@ public class Settings_4 extends AppCompatActivity {
         SeekBar seekBarPoints = findViewById(R.id.seekBar_settings_max_points);
         seekBarPoints.setProgress(10);
         seekBarPoints.setMax(100);
+
         TextView seekBarP = findViewById(R.id.textView_seek_bar_points);
 
         seekBarPoints.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){

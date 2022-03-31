@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Random;
 import java.util.ArrayList;
 
@@ -33,6 +35,8 @@ public class Playing_Phase_6 extends AppCompatActivity {
     String []game_words;
     Random random=new Random();
     ArrayList<String> game_word_list=new ArrayList<String>();
+    TextView Time_Label ;
+    TextView Last_word_textview;
 
     // -----------Alert Dialogue -- 9 fragment
     private AlertDialog.Builder dialogueBuilder;
@@ -47,7 +51,9 @@ public class Playing_Phase_6 extends AppCompatActivity {
         setContentView(R.layout.activity_playing_phase_6);
 
         MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
-
+        Last_word_textview=findViewById((R.id.Last_word_textview));
+        Last_word_textview.setVisibility(View.INVISIBLE);
+        Time_Label = findViewById(R.id.Time_Label);
         Bundle timeris = getIntent().getExtras();
         timer=timeris.getInt("timer");
         Timer=findViewById(R.id.timer);
@@ -65,17 +71,17 @@ public class Playing_Phase_6 extends AppCompatActivity {
             {
                 case 1:
                    game_words = Main.game.getWordsJunior_en();
-                    word.setText("EN - junior");
+                    word.setText("Get ready!");
                     addWordsToArrayList(game_words);
                     break;
                 case 2:
                     game_words = Main.game.getWordsMedium_en();
-                    word.setText("EN - medium");
+                    word.setText("Get ready!");
                     addWordsToArrayList(game_words);
                     break;
                 case 3:
                    game_words = Main.game.getWordsSenior_en();
-                    word.setText("EN - senior");
+                    word.setText("Get ready!");
                     addWordsToArrayList(game_words);
                     break;
             }
@@ -86,17 +92,17 @@ public class Playing_Phase_6 extends AppCompatActivity {
             {
                 case 1:
                     game_words = Main.game.getWordsJunior_lt();
-                    word.setText("LT - junior");
+                    word.setText("Pasiruoškite!");
                     addWordsToArrayList(game_words);
                     break;
                 case 2:
                     game_words = Main.game.getWordsMedium_lt();
-                    word.setText("LT - medium");
+                    word.setText("Pasiruoškite!");
                     addWordsToArrayList(game_words);
                     break;
                 case 3:
                     game_words = Main.game.getWordsSenior_lt();
-                    word.setText("LT - senior");
+                    word.setText("Pasiruoškite!");
                     addWordsToArrayList(game_words);
                     break;
             }
@@ -253,12 +259,15 @@ public class Playing_Phase_6 extends AppCompatActivity {
             }
             public void onFinish() {
                 if(!Main.game.getIsEnglish())
-                    Timer.setText("Paskutinis\nžodis!");
+                    Last_word_textview.setText("Paskutinis\nžodis!");
                 else
-                    Timer.setText("Last word!");
-
+                    Last_word_textview.setText("Last word!");
+                Last_word_textview.setVisibility(View.VISIBLE);
                 Button stop_button =findViewById(R.id.button_stop);
                 stop_button.setEnabled(false);
+                stop_button.setVisibility(View.INVISIBLE);
+                Time_Label.setVisibility(View.INVISIBLE);
+                Timer.setVisibility(View.INVISIBLE);
                 timerIsFinished = true;
             }
 

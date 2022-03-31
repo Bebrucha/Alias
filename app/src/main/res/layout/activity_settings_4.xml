@@ -15,22 +15,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="@string/difficulty"
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.692" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -41,6 +42,7 @@
             android:layout_height="48dp"
             android:checked="true"
             android:text="@string/junior"
+            android:textAlignment="center"
             android:textColor="#00796B" />
 
         <RadioButton
@@ -48,13 +50,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="@string/medium" />
+            android:text="@string/medium"
+            android:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/Senior"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="@string/senior" />
+            android:text="@string/senior"
+            android:textAlignment="center" />
 
     </RadioGroup>
 
@@ -63,6 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -75,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="204dp"
         android:minWidth="48dp"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -95,7 +100,7 @@
         app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.607" />
 
     <TextView
         android:id="@+id/textView12"
@@ -103,6 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="212dp"
         android:text="@string/round_timer"
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
@@ -122,7 +128,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintVertical_bias="0.538" />
 
     <TextView
         android:id="@+id/textView14"
@@ -130,13 +136,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="236dp"
         android:text="@string/length_in_seconds"
+        android:textAlignment="center"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/seekBar_settings_round_length"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintVertical_bias="0.655" />
 
     <TextView
         android:id="@+id/textView15"
@@ -145,6 +152,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginBottom="232dp"
         android:text="@string/skip_penalty"
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,8 +164,9 @@
         android:layout_width="37dp"
         android:layout_height="19dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="96dp"
         android:text="@string/ten"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toEndOf="@+id/seekBar_settings_max_points"
@@ -181,7 +190,7 @@
         android:id="@+id/seekBar_settings_max_points"
         android:layout_width="220dp"
         android:layout_height="34dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="388dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
@@ -192,10 +201,12 @@
         android:layout_width="37dp"
         android:layout_height="22dp"
         android:layout_marginStart="121dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="292dp"
         android:layout_marginEnd="116dp"
         android:text="@string/ten"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -204,8 +215,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="204dp"
         android:text="@string/every_skipped_word"
+        android:textAlignment="center"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -215,6 +227,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/previous"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_settings_next_4"
         app:layout_constraintHorizontal_bias="0.05"

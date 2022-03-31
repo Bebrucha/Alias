@@ -12,6 +12,7 @@
         android:layout_width="153dp"
         android:layout_height="52dp"
         android:text="@string/Start_game"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
@@ -24,13 +25,14 @@
         android:layout_width="62dp"
         android:layout_height="38dp"
         android:text="@string/change_language"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
 
+        app:layout_constraintVertical_bias="0.023"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
@@ -38,6 +40,7 @@
         android:layout_width="153dp"
         android:layout_height="52dp"
         android:text="@string/how_to_play"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
@@ -83,6 +86,7 @@
         android:layout_marginEnd="72dp"
         android:layout_marginBottom="24dp"
         android:text="@string/sounds"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/sound_effect_switch"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -93,6 +97,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginBottom="335dp"
         android:text="@string/off"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Music_switch" />
 
@@ -103,6 +108,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="335dp"
         android:text="@string/off_ti"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sound_effect_switch" />
 
