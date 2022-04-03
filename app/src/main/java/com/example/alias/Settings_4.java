@@ -94,22 +94,22 @@ public class Settings_4 extends AppCompatActivity {
             }
         });
 
-        /// PREVIOUS button ------------------------------------------------------------------------
-        Button Previous = findViewById(R.id.button_4_previous);
-        //Previous.setOnClickListener(v -> startActivity(new Intent(Settings_4.this, Team_Count_3.class)));
-        Previous.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(Main.game.getIsSound()){
-                    sound_effect.start();
-                }
-                Intent intent = new Intent(view.getContext(),Team_Count_3.class);
-                Bundle extra = new Bundle();
-                extra.putBoolean("sound", Main.game.getIsSound());
-                intent.putExtra("extra", extra);
-                startActivity(intent);
-            }
-        });
+//        /// PREVIOUS button ------------------------------------------------------------------------
+//        Button Previous = findViewById(R.id.button_4_previous);
+//        //Previous.setOnClickListener(v -> startActivity(new Intent(Settings_4.this, Team_Count_3.class)));
+//        Previous.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(Main.game.getIsSound()){
+//                    sound_effect.start();
+//                }
+//                Intent intent = new Intent(view.getContext(),Team_Count_3.class);
+//                Bundle extra = new Bundle();
+//                extra.putBoolean("sound", Main.game.getIsSound());
+//                intent.putExtra("extra", extra);
+//                startActivity(intent);
+//            }
+//        });
 
         /// DIFFICULTIES ---------------------------------------------------------------------------
         RadioButton junior =findViewById(R.id.Junior);

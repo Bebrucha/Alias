@@ -19,19 +19,19 @@ public class Team_Count_3 extends AppCompatActivity {
 
         MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
 
-        /// PREVIOUS button ------------------------------------------------------------------------
-        Button previous = findViewById(R.id.button_MainMenu);
-        previous.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(Main.game.getIsSound())
-                    sound_effect.start();
-                Intent intent = new Intent(getApplicationContext(), Main.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        /// PREVIOUS button ------------------------------------------------------------------------
+//        Button previous = findViewById(R.id.button_MainMenu);
+//        previous.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                if(Main.game.getIsSound())
+//                    sound_effect.start();
+//                Intent intent = new Intent(getApplicationContext(), Main.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
 
 
         EditText num_of_teams_label = findViewById(R.id.num_of_teams);

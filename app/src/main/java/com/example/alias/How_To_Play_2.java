@@ -16,19 +16,19 @@ public class How_To_Play_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_howtoplay_2);
 
-        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
+//        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
 
-        Button HowToPlay_To_Start =findViewById(R.id.button_howtoplay_to_start);
-
-        HowToPlay_To_Start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(Main.game.getIsSound())
-                    sound_effect.start();
-                finish();
-            }
-        });
+//        Button HowToPlay_To_Start =findViewById(R.id.button_howtoplay_to_start);
+//
+//        HowToPlay_To_Start.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                if(Main.game.getIsSound())
+//                    sound_effect.start();
+//                finish();
+//            }
+//        });
 
     }
 }
