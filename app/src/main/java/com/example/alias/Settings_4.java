@@ -15,6 +15,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Settings_4 extends AppCompatActivity {
+    @Override
+    public void onBackPressed() {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +41,17 @@ public class Settings_4 extends AppCompatActivity {
         });
 
         SeekBar seekBarLength = findViewById(R.id.seekBar_settings_round_length);
-        seekBarLength.setProgress(10);
-        seekBarLength.setMax(100);
+        seekBarLength.setProgress(0);
+        seekBarLength.setMax(90);
+        int minL = 10;
         TextView seekBarL = findViewById(R.id.textView_seek_bar_length);
 
         /// TIME FOR ONE ROUND seekbar -------------------------------------------------------------
         seekBarLength.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                seekBarL.setText(String.valueOf(progress));
+                int value = minL + progress;
+                seekBarL.setText(String.valueOf(value));
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -58,15 +64,17 @@ public class Settings_4 extends AppCompatActivity {
 
         /// NUM OF POINTS TO WIN THE GAME ----------------------------------------------------------
         SeekBar seekBarPoints = findViewById(R.id.seekBar_settings_max_points);
-        seekBarPoints.setProgress(10);
-        seekBarPoints.setMax(100);
+        seekBarPoints.setProgress(0);
+        seekBarPoints.setMax(90);
+        int minP = 10;
 
         TextView seekBarP = findViewById(R.id.textView_seek_bar_points);
 
         seekBarPoints.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                seekBarP.setText(String.valueOf(progress));
+                int value = minP + progress;
+                seekBarP.setText(String.valueOf(value));
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -139,5 +147,6 @@ public class Settings_4 extends AppCompatActivity {
                 Main.game.setDifficulty(3);
             }
         });
+
     }
 }

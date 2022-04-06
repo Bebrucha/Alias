@@ -20,6 +20,10 @@ import java.util.ArrayList;
 
 public class Playing_Phase_6 extends AppCompatActivity {
 
+    @Override
+    public void onBackPressed() {
+
+    }
     CountDownTimer cdTimer;
     TextView Timer;
     long timer=0;

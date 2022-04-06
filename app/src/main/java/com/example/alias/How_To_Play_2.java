@@ -11,6 +11,10 @@ import android.widget.Button;
 public class How_To_Play_2 extends AppCompatActivity {
 
     @Override
+    public void onBackPressed() {
+
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);

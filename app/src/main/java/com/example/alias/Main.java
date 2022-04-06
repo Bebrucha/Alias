@@ -17,6 +17,10 @@ import java.util.Locale;
 
 public class Main extends AppCompatActivity {
 
+    @Override
+    public void onBackPressed() {
+
+    }
     // --------main game variable ----- public, thus we can use it everywhere----
     public static Game game = new Game();
     //--------------------------------------------------------------------------
@@ -59,6 +63,7 @@ public class Main extends AppCompatActivity {
                     sound_effect.start();
             }
         });
+
 
         // HOW TO PLAY button ----------------------------------------------------------------------
         Button HowToPlay =findViewById(R.id.button_howtoplay);

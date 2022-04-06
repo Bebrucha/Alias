@@ -13,6 +13,10 @@ import android.widget.TextView;
 
 public class Team_Scores_5 extends AppCompatActivity{
 
+    @Override
+    public void onBackPressed() {
+
+    }
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_scores_5);
