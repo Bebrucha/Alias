@@ -61,18 +61,7 @@ public class Game {
             all_teams.add(new Team(lastTeamId));
             lastTeamId++;
         }
-        //this.all_teams_current_round=all_teams;
     }
-
-
-//    public ArrayList<Team> setAllTeamsCurrentRound() {
-//        for(int i=0;i<all_teams_current_round.size();i++){
-//            all_teams_current_round.add()
-//
-//        }
-//        return this.all_teams_current_round;
-//    }
-
 
     public void setNumOfTeams(int num) { this.num_of_teams = num ;}
     public void setDifficulty(int level) { this.difficulty = level; }
@@ -136,6 +125,16 @@ public class Game {
         return false;
     }
 
+    /**
+     * Verifies that every team had a chance to play in the current round
+     * @return boolean: every team had a chance to play in the current round
+     */
+    public boolean everyTeamPlayedInThisRound() {
+        if (this.current_round_num % this.num_of_teams == 0)
+            return true;
+        return false;
+    }
+
     public Team getWinnerTeam(){
         int max = all_teams.get(0).getTotalPoints();
         int maxId = all_teams.get(0).getId();
@@ -152,6 +151,22 @@ public class Game {
             }
         }
         return this.all_teams.get(maxId);
+    }
+
+    public void sortTeamsByPoints(){
+
+        for(int i = 0; i < this.num_of_teams - 1; i++){
+
+            for (int j = 0; j < this.num_of_teams - i - 1; j++){
+
+                if(this.all_teams.get(j).getTotalPoints() < this.all_teams.get(j+1).getTotalPoints()){
+                    Team temp = this.all_teams.get(j);
+                    this.all_teams.set(j, this.all_teams.get(j+1));
+                    this.all_teams.set(j+1, temp);
+                }
+            }
+
+        }
     }
 
 

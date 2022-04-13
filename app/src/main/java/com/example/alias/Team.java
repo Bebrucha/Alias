@@ -59,15 +59,4 @@ public class Team {
 
     public void newRoundIsStarted() { mPointsReceivedInThisRound = 0; }
 
-//    public static ArrayList<Team> createTeamList(int numTeams){
-//        ArrayList<Team> teams = new ArrayList<Team>();
-//        int lastTeamId=0;
-//        for(int i=0; i<=numTeams;i++)
-//        {
-//            ++lastTeamId;
-//            teams.add(new Team(lastTeamId));
-//        }
-//
-//            return teams;
-//    }
 }

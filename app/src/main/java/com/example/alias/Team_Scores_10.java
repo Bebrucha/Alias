@@ -39,13 +39,9 @@ public class Team_Scores_10 extends AppCompatActivity {
                 }
 
                 Intent intent;
-                if(Main.game.oneTeamWon()){
+                if(Main.game.oneTeamWon() && Main.game.everyTeamPlayedInThisRound()){
                     // go to 11th
                     intent = new Intent(getApplicationContext(), Team_Scores_11.class);
-
-                    // !!!!!! cia reikia eiti i 11-a fragmenta, bet man kazkodel uzlusta vis!!!!!!!!!!!!!!!!!
-                    //Man atrodo cia jau viskas gerai, bet palikau komentara nes ne as rasiau :)
-                    //Jei trinsit ana istrinkit ir situos
                 }
                 else
                 {

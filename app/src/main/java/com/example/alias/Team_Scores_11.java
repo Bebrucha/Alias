@@ -27,7 +27,7 @@ public class Team_Scores_11 extends AppCompatActivity {
 
         Button main_menu = findViewById(R.id.button_play_again);
 
-
+        Main.game.sortTeamsByPoints();
         //recyclerview of teams
         RecyclerView rvTeams = (RecyclerView) findViewById(R.id.rv_teams2);
         Team_Adapter adapter = new Team_Adapter(Main.game.getAll_teams(), false);
