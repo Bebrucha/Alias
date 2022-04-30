@@ -4,21 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/alias__5_"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="false"
     tools:context=".Main">
 
     <Button
         android:id="@+id/button_start"
-        android:layout_width="153dp"
-        android:layout_height="52dp"
+        android:layout_width="89dp"
+        android:layout_height="43dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="casual"
         android:text="@string/Start_game"
         android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721" />
+        app:layout_constraintVertical_bias="0.875" />
 
     <Button
         android:id="@+id/button_lang"
@@ -39,88 +44,95 @@
         android:id="@+id/button_howtoplay"
         android:layout_width="153dp"
         android:layout_height="52dp"
+        android:layout_marginBottom="180dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="casual"
         android:text="@string/how_to_play"
         android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_start"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
         android:id="@+id/Music_switch"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="320dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/Music_textview"
-        android:layout_width="48dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/music"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/Music_switch"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/sound_effect_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toEndOf="@+id/Music_textview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Switch
         android:id="@+id/sound_effect_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="320dp"
         android:minWidth="48dp"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="50dp"
         android:layout_height="22dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="24dp"
         android:text="@string/sounds"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/sound_effect_switch"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sound_effect_switch"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
 
     <TextView
         android:id="@+id/music_off_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="335dp"
+        android:layout_marginEnd="244dp"
         android:text="@string/off"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Music_switch" />
+        app:layout_constraintBottom_toTopOf="@+id/sounds_off_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Music_switch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526" />
 
     <TextView
         android:id="@+id/sounds_off_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="335dp"
+        android:layout_marginEnd="228dp"
         android:text="@string/off_ti"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sound_effect_switch" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="172dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_start"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/sound_effect_switch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <TextView
+        android:id="@+id/Music_textview"
+        android:layout_width="48dp"
+        android:layout_height="21dp"
+        android:text="@string/music"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/textView22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintVertical_bias="0.545" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

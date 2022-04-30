@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Team_Scores_10">
 
     <Button
         android:id="@+id/button_next_10"
-        android:layout_width="118dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/next"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="36dp"
+        android:background="#00FFFFFF"
+        android:foreground="@drawable/next_green"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView

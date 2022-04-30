@@ -5,6 +5,7 @@
     android:id="@+id/number_of_teams"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Team_Count_3">
 
     <TextView
@@ -56,13 +57,15 @@
 
     <Button
         android:id="@+id/button_next_num_of_teams"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/next"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="40dp"
+        android:background="#00FFFFFF"
+        android:foreground="@drawable/next_green"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
