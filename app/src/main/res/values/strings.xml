@@ -58,4 +58,5 @@
     <string name="off_ti">OFF</string>
     <string name="which_team_guessed">Which team guessed the word?</string>
     <string name="save">Save</string>
+    <string name="SETTINGS">SETTINGS</string>
 </resources>

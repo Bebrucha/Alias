@@ -7,7 +7,19 @@
     android:background="#FFFFFF"
     tools:context=".Settings_4">
 
-
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="@string/SETTINGS"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     //difficulty selection
 
     <TextView
@@ -22,7 +34,9 @@
         app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider8"
-        app:layout_constraintVertical_bias="0.785" />
+        app:layout_constraintVertical_bias="0.785"
+        android:fontFamily="casual"
+        android:textStyle="bold"/>
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -43,7 +57,9 @@
             android:checked="true"
             android:text="@string/junior"
             android:textAlignment="center"
-            android:textColor="#00796B" />
+            android:textColor="#00796B"
+            android:fontFamily="casual"
+            android:textStyle="bold"/>
 
         <RadioButton
             android:id="@+id/Medium"
@@ -51,14 +67,18 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:text="@string/medium"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"/>
 
         <RadioButton
             android:id="@+id/Senior"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:text="@string/senior"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"/>
 
     </RadioGroup>
 
@@ -260,18 +280,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.130" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SETTINGS"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/divider8"
+        android:id="@+id/textView18"
+        android:layout_width="411dp"
+        android:layout_height="88dp"
+        android:background="@drawable/header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     //difficulty selection
 </androidx.constraintlayout.widget.ConstraintLayout>
