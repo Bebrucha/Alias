@@ -24,7 +24,7 @@ public class Main extends AppCompatActivity {
     // --------main game variable ----- public, thus we can use it everywhere----
     public static Game game = new Game();
     //--------------------------------------------------------------------------
-
+    Button button_lang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,14 @@ public class Main extends AppCompatActivity {
        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
         MediaPlayer music_effect=MediaPlayer.create(this,R.raw.music_effect);
 
-        Button button_lang = findViewById(R.id.button_lang);
+       button_lang = findViewById(R.id.button_lang);
+
+        if (button_lang.getText().equals("LT")){
+            button_lang.setBackground(this.getResources().getDrawable(R.drawable.lt_flag));
+        }
+        else {
+            button_lang.setBackground(this.getResources().getDrawable(R.drawable.uk_flag));
+        }
 
         // START button ----------------------------------------------------------------------------
         Button Start = findViewById(R.id.button_start);
@@ -145,21 +152,26 @@ public class Main extends AppCompatActivity {
 
             setLocale("lt");
             game.setLanguage(false);
+            button.setBackground(this.getResources().getDrawable(R.drawable.lt_flag));
             recreate();
         }
         else {
             setLocale("en");
             game.setLanguage(true);
+            button.setBackground(this.getResources().getDrawable(R.drawable.uk_flag));
             recreate();
         }
     }
 
     private void setLocale(String lang) {
         String country;
-        if (lang.equals("lt"))
+        if (lang.equals("lt")) {
             country = "LT";
-        else country = "US";
-
+        }
+        else
+        {
+            country = "US";
+        }
         Locale locale = new Locale(lang, country);
         Locale.setDefault(locale);
         Configuration config = new Configuration();
