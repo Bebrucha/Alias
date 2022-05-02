@@ -59,6 +59,9 @@ public class Settings_4 extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 Main.game.setTimeOfOneRound(Integer.parseInt((String) seekBarL.getText()));
+                if(Main.game.getIsSound()){
+                    sound_effect.start();
+                }
             }
         });
 
@@ -81,6 +84,9 @@ public class Settings_4 extends AppCompatActivity {
             }
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+                if(Main.game.getIsSound()){
+                    sound_effect.start();
+                }
                 Main.game.setMaxPointsToWinGame(Integer.parseInt((String) seekBarP.getText()));
             }
         });
@@ -127,6 +133,9 @@ public class Settings_4 extends AppCompatActivity {
             public void onClick(View view)
             {
                 Main.game.setDifficulty(1);
+                if(Main.game.getIsSound()){
+                    sound_effect.start();
+                }
             }
         });
         RadioButton medium =findViewById(R.id.Medium);
@@ -136,6 +145,9 @@ public class Settings_4 extends AppCompatActivity {
             public void onClick(View view)
             {
                 Main.game.setDifficulty(2);
+                if(Main.game.getIsSound()){
+                    sound_effect.start();
+                }
             }
         });
         RadioButton senior =findViewById(R.id.Senior);
@@ -145,6 +157,9 @@ public class Settings_4 extends AppCompatActivity {
             public void onClick(View view)
             {
                 Main.game.setDifficulty(3);
+                if(Main.game.getIsSound()){
+                    sound_effect.start();
+                }
             }
         });
 

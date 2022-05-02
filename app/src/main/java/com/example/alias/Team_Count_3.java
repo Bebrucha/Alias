@@ -33,7 +33,8 @@ public class Team_Count_3 extends AppCompatActivity {
 //                    sound_effect.start();
 //                Intent intent = new Intent(getApplicationContext(), Main.class);
 //                startActivity(intent);
-//                finish();
+//
+
 //            }
 //        });
 
@@ -61,7 +62,6 @@ public class Team_Count_3 extends AppCompatActivity {
                     extra.putBoolean("sound", Main.game.getIsSound());
                     intent.putExtra("extra", extra);
                     startActivity(intent);
-                    finish();
 
                 } else
                 {

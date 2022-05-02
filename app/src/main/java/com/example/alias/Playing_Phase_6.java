@@ -41,6 +41,7 @@ public class Playing_Phase_6 extends AppCompatActivity {
     ArrayList<String> game_word_list=new ArrayList<String>();
     TextView Time_Label ;
     TextView Last_word_textview;
+    MediaPlayer sound_effect;
 
     // -----------Alert Dialogue -- 9 fragment
     private AlertDialog.Builder dialogueBuilder;
@@ -54,7 +55,7 @@ public class Playing_Phase_6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing_phase_6);
 
-        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
+        sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
         Last_word_textview=findViewById((R.id.Last_word_textview));
         Last_word_textview.setVisibility(View.INVISIBLE);
         Time_Label = findViewById(R.id.Time_Label);
@@ -173,7 +174,6 @@ public class Playing_Phase_6 extends AppCompatActivity {
                 {
                     Intent intent = new Intent(getApplicationContext(), Team_Scores_10.class);
                     startActivity(intent);
-                    finish();
                 }
 
             }
@@ -312,6 +312,9 @@ public class Playing_Phase_6 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Find the team by its' name and add give a point
+                if(Main.game.getIsSound()){
+                    sound_effect.start();
+                }
                 String team_guessed_word = spinner_teamNames.getSelectedItem().toString();
                 for (int i = 0; i < Main.game.getNumOfTeams(); i++)
                     if(team_guessed_word.equals(Main.game.getTeam(i).getName()))
@@ -319,7 +322,6 @@ public class Playing_Phase_6 extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), Team_Scores_10.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

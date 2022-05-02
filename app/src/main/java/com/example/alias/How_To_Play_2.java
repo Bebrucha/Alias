@@ -30,7 +30,6 @@ public class How_To_Play_2 extends AppCompatActivity {
 //
 //                if(Main.game.getIsSound())
 //                    sound_effect.start();
-//                finish();
 //            }
 //        });
 

@@ -48,7 +48,6 @@ public class Main extends AppCompatActivity {
                 extra.putBoolean("sound", game.getIsSound());
                 intent.putExtra("extra", extra);
                 startActivity(intent);
-                finish();
             }
         });
 

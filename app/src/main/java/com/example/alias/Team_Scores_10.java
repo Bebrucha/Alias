@@ -54,7 +54,6 @@ public class Team_Scores_10 extends AppCompatActivity {
                 extra.putBoolean("sound", Main.game.getIsSound());
                 intent.putExtra("extra", extra);
                 startActivity(intent);
-                finish();
 
             }
         });
