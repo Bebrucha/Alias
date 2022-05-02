@@ -5,7 +5,7 @@
     android:id="@+id/number_of_teams"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/alias_chooseteams"
     tools:context=".Team_Count_3">
 
     <TextView
@@ -15,14 +15,15 @@
         android:text="@string/number_of_teams_label"
         android:textAlignment="center"
         android:textAllCaps="false"
+        android:textColor="#3F51B5"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.114" />
 
     <EditText
         android:id="@+id/num_of_teams"
@@ -32,14 +33,14 @@
         android:inputType="number"
         android:text="3"
         android:textAlignment="center"
-        android:textColor="#050505"
+        android:textColor="#3F51B5"
         android:textSize="34sp"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num_of_teams_label"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintVertical_bias="0.071" />
 
     <TextView
         android:id="@+id/num_of_teams_validation_label"
