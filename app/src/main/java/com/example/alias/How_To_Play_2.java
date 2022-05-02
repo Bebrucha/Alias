@@ -9,10 +9,13 @@ import android.view.View;
 import android.widget.Button;
 
 public class How_To_Play_2 extends AppCompatActivity {
-
-    @Override
     public void onBackPressed() {
 
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
+            getSupportFragmentManager().popBackStack();
+        } else {
+            finish();
+        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

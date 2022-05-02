@@ -13,9 +13,13 @@ import android.widget.TextView;
 
 public class Team_Scores_5 extends AppCompatActivity{
 
-    @Override
     public void onBackPressed() {
 
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
+            getSupportFragmentManager().popBackStack();
+        } else {
+            finish();
+        }
     }
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

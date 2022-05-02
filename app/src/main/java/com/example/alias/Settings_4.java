@@ -15,9 +15,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Settings_4 extends AppCompatActivity {
-    @Override
     public void onBackPressed() {
 
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
+            getSupportFragmentManager().popBackStack();
+        } else {
+            finish();
+        }
     }
 
     @Override

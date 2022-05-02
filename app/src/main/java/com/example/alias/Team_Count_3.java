@@ -12,9 +12,13 @@ import android.widget.TextView;
 
 public class Team_Count_3 extends AppCompatActivity {
 
-    @Override
     public void onBackPressed() {
 
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
+            getSupportFragmentManager().popBackStack();
+        } else {
+            finish();
+        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

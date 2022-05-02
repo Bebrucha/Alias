@@ -17,9 +17,13 @@ import java.util.Locale;
 
 public class Main extends AppCompatActivity {
 
-    @Override
     public void onBackPressed() {
 
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
+            getSupportFragmentManager().popBackStack();
+        } else {
+            finish();
+        }
     }
     // --------main game variable ----- public, thus we can use it everywhere----
     public static Game game = new Game();
