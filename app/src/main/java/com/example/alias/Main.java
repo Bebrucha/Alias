@@ -3,6 +3,9 @@ package com.example.alias;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -12,7 +15,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.List;
 import java.util.Locale;
 
 public class Main extends AppCompatActivity {
@@ -25,18 +30,50 @@ public class Main extends AppCompatActivity {
             finish();
         }
     }
+
     // --------main game variable ----- public, thus we can use it everywhere----
     public static Game game = new Game();
     //--------------------------------------------------------------------------
     Button button_lang;
+    MediaPlayer music_effect;
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (music_effect != null){
+            music_effect.pause();
+            if (isFinishing()){
+                music_effect.pause();
+            }
+        }
+        Context context = getApplicationContext();
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
+        if (!taskInfo.isEmpty()) {
+            ComponentName topActivity = taskInfo.get(0).topActivity;
+            if (!topActivity.getPackageName().equals(context.getPackageName())) {
+                music_effect.pause();
+            }
+        }
+        super.onPause();
+    }
+    @Override
+    protected void onResume() {
+        if(music_effect != null && !music_effect.isPlaying() && game.getIsMusic())
+            music_effect.start();
+        super.onResume();
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu_1);
         loadLocale();
 
+
        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
-        MediaPlayer music_effect=MediaPlayer.create(this,R.raw.music_effect);
+         music_effect=MediaPlayer.create(this,R.raw.music_effect);
+        game.setMusic(music_effect);
 
        button_lang = findViewById(R.id.button_lang);
 
@@ -86,7 +123,7 @@ public class Main extends AppCompatActivity {
                 if(game.getIsSound())
                     sound_effect.start();
                 Bundle extra = new Bundle();
-                extra.putBoolean("sound", game.getIsSound());
+                extra.putBoolean("music", game.getIsSound());
                 intent.putExtra("extra", extra);
                 startActivity(intent);
             }
@@ -132,9 +169,10 @@ public class Main extends AppCompatActivity {
                         music_off.setText("Įjungta");
                     else
                         music_off.setText("ON");
-
+                    recreate();
                     music_effect.start();
                     music_effect.setLooping(true);
+
                 }
                 else {
                     if(language.equals("lt_LT"))
@@ -143,10 +181,14 @@ public class Main extends AppCompatActivity {
                     music_off.setText("OFF");
 
                     music_effect.pause();
+                    recreate();
                 }
             }
         });
         if(music_effect.isPlaying()){
+            music.setChecked(true);
+        }
+        if(game.getIsMusic()){
             music.setChecked(true);
         }
     }

@@ -1,5 +1,7 @@
 package com.example.alias;
 
+import android.media.MediaPlayer;
+
 import java.util.ArrayList;
 
 public class Game {
@@ -16,6 +18,7 @@ public class Game {
     private int id_currently_playing_team;
     private ArrayList<Team> all_teams;
     private ArrayList<Team> all_teams_current_round;
+    private MediaPlayer music_effect;
 
     /// CONSTRUCTORS -------------------------------------------------------------------------------
     Game() {
@@ -63,6 +66,7 @@ public class Game {
         }
     }
 
+    public void setMusic(MediaPlayer music_effect) { this.music_effect = music_effect; }
     public void setNumOfTeams(int num) { this.num_of_teams = num ;}
     public void setDifficulty(int level) { this.difficulty = level; }
     public void setLanguage(boolean isEnglish) { this.is_english = isEnglish; }
@@ -88,6 +92,7 @@ public class Game {
     public Team getCurrentlyPlayingTeam() { return this.all_teams.get(this.id_currently_playing_team); }
     public boolean getIsSound() { return this.is_sound; }
     public boolean getIsMusic() { return this.is_music; }
+    public MediaPlayer getMusic() { return this.music_effect; }
     /**
      * Difficulty is described accordingly: 1-junior; 2-middle; 3-senior
      * @return int: level of difficulty (1,2 or 3)

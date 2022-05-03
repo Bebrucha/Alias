@@ -11,29 +11,37 @@
         android:theme="@style/Theme.Alias">
         <activity
             android:name=".Team_Scores_11"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Team_Scores_10"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Playing_Phase_6"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Team_Scores_5"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Settings_4"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Team_Count_3"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".How_To_Play_2"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Main"
             android:exported="true"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Alias.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,5 +50,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
 
 </manifest>
