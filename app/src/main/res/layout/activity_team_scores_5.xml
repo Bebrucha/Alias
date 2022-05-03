@@ -11,13 +11,14 @@
         android:id="@+id/button_start_game_5"
         android:layout_width="220dp"
         android:layout_height="104dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/lets_go"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:background="@drawable/playing_phase_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintHorizontal_bias="0.591"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

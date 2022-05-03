@@ -33,11 +33,11 @@
 
     <Button
         android:id="@+id/button_save_9"
-        android:layout_width="111dp"
-        android:layout_height="37dp"
+        android:layout_width="135dp"
+        android:layout_height="53dp"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="25dp"
-        android:background="#8BC34A"
+        android:background="@drawable/playing_phase_button"
         android:text="@string/save"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"

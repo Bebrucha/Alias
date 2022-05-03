@@ -11,19 +11,19 @@
 
     <Button
         android:id="@+id/button_start"
-        android:layout_width="89dp"
-        android:layout_height="43dp"
-        android:background="#00FFFFFF"
+        android:layout_width="236dp"
+        android:layout_height="123dp"
+        android:background="@drawable/debeselis"
         android:fontFamily="casual"
         android:text="@string/Start_game"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintHorizontal_bias="0.814"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <Button
         android:id="@+id/button_lang"
@@ -44,17 +44,17 @@
 
     <Button
         android:id="@+id/button_howtoplay"
-        android:layout_width="153dp"
-        android:layout_height="52dp"
+        android:layout_width="263dp"
+        android:layout_height="118dp"
         android:layout_marginBottom="160dp"
-        android:background="#00FFFFFF"
+        android:background="@drawable/debeselis"
         android:fontFamily="casual"
         android:text="@string/how_to_play"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Switch

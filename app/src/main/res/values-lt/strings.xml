@@ -33,7 +33,7 @@
     <string name="sounds">Garsai</string>
     <string name="music">Muzika</string>
     <string name="turn_on_sound">įjungti garso efektus</string>
-    <string name="how_to_play">Žaidimo instrukcija</string>
+    <string name="how_to_play">Instrukcija</string>
     <string name="htp_header">Įtraukiantis komandinis žaidimas!</string>
     <string name="htp_goal">Žaidimo tikslas yra paaiškinti kuo daugiau žodžių savo komandai per ribotą laiką.</string>
     <string name="htp_rule1">Žaidėjai negali naudoti daiktų, kurie apibūdintų gautojo žodžio formą, dalis.</string>
