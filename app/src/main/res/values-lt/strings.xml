@@ -13,7 +13,7 @@
     <string name="change_language">EN</string>
     <string name="main_menu">Pagrindinis puslapis</string>
     <string name="number_of_teams_label">Koks komandų skaičius?</string>
-    <string name="number_of_teams_input_validation_explain">*Skaičius nėra tarp 1 ir 10</string>
+    <string name="number_of_teams_input_validation_explain">*Skaičius nėra tarp 2 ir 10</string>
     <string name="difficulty">Sudėtingumas</string>
     <string name="medium">Patyręs</string>
     <string name="senior">Ekspertas</string>

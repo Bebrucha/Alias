@@ -93,7 +93,7 @@ public class Team_Count_3 extends AppCompatActivity {
 
                 TextView validation = findViewById(R.id.num_of_teams_validation_label);
 
-                if(Main.game.getNumOfTeams() >= 1 && Main.game.getNumOfTeams() <= 10){
+                if(Main.game.getNumOfTeams() >= 2 && Main.game.getNumOfTeams() <= 10){
                     validation.setVisibility(View.INVISIBLE);
 
                     Intent intent = new Intent(getApplicationContext(), Settings_4.class);

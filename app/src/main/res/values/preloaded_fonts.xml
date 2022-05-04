@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/just_another_hand</item>
+        <item>@font/zcool_kuaile</item>
+    </array>
+</resources>
