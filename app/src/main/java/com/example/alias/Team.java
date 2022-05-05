@@ -1,5 +1,5 @@
 package com.example.alias;
-
+import java.util.Random;
 import java.util.ArrayList;
 
 public class Team {
@@ -9,9 +9,20 @@ public class Team {
     private int mPointsReceivedInThisRound;
     private int mId;
 
+    /// TEAM NAME ARRAYS ---------------------------------------------------------------------------
+
+    String[] adj_en=Main.game.getAdjectives_en();
+    String[] nou_en=Main.game.getNouns_en();
+
+    String[] adj_lt=Main.game.getAdjectives_lt();
+    String[] nou_lt=Main.game.getNouns_lt();
+
+
+
     /// CONSTRUCTORS -------------------------------------------------------------------------------
     public Team(int id){
-        this.mName = "Team " + id;
+        //this.mName = "Team " + id;
+        this.mName=generateTeamName();
         this.mPoints = 0;
         this.mPointsReceivedInThisRound = 0;
         this.mId = id;
@@ -58,5 +69,55 @@ public class Team {
     }
 
     public void newRoundIsStarted() { mPointsReceivedInThisRound = 0; }
+
+
+    public String generateTeamName()
+    {
+        String fullName="a";
+
+            if(Main.game.getIsEnglish())
+            {
+                if(Main.game.adjectives_enn.isEmpty()) {
+                    addWordsToArrayList(adj_en, Main.game.adjectives_enn);
+                    addWordsToArrayList(nou_en, Main.game.nouns_enn);
+
+                }
+
+                Random random = new Random();
+                int randomA = random.nextInt(Main.game.adjectives_enn.size());
+                int randomN = random.nextInt(Main.game.nouns_enn.size());
+
+                fullName = Main.game.adjectives_enn.get(randomA)+" "+Main.game.nouns_enn.get(randomN);
+                Main.game.adjectives_enn.remove(randomA);
+                Main.game.nouns_enn.remove(randomN);
+
+            }
+            else
+            {
+                if(Main.game.adjectives_ltt.isEmpty()) {
+                    addWordsToArrayList(adj_lt, Main.game.adjectives_ltt);
+                    addWordsToArrayList(nou_lt, Main.game.nouns_ltt);
+                }
+
+                Random random = new Random();
+                int randomA = random.nextInt(Main.game.adjectives_ltt.size());
+                int randomN = random.nextInt(Main.game.nouns_ltt.size());
+
+                fullName = Main.game.adjectives_ltt.get(randomA)+" "+Main.game.nouns_ltt.get(randomN);
+                Main.game.adjectives_ltt.remove(randomA);
+                Main.game.nouns_ltt.remove(randomN);
+
+            }
+
+        return fullName;
+    }
+
+    static void addWordsToArrayList(String[]words,ArrayList<String>nameWords)
+    {
+        for(int i = 0; i < words.length; i++)
+        {
+            nameWords.add(words[i]);
+        }
+    }
 
 }

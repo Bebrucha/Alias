@@ -279,4 +279,57 @@ public class Game {
                                             "Caretaker",        "Tailcoat",         "Excellency"};
 
 
+    //---------------Team Names---------------------
+
+    public String[] getAdjectives_en()  { return this.adjectives_en; }
+    public String[] getNouns_en()       { return this.nouns_en; }
+    public String[] getAdjectives_lt()  { return this.adjectives_lt; }
+    public String[] getNouns_lt()       { return this.nouns_lt; }
+    private String[] adjectives_en ={"Mad",      "Beautiful",     "Crazy",       "Lazy",       "Reckless",
+                                     "Fast",     "Dead",          "Happy",       "Slow",       "Big",
+                                     "Small",    "Dumb",          "Smelly",      "Lithuanian", "Scary",
+                                     "Boring",   "Smart",         "Heavy",       "Chubby",     "Skinny",
+                                     "Lame",     "Upset",         "Green",       "Bored",      "Red",
+                                     "Yellow",   "Blue",          "Drunk",       "Pink",       "Tall",
+                                     "Short",    "Imaginary",     "Real",        "Fluffy",     "Wicked",
+                                     "Dirty",    "Clean",         "Edgy",        "Teenage",    "Bad",
+                                     "Lonely"};
+
+    private String[] nouns_en =     {"Dogs",         "Cats",      "Horses",      "Cows",       "Mice",
+                                     "Pigs",         "Fishes",    "Bears",       "Pitbulls",   "Labradors",
+                                     "Chickens",      "Trees",     "Goats",       "Cars",       "Flowers",
+                                     "Trains",       "Planes",    "Candies",     "Boxes",      "Spoons",
+                                     "Bananas",      "Tomatoes",  "Oranges",     "Shoes",      "Forks",
+                                     "Hairs",        "Houses",    "Pebbles",     "Terriers",   "Pizzas",
+                                     "Salmons",      "Eggs",      "Bushes",      "Guns",       "Skunks",
+                                     "Toes",         "Fingers",   "Noses",       "Friends",    "Enemies",
+                                     "Students"};
+
+    private String[] adjectives_lt= {"Pikti",       "Gražūs",     "Pamišę",       "Tingūs",    "Greiti",
+                                     "Mirę",        "Laimingi",   "Lėti",         "Dideli",    "Maži",
+                                     "Kvaili",      "Dvokūs",     "Lietuviški",   "Baisūs",    "Nuobodūs",
+                                     "Nusiminę",    "Protingi",   "Sunkūs",       "Žali",      "Raudoni",
+                                     "Geltoni",     "Mėlyni",     "Girti",        "Rožiniai",  "Aukšti",
+                                     "Žemi",        "Tikri",      "Putlūs",       "Nesveiki",  "Purvini",
+                                     "Švarūs",      "Mandrūs",    "Jauni",        "Blogi",     "Du",
+                                     "Vieniši"};
+
+    private String[] nouns_lt=      {"Šunys",       "Katinai",    "Arkliai",      "Jaučiai",   "Šeškai",
+                                     "Žiurkėnai",   "Šernai",     "Ešeriai",      "Medžiai",   "Grizliai",
+                                     "Labradorai",  "Gaidžiai",   "Viščiukai",    "Ožiai",     "Šaukštai",
+                                     "Bananai",     "Pomidorai",  "Motociklai",   "Apelsinai", "Batai",
+                                     "Cepelinai",   "Kugeliai",   "Plaukai",      "Namai",     "Akmenys",
+                                     "Kiaušiai",    "Krūmai",     "Šautuvai",     "Pirštai",   "Draugai",
+                                     "Priešai",     "Studentai"};
+
+
+    /// TEAM NAME ARRAYLISTS -----------------------------------------------------------------------
+
+    ArrayList<String> adjectives_enn = new ArrayList<String>();
+    ArrayList<String> adjectives_ltt = new ArrayList<String>();
+
+    ArrayList<String> nouns_enn = new ArrayList<String>();
+    ArrayList<String> nouns_ltt = new ArrayList<String>();
+
+
 }
