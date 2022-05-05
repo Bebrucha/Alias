@@ -156,6 +156,20 @@ public class Main extends AppCompatActivity {
                 }
             }
         });
+        // MORE button ----------------------------------------------------------------------
+        Button More =findViewById(R.id.button_More);
+
+        More.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), More.class);
+                if(game.getIsSound())
+                    sound_effect.start();
+                startActivity(intent);
+            }
+        });
+
 
         // MUSIC switch ----------------------------------------------------------------------------
         TextView music_off = findViewById(R.id.music_off_textview);
@@ -191,6 +205,36 @@ public class Main extends AppCompatActivity {
         if(game.getIsMusic()){
             music.setChecked(true);
         }
+
+
+        if(game.getIsMusic()) {
+            if(language.equals("lt_LT"))
+                music_off.setText("Įjungta");
+            else
+                music_off.setText("ON");
+
+        }
+        else {
+            if(language.equals("lt_LT"))
+                music_off.setText("Išjungta");
+            else
+                music_off.setText("OFF");
+        }
+
+        if(game.getIsSound()) {
+            if(language.equals("lt_LT"))
+                sound_off.setText("Įjungti");
+            else
+                sound_off.setText("ON");
+
+        }
+        else {
+            if(language.equals("lt_LT"))
+                sound_off.setText("Išjungti");
+            else
+                sound_off.setText("OFF");
+        }
+
     }
 
     private void changeLanguage(Button button) {

@@ -59,4 +59,7 @@
     <string name="which_team_guessed">Which team guessed the word?</string>
     <string name="save">Save</string>
     <string name="SETTINGS">SETTINGS</string>
+    <string name="More">More</string>
+    <string name="more_header">Creators</string>
+    <string name="more_team">© Team: JATI</string>
 </resources>

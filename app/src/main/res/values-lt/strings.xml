@@ -59,4 +59,7 @@
     <string name="which_team_guessed">Kuri komanda atspėjo žodį?</string>
     <string name="save">Saugoti</string>
     <string name="SETTINGS">NUSTATYMAI</string>
+    <string name="More">Daugiau</string>
+    <string name="more_header">Kūrėjai</string>
+    <string name="more_team">© Komanda: JATI</string>
 </resources>

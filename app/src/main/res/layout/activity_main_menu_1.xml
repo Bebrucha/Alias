@@ -10,6 +10,22 @@
     tools:context=".Main">
 
     <Button
+        android:id="@+id/button_More"
+        android:layout_width="164dp"
+        android:layout_height="83dp"
+        android:background="@drawable/debeselis"
+        android:fontFamily="@font/just_another_hand"
+        android:text="@string/More"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674" />
+
+    <Button
         android:id="@+id/button_start"
         android:layout_width="236dp"
         android:layout_height="123dp"
@@ -20,10 +36,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintHorizontal_bias="0.811"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.957" />
 
     <Button
         android:id="@+id/button_lang"
@@ -48,7 +64,7 @@
         android:id="@+id/button_howtoplay"
         android:layout_width="263dp"
         android:layout_height="118dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="140dp"
         android:background="@drawable/debeselis"
         android:fontFamily="@font/just_another_hand"
         android:text="@string/how_to_play"
