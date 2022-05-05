@@ -94,7 +94,13 @@ public class Team_Scores_5 extends AppCompatActivity{
         label_next_team.setText(Main.game.getCurrentlyPlayingTeam().getName());
 
         TextView label_round = findViewById(R.id.textView_round);
-        label_round.setText("ROUNDAS " + Integer.toString(Main.game.getCurrentRoundNum()));
+        String round_name;
+        if(Main.game.getIsEnglish()){
+            round_name = "ROUND ";
+        } else{
+            round_name = "RAUNDAS ";
+        }
+        label_round.setText(round_name + Integer.toString(Main.game.getCurrentRoundNum()));
 
 
         // START button ----------------------------------------------------------------------------

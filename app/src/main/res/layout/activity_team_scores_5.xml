@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:fontFamily="@font/just_another_hand"
-        android:text="@string/round_name"
+        android:text="@string/round"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="30sp"
