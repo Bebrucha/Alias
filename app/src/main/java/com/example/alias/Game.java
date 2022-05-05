@@ -15,6 +15,7 @@ public class Game {
     private boolean is_skip_penalty;
     private boolean is_sound;
     private boolean is_music;
+    private boolean game_created_for_the_first_time;
     private int id_currently_playing_team;
     private ArrayList<Team> all_teams;
     private ArrayList<Team> all_teams_current_round;
@@ -37,6 +38,7 @@ public class Game {
         this.id_currently_playing_team = 0;
         this.is_sound = false;
         this.is_music = false;
+        this.game_created_for_the_first_time = true;
     }
 
     Game(int numTeams, boolean isEnglish, int level, int timeOfOneRound,
@@ -76,6 +78,9 @@ public class Game {
     public void setMaxPointsToWinGame(int maxPointsToWinGame) { this.max_points_to_win_game =
             maxPointsToWinGame; }
     public void setIsSkipPenalty(boolean isSkipPenalty) { this.is_skip_penalty = isSkipPenalty; }
+    public void setGameCreatedForTheFirstTime(boolean gameCreatedForTheFirstTime) {
+        this.game_created_for_the_first_time = gameCreatedForTheFirstTime;
+    }
 
     /// GET methods --------------------------------------------------------------------------------
     public Team getTeam(int id) { return this.all_teams.get(id); }
@@ -101,6 +106,7 @@ public class Game {
     public int getTimeOfOneRound() { return this.time_of_one_round; }
     public int getMaxPointsToWinGame() { return this.max_points_to_win_game; }
     public boolean getIsSkipPenalty() { return this.is_skip_penalty; }
+    public boolean getGameCreatedForTheFirstTime() { return this.game_created_for_the_first_time; }
 
     /// ADDITIONAL methods -------------------------------------------------------------------------
     public void updateCurrentRoundNum()

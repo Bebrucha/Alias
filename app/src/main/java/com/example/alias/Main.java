@@ -35,6 +35,7 @@ public class Main extends AppCompatActivity {
     public static Game game = new Game();
     //--------------------------------------------------------------------------
     MediaPlayer music_effect;
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -68,6 +69,11 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu_1);
         loadLocale();
+
+        if(game.getGameCreatedForTheFirstTime()){
+            setLocale("lt");
+            game.setGameCreatedForTheFirstTime(false);
+        }
 
 
        MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);

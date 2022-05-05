@@ -62,4 +62,7 @@
     <string name="More">More</string>
     <string name="more_header">Creators</string>
     <string name="more_team">© Team: JATI</string>
+    <string name="round_points">Round points</string>
+    <string name="total_points">Total points</string>
+    <string name="round_name">Round</string>
 </resources>
