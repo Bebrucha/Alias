@@ -29,7 +29,7 @@ public class Game {
         this.setTeams(numTeams);
         this.num_of_teams = numTeams;
         this.difficulty = 1;
-        this.is_english = true;
+        this.is_english = false;
         this.current_round_num = 0;
         this.time_of_one_round = 10;
         this.max_points_to_win_game = 10;

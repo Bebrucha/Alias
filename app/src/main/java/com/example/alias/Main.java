@@ -34,7 +34,6 @@ public class Main extends AppCompatActivity {
     // --------main game variable ----- public, thus we can use it everywhere----
     public static Game game = new Game();
     //--------------------------------------------------------------------------
-    Button button_lang;
     MediaPlayer music_effect;
     @Override
     protected void onPause() {
@@ -75,15 +74,6 @@ public class Main extends AppCompatActivity {
          music_effect=MediaPlayer.create(this,R.raw.music_effect);
         game.setMusic(music_effect);
 
-       button_lang = findViewById(R.id.button_lang);
-
-        if (button_lang.getText().equals("LT")){
-            button_lang.setBackground(this.getResources().getDrawable(R.drawable.lt_flag));
-        }
-        else {
-            button_lang.setBackground(this.getResources().getDrawable(R.drawable.uk_flag));
-        }
-
         // START button ----------------------------------------------------------------------------
         Button Start = findViewById(R.id.button_start);
         Start.setOnClickListener(new View.OnClickListener() {
@@ -101,13 +91,25 @@ public class Main extends AppCompatActivity {
 
 
         // LANGUAGE button -------------------------------------------------------------------------
+        Button button_lang = findViewById(R.id.button_lang);
+        if (button_lang.getText().equals("LT")){
+            button_lang.setBackground(this.getResources().getDrawable(R.drawable.lt_flag));
+        }
+        else {
+            button_lang.setBackground(this.getResources().getDrawable(R.drawable.uk_flag));
+        }
+
+        // Patikrina dabartine kalba pagal nustatyta Locale
+        String currentLanguage = Locale.getDefault().getDisplayLanguage();
+        game.setLanguage(currentLanguage.toLowerCase().contains("en"));
+
         button_lang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                changeLanguage(button_lang);
                 if(game.getIsSound())
                     sound_effect.start();
+                changeLanguage(button_lang);
             }
         });
 
@@ -137,7 +139,6 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 game.setIsSound(sound.isChecked());
-             //   sound_state=sound.isChecked();
                 if(game.getIsSound()) {
                     if(language.equals("lt_LT")){
                         sound_effect.start();
@@ -163,7 +164,6 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 game.setIsMusic(music.isChecked());
-               // sound_state=music.isChecked();
                 if(game.getIsMusic()) {
                     if(language.equals("lt_LT"))
                         music_off.setText("Įjungta");
@@ -194,17 +194,17 @@ public class Main extends AppCompatActivity {
     }
 
     private void changeLanguage(Button button) {
-        if (button.getText().equals("LT")){
+        if (button.getText().equals("EN")){
 
             setLocale("lt");
             game.setLanguage(false);
-            button.setBackground(this.getResources().getDrawable(R.drawable.lt_flag));
+            button.setBackground(this.getResources().getDrawable(R.drawable.uk_flag));
             recreate();
         }
         else {
             setLocale("en");
             game.setLanguage(true);
-            button.setBackground(this.getResources().getDrawable(R.drawable.uk_flag));
+            button.setBackground(this.getResources().getDrawable(R.drawable.lt_flag));
             recreate();
         }
     }

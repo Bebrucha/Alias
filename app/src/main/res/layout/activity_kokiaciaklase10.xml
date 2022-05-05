@@ -13,7 +13,7 @@
         android:layout_height="55dp"
         android:layout_marginBottom="36dp"
         android:background="#00FFFFFF"
-        android:foreground="@drawable/next_green"
+        android:foreground="@drawable/next_blu"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

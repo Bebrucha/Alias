@@ -64,7 +64,7 @@
         android:layout_height="55dp"
         android:layout_marginBottom="40dp"
         android:background="#00FFFFFF"
-        android:foreground="@drawable/next_green_line"
+        android:foreground="@drawable/next_blu"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
