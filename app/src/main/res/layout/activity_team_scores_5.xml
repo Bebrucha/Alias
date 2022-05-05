@@ -32,7 +32,6 @@
         android:text="@string/round_points"
         android:textAlignment="center"
         android:textSize="35sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
