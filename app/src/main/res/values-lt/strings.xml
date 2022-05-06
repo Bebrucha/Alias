@@ -39,7 +39,7 @@
     <string name="htp_rule1">Žaidėjai negali naudoti daiktų, kurie apibūdintų gautojo žodžio formą, dalis.</string>
     <string name="htp_rule2">Žaidėjai negali paaiškinti žodžio kita kalba.</string>
     <string name="htp_rule3">Pirmoji komanda pasiekusi taisyklėse nustatyta limitą laimi.</string>
-    <string name="htp_rule4">Kiekvienas atspėtas žodis komandai prideda 1 balą. Praleidus žodį atimamas taisyklėse nustatytas taškų kiekis.</string>
+    <string name="htp_rule4">Kiekvienas atspėtas žodis komandai prideda 1 balą. Įjungus funkcionalumą nustatymuose, praleidus žodį atimamas 1 taškas.</string>
     <string name="stop">Stop</string>
     <string name="continue_button">Tęsti</string>
     <string name="get_ready_to_play">Pasiruoškite žaisti!</string>

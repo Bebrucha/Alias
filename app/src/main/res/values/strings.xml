@@ -39,7 +39,7 @@
     <string name="htp_rule1">Players can\'t use items to show shape or detail of resulting word.</string>
     <string name="htp_rule2">Players can\'t explain the word in another language.</string>
     <string name="htp_rule3">The first team to reach the specified limit of points in the rules wins.</string>
-    <string name="htp_rule4">Each guessed word adds 1 point to the team. Skipping a word deducts number of points specified in the rules.</string>
+    <string name="htp_rule4">Each guessed word adds 1 point to the team. If enabled in the settings, skipping a word deducts 1 point.</string>
     <string name="stop">Stop</string>
     <string name="continue_button">Continue</string>
     <string name="get_ready_to_play">Get ready to play!</string>
