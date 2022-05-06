@@ -38,7 +38,7 @@
     <TextView
         android:id="@+id/label_winner_announcement_11"
         android:layout_width="328dp"
-        android:layout_height="48dp"
+        android:layout_height="62dp"
         android:layout_marginTop="240dp"
         android:fontFamily="@font/just_another_hand"
         android:text="TEAM X"
@@ -103,13 +103,17 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_teams2"
-        android:layout_width="261dp"
-        android:layout_height="157dp"
+        android:layout_width="318dp"
+        android:layout_height="159dp"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="10dp"
+        android:scrollbarThumbVertical="@drawable/playing_phase_button"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/button_play_again"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21"
-        app:layout_constraintVertical_bias="0.518" />
+        app:layout_constraintVertical_bias="0.513" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
