@@ -89,6 +89,8 @@ public class Playing_Phase_6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing_phase_6);
 
+
+        Main.game.FRAGMENT6_WAS_VISITED(true);
         sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
         Last_word_textview=findViewById((R.id.Last_word_textview));
         Last_word_textview.setVisibility(View.INVISIBLE);

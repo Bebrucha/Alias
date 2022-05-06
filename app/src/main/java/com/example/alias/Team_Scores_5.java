@@ -69,21 +69,6 @@ public class Team_Scores_5 extends AppCompatActivity{
 
         MediaPlayer sound_effect=MediaPlayer.create(this,R.raw.sound_effect);
 
-//        // PREVIOUS button -------------------------------------------------------------------------
-//        Button Previous = findViewById(R.id.button_previous_5);
-//        Previous.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(Main.game.getIsSound()){
-//                    sound_effect.start();
-//                }
-//                Intent intent = new Intent(view.getContext(), Settings_4.class);
-//                Bundle extra = new Bundle();
-//                extra.putBoolean("sound", Main.game.getIsSound());
-//                intent.putExtra("extra", extra);
-//                startActivity(intent);
-//            }
-//        });
 
 
         RecyclerView rvTeams = (RecyclerView) findViewById(R.id.rv_teams);
@@ -93,6 +78,7 @@ public class Team_Scores_5 extends AppCompatActivity{
         rvTeams.setLayoutManager(new LinearLayoutManager(this));
 
         // -----------------------------------------------------------------------------------------
+        if(Main.game.Visit_of_fragment_6())
         Main.game.updateCurrentRoundNum(); // ---------------------- veeeery important method
         // -----------------------------------------------------------------------------------------
 
@@ -108,7 +94,11 @@ public class Team_Scores_5 extends AppCompatActivity{
             round_name = "RAUNDAS ";
         }
 
+        if(Main.game.Visit_of_fragment_6())
         label_round.setText(round_name + Integer.toString(Main.game.getCurrentRoundNum()));
+        else {
+            label_round.setText(round_name + Integer.toString(1));
+        }
 
 
         // START button ----------------------------------------------------------------------------

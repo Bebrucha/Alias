@@ -20,6 +20,7 @@ public class Game {
     private ArrayList<Team> all_teams;
     private ArrayList<Team> all_teams_current_round;
     private MediaPlayer music_effect;
+    private Boolean visited_fragment_6=false;
 
     /// CONSTRUCTORS -------------------------------------------------------------------------------
     Game() {
@@ -31,7 +32,7 @@ public class Game {
         this.num_of_teams = numTeams;
         this.difficulty = 1;
         this.is_english = false;
-        this.current_round_num = 0;
+        this.current_round_num = 1;
         this.time_of_one_round = 10;
         this.max_points_to_win_game = 10;
         this.is_skip_penalty = false;
@@ -78,6 +79,7 @@ public class Game {
     public void setMaxPointsToWinGame(int maxPointsToWinGame) { this.max_points_to_win_game =
             maxPointsToWinGame; }
     public void setIsSkipPenalty(boolean isSkipPenalty) { this.is_skip_penalty = isSkipPenalty; }
+    public void FRAGMENT6_WAS_VISITED(boolean VISIT) { this.visited_fragment_6 = VISIT; }
     public void setGameCreatedForTheFirstTime(boolean gameCreatedForTheFirstTime) {
         this.game_created_for_the_first_time = gameCreatedForTheFirstTime;
     }
@@ -93,6 +95,7 @@ public class Game {
     public int getNumOfTeams() { return this.num_of_teams; }
     public int getCurrentRoundNum() { return this.current_round_num; }
     public boolean getIsEnglish() { return this.is_english; }
+    public boolean Visit_of_fragment_6() { return this.visited_fragment_6; }
     public int getIdCurrentlyPlayingTeam() { return this.id_currently_playing_team; }
     public Team getCurrentlyPlayingTeam() { return this.all_teams.get(this.id_currently_playing_team); }
     public boolean getIsSound() { return this.is_sound; }
