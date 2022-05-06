@@ -204,7 +204,23 @@ public class Game {
                                 "Ateitis",      "Gerbėjas",     "Pelėda",       "Grybas",
                                 "Stresas",      "Klubas",       "Užkandis",     "Pagalvė",
                                 "Eilė",         "Planas",       "Cirkas",       "Kodas",
-                                "Linija",       "Svetainė",     "Pietūs",       "Gyvatė"};
+                                "Linija",       "Svetainė",     "Pietūs",       "Gyvatė",
+
+                                "Meilė",         "Plaukai",      "Saldainis",     "Tušinukas",
+                                "Robotas",        "Mašina",       "Tiltas",       "Kukurūzas",
+                                "Stalas",         "Futbolas",      "Garbana",      "Kalnai",
+                                "Snaigė",         "Vyšnia",      "Zigzagas",       "Vėliava",
+                                "Kumštinė pirštinė",  "Morka",      "Šviesa",       "Skruzdelės",
+                                "Žandas",           "Atletas",    "Filmas",       "Karšta",
+                                "Padavėja",         "Dėdė",      "Brokolis",    "Pelė",
+                                "Kavinė",        "Kramtyti",       "Druska",       "Skrudinta duona",
+                                "Akiniai",           "Knyga",       "Sraigė",       "Dubuo",
+                                "Supynės",            "Varlė",      "Gyvas",        "Monstras",
+                                "Aitvaras",             "Sapnas",     "Vandenynas",        "Kalėjimas",
+                                "Kablys",              "Laikrodis",    "Apskritimas",       "Jūrų vėžlys",
+                                "Avis",            "Žuvis",     "Krabas",         "Kaminas",
+                                "Sraigtasparnis",       "Mėnulis",     "Kvadratas",       "Muzika",
+                                "Žvaigždė",             "Kiaulė",      "Ausis",          "Debesis"};
 
     private String[] words_junior_en = {"Mask",         "Lemon",        "Embankment",   "Honey",
                                 "Cow",          "Handwriting",  "Neck",         "Teapot",
@@ -220,7 +236,25 @@ public class Game {
                                 "Future",       "Fan",          "Circus",       "Mushroom",
                                 "Stress",       "Club",         "Lunch",        "Pillow",
                                 "Queue",        "Plan",         "Castle",       "Code",
-                                 "Line",         "Web",         "Breathing",    "Snake"};
+                                 "Line",         "Web",         "Breathing",    "Snake",
+
+                               "Love",         "Hair",         "Candy",        "Pen",
+                                "Robot",        "Car",          "Bridge",       "Corn",
+                                "Desk",         "Football",      "Curl",         "Mountains",
+                               "Snowflake",     "Cherry",      "Zigzag",       "Flag",
+                               "Mitten",         "Carrot",      "Light",       "Ants",
+                               "Cheek",           "Athlete",    "Movie",       "Hot",
+                                "Waitress",         "Uncle",      "Broccoli",    "Mouse",
+                                "Cafeteria",        "Chew",       "Salt",       "Toast",
+                                 "Glasses",           "Book",       "Snail",       "Bowl",
+                                "Swing",            "Frog",      "Alive",        "Monster",
+                                 "Kite",             "Dream",     "Ocean",        "Jail",
+                                 "Hook",              "Clock",    "Circle",       "Sea turtle",
+                                  "Sheep",            "Fish",     "Crab",         "Chimney",
+                                  "Helicopter",       "Moon",     "Square",       "Music",
+                                  "Star",             "Pig",      "Ear",          "Cloud"};
+
+
 
     private String[] words_medium_lt = {"Liokajus",         "Šturmanas",        "Išdavystė",
                                 "Našta",            "Migracija",        "Kalakutas",
@@ -237,7 +271,24 @@ public class Game {
                                 "Nuostaba",         "Įprotis",          "Šimpanzė",
                                 "Klestėjimas",      "Lankomumas",       "Sudėtingumas",
                                 "Diagrama",         "Nelaimė",          "Vaiduoklis",
-                                "Angelas",          "Atsarginė kopija", "Grąžtas"};
+                                "Angelas",          "Atsarginė kopija", "Grąžtas",
+
+                                "Naujagimis",          "Kamera",           "Rašalas",
+                                "Ritė",             "Kino teatras",    "Apskritas langas",
+                                "Ledinukas",         "Smegenys",            "Juosta",
+                                "Skrandis",          "Banano žievė",     "Plukė",
+                                "Maikė",          "Hot-dogas",          "Randas",
+                                "Durys",             "Rytai",             "Menininkas",
+                                "Žadintuvas",      "Guminis kamuoliukas",          "Organas",
+                                "Savivartis ",       "Tarakonas",        "Tualetinis popierius",
+                                "Ryklys",            "Skerdikas",          "Varpas",
+                                "Avilys",          "Mokytoja",          "Ūkininkas",
+                                "Viršelis",            "Buožgalvis",          "Kepėjas",
+                                "Suknelė",            "Mokyklinis autobusas",       "Šukos",
+                                "Letena",             "Užuolaidos",         "Nykštys",
+                                "Pagalvės užvalkalas",       "Eskalatorius",        "Uždaryta",
+                                "Lietus",             "Colis",             "Tramplynas",
+                                "Sidabro dirbiniai",       "Ratas",              "Durų rankena"};
 
     private String[] words_medium_en = {"Butler",           "Navigator",        "Betrayal",
                                 "Burden",           "Migration",        "Turkey",
@@ -254,7 +305,24 @@ public class Game {
                                 "Amazement",        "Habit",            "Chimpanzee",
                                 "Prosperity",       "Attendance",       "Complexity",
                                 "Chart",            "Disaster",         "Ghost",
-                                "Angel",            "Backup",           "Drill"};
+                                "Angel",            "Backup",           "Drill",
+
+                              "Newborn",          "Camera",           "Ink",
+                              "Coil",             "Movie theater",    "Porthole",
+                              "Popsicle",         "Brain",            "Tape",
+                               "Stomach",          "Banana split",     "Anemone",
+                               "T-shirt",          "Hot dog",          "Scar",
+                               "Door",             "East",             "Artist",
+                               "Alarm clock",      "Gumball",          "Organ",
+                              "Dump truck",       "Cockroach",        "Toilet paper",
+                               "Shark",            "Butcher",          "Bell",
+                              "Beehive",          "Teacher",          "Farmer",
+                             "Cover",            "Tadpole",          "Baker",
+                              "Dress",            "School bus",       "Hairbrush",
+                              "Claw",             "Curtains",         "Thumb",
+                              "Pillowcase",       "Escalator",        "Closed",
+                              "Rain",             "Inch",             "Trampoline",
+                              "Silverware",       "Lap",              "Doorknob"};
 
     private String[] words_senior_lt = {"Vikrumas",          "Saugotojas",      "Filharmonija",
                                 "Atrologija",        "Valda",           "Terariumas",
@@ -268,7 +336,21 @@ public class Game {
                                 "Ginčas",            "Tvarumas",        "Sagtis",
                                 "Ekvilibristas",     "Gyvybingumas",    "Puma",
                                 "Lokatorius",        "Sąjunga",         "Eržilas",
-                                "Prižiūrėtojas",     "Frakas",          "Ekscelencija"};
+                                "Prižiūrėtojas",     "Frakas",          "Ekscelencija",
+
+                                "Nardymas nuo uolų",      "Krūminiai dantys",           "Kasykla",
+                                "Grobis",              "Vestuvinis tortas",     "Pabaiga",
+                                "Medžiaga",            "Džiazas",             "Žemės drebėjimas",
+                                "Savininkas",          "Maisto parduotuvė",    "Svetainė",
+                                "Optometristas",       "Vištidė",      "Keltuvas",
+                                "Džiunglės",            "Filosofas",             "Kolonėlės",
+                                "Kapitonas",           "Įstrižainė",          "Kvidičas",
+                                "Teisingas",           "Maistas išsivežimui",      "Mokamas kelias",
+                                "Bobslėjus",           "Trynys",                "Geras pirkinys",
+                                "Kalvis",        "Jausmas",             "Kartografija",
+                                "Išsilavinimas",          "Atstovas",      "Sieksnis",
+                                "Sąvartynas",            "Vertimas",        "Ironija",
+                                "Laiko zona",            "Nepažįstamas",          "Pelkės"};
 
     private String[] words_senior_en = {"Dexterity",        "Protector",        "Philharmonic",
                                             "Astrology",        "Possession",       "Terrarium",
@@ -282,7 +364,21 @@ public class Game {
                                             "Altercation",      "Sustainability",   "Clasp",
                                             "Equilibrist",      "Vitality",         "Cougar",
                                             "Locator",          "Conjunction",      "Stallion",
-                                            "Caretaker",        "Tailcoat",         "Excellency"};
+                                            "Caretaker",        "Tailcoat",         "Excellency",
+
+                                           "Cliff diving",      "Molar teeth",           "Mine",
+                                           "Prey",              "Wedding cake",     "End zone",
+                                           "Fabric",            "Jazz",             "Earthquake",
+                                          "Landlord",          "Grocery store",    "Living room",
+                                         "Optometrist",       "Chicken coop",      "Ski lift",
+                                          "Jungle",            "Philosopher",             "Speakers",
+                                          "Captain",           "Diagonal",          "Quidditch",
+                                          "Correct",           "Drive-through",      "Toll road",
+                                           "Bobsled",           "Yolk",                "Bargain",
+                                          "Blacksmith",        "Feeling",             "Cartography",
+                                          "Education",          "Representative",      "Fathom",
+                                          "Landfill",            "Translation",        "Irony",
+                                          "Time zone",            "Stranger",          "Wetlands"};
 
 
     //---------------Team Names---------------------
