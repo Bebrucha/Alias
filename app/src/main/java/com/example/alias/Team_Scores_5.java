@@ -5,11 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ActivityManager;
+import android.app.FragmentManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +27,11 @@ public class Team_Scores_5 extends AppCompatActivity{
         } else {
             finish();
         }
+    }
+    private String getCallerFragment(){
+        FragmentManager fm = getFragmentManager();
+        int count = getFragmentManager().getBackStackEntryCount();
+        return fm.getBackStackEntryAt(count - 2).getName();
     }
     @Override
     protected void onPause() {
@@ -100,6 +107,7 @@ public class Team_Scores_5 extends AppCompatActivity{
         } else{
             round_name = "RAUNDAS ";
         }
+
         label_round.setText(round_name + Integer.toString(Main.game.getCurrentRoundNum()));
 
 

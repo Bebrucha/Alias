@@ -168,7 +168,10 @@ public class Playing_Phase_6 extends AppCompatActivity {
                         word.setText(game_word_list.get(random_num));
                         game_word_list.remove(random_num);
                     }
-                    else word.setText("OutOfWords:(");
+                    else{
+                        word.setText("OutOfWords:(");
+                        button_guessed.setEnabled(false);
+                    }
                 }
                 else
                 {
@@ -201,7 +204,10 @@ public class Playing_Phase_6 extends AppCompatActivity {
                         word.setText(game_word_list.get(random_num));
                         game_word_list.remove(random_num);
                     }
-                    else word.setText("OutOfWords:(");
+                    else{
+                        word.setText("OutOfWords:(");
+                        button_skipped.setEnabled(false);
+                    }
 
                 }
                 else

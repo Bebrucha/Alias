@@ -71,7 +71,7 @@ public class Main extends AppCompatActivity {
         loadLocale();
 
         if(game.getGameCreatedForTheFirstTime()){
-            setLocale("lt");
+            setLocale("en");
             game.setGameCreatedForTheFirstTime(false);
         }
 
