@@ -71,7 +71,7 @@ public class Main extends AppCompatActivity {
         loadLocale();
 
         if(game.getGameCreatedForTheFirstTime()){
-            setLocale("en");
+            setLocale("lt");
             game.setGameCreatedForTheFirstTime(false);
         }
 
@@ -146,19 +146,19 @@ public class Main extends AppCompatActivity {
             public void onClick(View view) {
                 game.setIsSound(sound.isChecked());
                 if(game.getIsSound()) {
-                    if(language.equals("lt_LT")){
+                    if(game.getIsEnglish()){
                         sound_effect.start();
-                        sound_off.setText("Įjungti");}
+                        sound_off.setText("ON");}
                     else {
                         sound_effect.start();
-                        sound_off.setText("ON");
+                        sound_off.setText("Įjungta");
                     }
                 }
                 else{
-                    if(language.equals("lt_LT"))
-                        sound_off.setText("Išjungti");
+                    if(game.getIsEnglish())
+                        sound_off.setText("OFF");
                     else
-                    sound_off.setText("OFF");
+                    sound_off.setText("Išjungta");
                 }
             }
         });
@@ -185,20 +185,20 @@ public class Main extends AppCompatActivity {
             public void onClick(View view) {
                 game.setIsMusic(music.isChecked());
                 if(game.getIsMusic()) {
-                    if(language.equals("lt_LT"))
-                        music_off.setText("Įjungta");
-                    else
+                    if(game.getIsEnglish())
                         music_off.setText("ON");
+                    else
+                        music_off.setText("Įjungta");
                     recreate();
                     music_effect.start();
                     music_effect.setLooping(true);
 
                 }
                 else {
-                    if(language.equals("lt_LT"))
-                        music_off.setText("Išjungta");
+                    if(game.getIsEnglish())
+                        music_off.setText("OFF");
                     else
-                    music_off.setText("OFF");
+                    music_off.setText("Išjungta");
 
                     music_effect.pause();
                     recreate();
@@ -214,31 +214,31 @@ public class Main extends AppCompatActivity {
 
 
         if(game.getIsMusic()) {
-            if(language.equals("lt_LT"))
-                music_off.setText("Įjungta");
-            else
+            if(game.getIsEnglish())
                 music_off.setText("ON");
+            else
+                music_off.setText("Įjungta");
 
         }
         else {
-            if(language.equals("lt_LT"))
-                music_off.setText("Išjungta");
-            else
+            if(game.getIsEnglish())
                 music_off.setText("OFF");
+            else
+                music_off.setText("Išjungta");
         }
 
         if(game.getIsSound()) {
-            if(language.equals("lt_LT"))
-                sound_off.setText("Įjungti");
-            else
+            if(game.getIsEnglish())
                 sound_off.setText("ON");
+            else
+                sound_off.setText("Įjungta");
 
         }
         else {
-            if(language.equals("lt_LT"))
-                sound_off.setText("Išjungti");
-            else
+            if(game.getIsEnglish())
                 sound_off.setText("OFF");
+            else
+                sound_off.setText("Išjungta");
         }
 
     }
