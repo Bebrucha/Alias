@@ -223,7 +223,27 @@ public class Game {
                                 "Kablys",              "Laikrodis",    "Apskritimas",       "Jūrų vėžlys",
                                 "Avis",            "Žuvis",     "Krabas",         "Kaminas",
                                 "Sraigtasparnis",       "Mėnulis",     "Kvadratas",       "Muzika",
-                                "Žvaigždė",             "Kiaulė",      "Ausis",          "Debesis"};
+                                "Žvaigždė",             "Kiaulė",      "Ausis",          "Debesis",
+
+                                "Šuo", "Lydeka", "Veršelis", "Voverė",
+                                "Tinginys", "Papūga", "Raganosis", "Boružėlė",
+                                "Vilkas", "Kupranugaris", "Ponis", "Strutis",
+                                "Lama", "Medūza", "Gepardas", "Briedis",
+                                "Elnias", "Paukštis", "Kurmis", "Kengūra",
+                                "Svirplys", "Pelikanas", "Žiogas", "Ruonis",
+                                "Vikšras", "Žuvėdra", "Baltasis lokys", "Zebras",
+                                "Omaras", "Jautis", "Katė", "Žiurkėnas",
+                                "Šeškas", "Bitė", "Aligatorius", "Chameleonas",
+                                "Voras", "Liūtas", "Asilas", "Krokodilas",
+                                "Šikšnosparnis", "Žąsis", "Nuotrauka", "Spintelė",
+                                "Vonia", "Klimėlis", "Dangtis", "Butelis",
+                                "Durys", "Namas", "Audinys", "Popierius",
+                                "Garažas", "Lėkštė", "Daržovės", "Kūdikis",
+                                "Virtuvė", "Žolė", "Mygtukas", "Mama",
+                                "Tėtis", "Stiklas", "Fortepijonas", "Gitara",
+                                "Būgnai", "Augalas", "Kempinėlė", "Langas",
+                                "Naminis gyvūnas", "Lova", "Kompiuteris", "Skėtis",
+    };
 
     private String[] words_junior_en = {"Mask",         "Lemon",        "Embankment",   "Honey",
                                 "Cow",          "Handwriting",  "Neck",         "Teapot",
@@ -255,7 +275,27 @@ public class Game {
                                  "Hook",              "Clock",    "Circle",       "Sea turtle",
                                   "Sheep",            "Fish",     "Crab",         "Chimney",
                                   "Helicopter",       "Moon",     "Square",       "Music",
-                                  "Star",             "Pig",      "Ear",          "Cloud"};
+                                  "Star",             "Pig",      "Ear",          "Cloud",
+
+                                "Dog","Pike","Calf","Squirrel",
+                                "Sloth","Parrot","Rhino","Ladybug",
+                                "Wolf","Camel","Pony","Ostrich",
+                                "Llama","Jellyfish","Cheetah","Moose",
+                                "Reindeer","Bird","Mole","Kangaroo",
+                                "Cricket","Pelican","Grasshopper","Seal",
+                                "Caterpillar","Seagull","Polar bear","Zebra",
+                                "Lobster","Ox","Cat","Hamster",
+                                "Skunk","Bee","Alligator","Chameleon",
+                                "Spider","Lion","Donkey","Crocodile",
+                                "Bat","Goose","Photograph","Cabinet",
+                                "Bath","Mat","Lid","Bottle",
+                                "Door","Home","Tissue","Paper",
+                                "Garage","Plate","Vegetable","Baby",
+                                "Kitchen","Grass","Button","Mom",
+                                "Dad","Glass","Piano","Guitar",
+                                "Drums","Plant","Sponge","Window",
+                                "Pet","Bed","Computer","Umbrella",
+    };
 
 
 
@@ -291,7 +331,22 @@ public class Game {
                                 "Letena",             "Užuolaidos",         "Nykštys",
                                 "Pagalvės užvalkalas",       "Eskalatorius",        "Uždaryta",
                                 "Lietus",             "Colis",             "Tramplynas",
-                                "Sidabro dirbiniai",       "Ratas",              "Durų rankena"};
+                                "Sidabro dirbiniai",       "Ratas",              "Durų rankena",
+
+                                "Avarija", "Pradėti", "Kreivė", "Miestas",
+                                "Tvenkinys", "Kopėčios", "Sušiai", "Nuotėkis",
+                                "Mikčiojimas", "Stadionas", "Naujienlaiškis", "Cukrus",
+                                "Valanda", "Limitas", "Žaislų parduotuvė", "Prailgintojas",
+                                "Kostiumas", "Gamykla", "Lygis", "Skalbimo mašina",
+                                "Gydymas", "Puslapis", "Vidurnaktis", "Teta",
+                                "Kaubojus", "Šildytuvas", "Leidėjas", "Šaknis",
+                                "Mitas", "Legenda", "Šalis", "Alus",
+                                "Užtrauktukas", "Chronometras", "Žentas", "Dukra",
+                                "Uošvė", "Uošvis", "Sūnėnas", "Dukterėčia",
+                                "Gervė", "Istorija", "Pakrantė", "Pirmininkas",
+                                "Prisijungti", "Komanda", "Partneris", "Ugniagesys",
+
+    };
 
     private String[] words_medium_en = {"Butler",           "Navigator",        "Betrayal",
                                 "Burden",           "Migration",        "Turkey",
@@ -325,7 +380,21 @@ public class Game {
                               "Claw",             "Curtains",         "Thumb",
                               "Pillowcase",       "Escalator",        "Closed",
                               "Rain",             "Inch",             "Trampoline",
-                              "Silverware",       "Lap",              "Doorknob"};
+                              "Silverware",       "Lap",              "Doorknob",
+
+                            "Shipwreck","Start","Curve","City",
+                            "Pond","Ladder","Sushi","Leak",
+                            "Stutter","Stadium","Newsletter","Sugar",
+                            "Hour","Limit","Toy store","Extension cord",
+                            "Suit","Factory","Level","Washing machine",
+                            "Cure","Page","Midnight","Aunt",
+                            "Cowboy","Heater","Publisher","Blueprint",
+                            "Myth","Legend","Country","Tin",
+                            "Zipper","Stopwatch","Son-in-law","Daughter-in-law",
+                            "Brother-in-law","Sister-in-law","Father-in-law","Mother-in-law",
+                            "Crane","Story","Coastline","Chairman",
+                            "Log-in","Team","Partner","Firefighter",
+    };
 
     private String[] words_senior_lt = {"Vikrumas",          "Saugotojas",      "Filharmonija",
                                 "Atrologija",        "Valda",           "Terariumas",
@@ -353,7 +422,21 @@ public class Game {
                                 "Kalvis",        "Jausmas",             "Kartografija",
                                 "Išsilavinimas",          "Atstovas",      "Sieksnis",
                                 "Sąvartynas",            "Vertimas",        "Ironija",
-                                "Laiko zona",            "Nepažįstamas",          "Pelkės"};
+                                "Laiko zona",            "Nepažįstamas",          "Pelkės",
+
+                                "Linksmas", "Gylis", "Protestantas", "Šlamštas",
+                                "Stalčius", "Siesta", "Mirtingas", "Nemirtingas",
+                                "Fragmentas", "Kilometras", "Mįslė", "Susikerta",
+                                "Pavadinimas", "Eketė", "Gimnazistas", "Išsklaidyti",
+                                "Dužo", "Chaosas", "Harmonija", "Įstatymas",
+                                "Budrus", "Veteranas", "Pareiškimas", "Psichologas",
+                                "Pasitikėti", "Atradimas", "Pasididžiavimas", "Dispečeris",
+                                "Brunetė", "Turtas", "Indeksas", "Infekcija",
+                                "Sauja", "Skrydis", "Keliamieji metai", "Priešas",
+                                "Sugriauti", "Ironija", "Pokštas", "Bausmė",
+                                "Gyventojas", "Teismas", "Nuomonė", "Tvarkaraštis",
+                                "Proto bokštas", "Sužavėti", "Kūrėjas", "Reakcija",
+    };
 
     private String[] words_senior_en = {"Dexterity",        "Protector",        "Philharmonic",
                                             "Astrology",        "Possession",       "Terrarium",
@@ -381,7 +464,21 @@ public class Game {
                                           "Blacksmith",        "Feeling",             "Cartography",
                                           "Education",          "Representative",      "Fathom",
                                           "Landfill",            "Translation",        "Irony",
-                                          "Time zone",            "Stranger",          "Wetlands"};
+                                          "Time zone",            "Stranger",          "Wetlands",
+
+                                        "Fun","Depth","Protestant","Junk",
+                                        "Drawer","Siesta","Mortal","Immortal",
+                                        "Fragment","Acre","Riddle","Intersect",
+                                        "Title","Ice fishing","Gymnast","Scatter",
+                                        "Shatter","Chaos","Harmony","Law",
+                                        "Vigilante","Veteran","aftermath","Psychologist",
+                                        "Confident","Discovery","Pride","Dispatcher",
+                                        "Brunette","Wealth","Index","Infection",
+                                        "Handful","Flight","Leap year","Enemy",
+                                        "Destruction","Ironic","Joke","Punishment",
+                                        "Population","Court","Opinion","Schedule",
+                                        "Brainstorm","Admire","Creator","Reaction",
+    };
 
 
     //---------------Team Names---------------------
