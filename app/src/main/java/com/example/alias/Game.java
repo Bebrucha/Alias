@@ -214,7 +214,7 @@ public class Game {
                                 "Stalas",         "Futbolas",      "Garbana",      "Kalnai",
                                 "Snaigė",         "Vyšnia",      "Zigzagas",       "Vėliava",
                                 "Kumštinė pirštinė",  "Morka",      "Šviesa",       "Skruzdelės",
-                                "Žandas",           "Atletas",    "Filmas",       "Karšta",
+                                "Žandas",           "Atletas",    "Filmas",       "Karštis",
                                 "Padavėja",         "Dėdė",      "Brokolis",    "Pelė",
                                 "Kavinė",        "Kramtyti",       "Druska",       "Skrudinta duona",
                                 "Akiniai",           "Knyga",       "Sraigė",       "Dubuo",
@@ -254,6 +254,14 @@ public class Game {
                                 "Vandenynas","Vėžlys","Kubas","Sapnas","Tualetas",
                                 "Dinozauras","Ledai","Šaka","Pledas","Šukos",
                                 "Plunksna","Motoroleris","Snaigė","Zigzagas","Sala",
+
+                                "Bučinys", "Šaltis", "Pusryčiai", "Niežulys", "Apkabinimas",
+                                "Kelėnas", "Šnabždesys", "Žiūronai", "Diskoteka", "Pertrauka",
+                                "Skaičiavimas", "Skonis", "Liūdesys", "Irklas", "Beldimas",
+                                "Berniukas", "Siurprizas", "Riešas", "Plojimas", "Šuolis",
+                                "Pačiūža", "Lūpa", "Plaukimas", "Žiovulys", "Akis",
+                                "Pėda", "Vakarienė", "Trauka", "Eilė", "Žiedas",
+                                "Pabudimas", "Stūmimas", "Liftas", "Malda", "Triušis", "Krepšinis"
     };
 
     private String[] words_junior_en = {"Mask",         "Lemon",        "Embankment",   "Honey",
@@ -317,6 +325,16 @@ public class Game {
                                 "Ocean","Turtle","Cube","Dream","Bathroom",
                                 "Dinosaur","Popsicle","Branch","Blanket","Comb",
                                 "Feather","Motorcycle","Snowflake","Zigzag","Island",
+
+                                "Kiss", "Cold", "Breakfast", "Itch", "Hug",
+                                "Knee", "Whisper", "Binoculars", "Disco", "Break",
+                                "Count", "Taste", "Sad", "Paddle", "Knock",
+                                "Boy", "Surprise", "Wrist", "Clap", "Hop",
+                                "Skate", "Lip", "Swim", "Yawn", "Eye",
+                                "Feet", "Dinner", "Pull", "Row", "Ring",
+                                "Awake", "Push", "Lift", "Beg", "Prayer",
+                                "Rabbit", "Basketball"
+
     };
 
 
@@ -492,6 +510,8 @@ public class Game {
                                 "Apsiaustas","Barbershop'as","Stipri liūtis","Apskleidimas","Kaiminystė",
                                 "Nutekėjimas","Tankumas","Pirštų galiukai","Trūkumas","Aplodismentai",
                                 "Mimika","Vilkikas","Varnų lizdas","Animacinis filmas","Leidėjas",
+
+
     };
 
     private String[] words_senior_en = {"Dexterity",        "Protector",        "Philharmonic",
