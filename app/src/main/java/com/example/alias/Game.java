@@ -243,6 +243,17 @@ public class Game {
                                 "Tėtis", "Stiklas", "Fortepijonas", "Gitara",
                                 "Būgnai", "Augalas", "Kempinėlė", "Langas",
                                 "Naminis gyvūnas", "Lova", "Kompiuteris", "Skėtis",
+
+                                "Skaidrė","Medis","Kablys","Višta","Kaminas",
+                                "Vyšnia","Sniego žmogus","Kalėjimas","Lietus","Hipopotamas",
+                                "Kompiuteris","Pelėda","Jūra","Žolė","Banginis",
+                                "Apskritimas","Skruzdelė","Plyšys","Valtis","Kuprinė",
+                                "Musė","Rankinė","Kreidelė","Pica","Sausainis",
+                                "Kalnas","Juros vėžlys","Stiklainis","Keksiukas","Nagas",
+                                "Balionas","Puodelis","Blokai","Lapas","Varlė",
+                                "Vandenynas","Vėžlys","Kubas","Sapnas","Tualetas",
+                                "Dinozauras","Ledai","Šaka","Pledas","Šukos",
+                                "Plunksna","Motoroleris","Snaigė","Zigzagas","Sala",
     };
 
     private String[] words_junior_en = {"Mask",         "Lemon",        "Embankment",   "Honey",
@@ -295,6 +306,17 @@ public class Game {
                                 "Dad","Glass","Piano","Guitar",
                                 "Drums","Plant","Sponge","Window",
                                 "Pet","Bed","Computer","Umbrella",
+
+                                "Slide","Tree","Hook","Chicken","Chimney",
+                                "Cherry","Snowman","Jail","Rain","Hippo",
+                                "Computer","Owl","Sea","Grass","Whale",
+                                "Circle","Ant","Crack","Boat","Backpack",
+                                "Fly","Purse","Crayon","Pizza","Cookie",
+                                "Mountain","Sea turtle","Jar","Cupcake","Nail",
+                                "Baloon","Cup","Blocks","Leaf","Frog",
+                                "Ocean","Turtle","Cube","Dream","Bathroom",
+                                "Dinosaur","Popsicle","Branch","Blanket","Comb",
+                                "Feather","Motorcycle","Snowflake","Zigzag","Island",
     };
 
 
@@ -346,6 +368,17 @@ public class Game {
                                 "Gervė", "Istorija", "Pakrantė", "Pirmininkas",
                                 "Prisijungti", "Komanda", "Partneris", "Ugniagesys",
 
+                                "Geležinkelis","Grilius","Šaknis","Matyti","Padanga",
+                                "Avis","Kaukė","Supynės","Tinklas","Pižama",
+                                "Pavasaris","Varlytė","Oro uostas","iPad","Puma",
+                                "Vainikas","Jūrų arkliukas","Daržovė","Spyna","Lempos jungtukas",
+                                "Bokštas","Kriketas","Kojinė","Vamzdis","Kepėjas",
+                                "Burė","Gryni pinigai","Vaškas","Kasetė","Tarakonas",
+                                "Vaflis","Būsena","Vertėjas","Princas","Žymeklis",
+                                "Riešutas","Diagrama","Ketvertukas","Platuma","Virtuvė",
+                                "Snieglenčių sportas","Švilpukas","Kastuvas","Salieras","Sandalas",
+                                "Geležis","Slidinėti","Bičių avilys","Greitkelis","Įeiti",
+
     };
 
     private String[] words_medium_en = {"Butler",           "Navigator",        "Betrayal",
@@ -394,6 +427,17 @@ public class Game {
                             "Brother-in-law","Sister-in-law","Father-in-law","Mother-in-law",
                             "Crane","Story","Coastline","Chairman",
                             "Log-in","Team","Partner","Firefighter",
+
+                            "Railroad","Grill","Root","See","Tire",
+                            "Sheep","Mask","Swing","Net","Pajamas",
+                            "Spring","Bowtie","Airport","iPad","Cougar",
+                            "Wreath","Seahorse","Vegetable","Lock","Light switch",
+                            "Tower","Cricket","Stocking","Pipe","Baker",
+                            "Sail","Cash","Wax","Tape","Cockroach",
+                            "Waffle","State","Dump truck","Prince","Marker",
+                            "Nut","Chart","Quadruplets","Latitude","Kitchen",
+                            "Snowboarding","Whistle","Shovel","Celery","Sandal",
+                            "Iron","Ski","Beehive","Highway","Enter",
     };
 
     private String[] words_senior_lt = {"Vikrumas",          "Saugotojas",      "Filharmonija",
@@ -436,6 +480,18 @@ public class Game {
                                 "Sugriauti", "Ironija", "Pokštas", "Bausmė",
                                 "Gyventojas", "Teismas", "Nuomonė", "Tvarkaraštis",
                                 "Proto bokštas", "Sužavėti", "Kūrėjas", "Reakcija",
+
+                                "Griaustinis","Meras","Ašarotas","Tureklai","Orbita",
+                                "Mikrobas","Taika","Dailidė","Ikrai","Išnykti",
+                                "Automobilių prekyba","Klijų pistoletas","Snausti","Krovinys","Konkurencija",
+                                "Valdžia","Ping pong'as","Mažmeninė prekyba","Visaėdis","Vandens ciklas",
+                                "Kostiumas","Kraštovaizdis","Katalogas","Tarnas","Pristatymas",
+                                "Koala","Trauma","Kelionė","Hipsteris","Lašelinė",
+                                "Gaminti","Lenta","Rasa","Bagažas","Šiukšlės",
+                                "Važiuojamoji dalis","Gamykla","Nardymas","Išrasti","Šonkaulis",
+                                "Apsiaustas","Barbershop'as","Stipri liūtis","Apskleidimas","Kaiminystė",
+                                "Nutekėjimas","Tankumas","Pirštų galiukai","Trūkumas","Aplodismentai",
+                                "Mimika","Vilkikas","Varnų lizdas","Animacinis filmas","Leidėjas",
     };
 
     private String[] words_senior_en = {"Dexterity",        "Protector",        "Philharmonic",
@@ -478,6 +534,18 @@ public class Game {
                                         "Destruction","Ironic","Joke","Punishment",
                                         "Population","Court","Opinion","Schedule",
                                         "Brainstorm","Admire","Creator","Reaction",
+
+                                        "Thunder","Mayor","Tearful","Banister","Orbit",
+                                        "Germ","Peace","Carpenter","Caviar","Granpa",
+                                        "Car dealership","Glue gun","Nap","Cargo","Competition",
+                                        "Government","Ping pong","Retail","Omnivore","Water cycle",
+                                        "Suit","Landscape","Catalog","Servant","Deliver",
+                                        "Koala","Injury","Trip","Hipster","Drip",
+                                        "Produce","Plank","Dew","Baggage","Junk",
+                                        "Driveway","Factory","Scuba diving","Invent","Rib",
+                                        "Cape","Barbershop","Downpour","Reveal","Neighborhood",
+                                        "Leak","Density","Tiptoe","Drawback","Applause",
+                                        "Mime","Tow truck","Crow's nest","Cartoon","Publisher",
     };
 
 
