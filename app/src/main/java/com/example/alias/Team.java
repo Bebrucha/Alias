@@ -18,7 +18,6 @@ public class Team {
     String[] nou_lt=Main.game.getNouns_lt();
 
 
-
     /// CONSTRUCTORS -------------------------------------------------------------------------------
     public Team(int id){
         //this.mName = "Team " + id;

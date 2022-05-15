@@ -72,7 +72,6 @@ public class Playing_Phase_6 extends AppCompatActivity {
     boolean timerIsFinished =false;
     String []game_words;
     Random random=new Random();
-    ArrayList<String> game_word_list=new ArrayList<String>();
     TextView Time_Label ;
     TextView Last_word_textview;
     MediaPlayer sound_effect;
@@ -111,42 +110,32 @@ public class Playing_Phase_6 extends AppCompatActivity {
             switch (Main.game.getDifficulty())
             {
                 case 1:
-                   game_words = Main.game.getWordsJunior_en();
-                    word.setText("Get ready!");
-                    addWordsToArrayList(game_words);
+                    Main.game.setGameWords(Main.game.getWordsJunior_en());
                     break;
                 case 2:
-                    game_words = Main.game.getWordsMedium_en();
-                    word.setText("Get ready!");
-                    addWordsToArrayList(game_words);
+                    Main.game.setGameWords(Main.game.getWordsMedium_en());
                     break;
                 case 3:
-                   game_words = Main.game.getWordsSenior_en();
-                    word.setText("Get ready!");
-                    addWordsToArrayList(game_words);
+                    Main.game.setGameWords(Main.game.getWordsSenior_en());
                     break;
             }
+            word.setText("Get ready!");
         }
         else
         {
             switch (Main.game.getDifficulty())
             {
                 case 1:
-                    game_words = Main.game.getWordsJunior_lt();
-                    word.setText("Pasiruoškite!");
-                    addWordsToArrayList(game_words);
+                    Main.game.setGameWords(Main.game.getWordsJunior_lt());
                     break;
                 case 2:
-                    game_words = Main.game.getWordsMedium_lt();
-                    word.setText("Pasiruoškite!");
-                    addWordsToArrayList(game_words);
+                    Main.game.setGameWords(Main.game.getWordsMedium_lt());
                     break;
                 case 3:
-                    game_words = Main.game.getWordsSenior_lt();
-                    word.setText("Pasiruoškite!");
-                    addWordsToArrayList(game_words);
+                    Main.game.setGameWords(Main.game.getWordsSenior_lt());
                     break;
             }
+            word.setText("Pasiruoškite!");
         }
 
         // GUESSED button --------------------------------------------------------------------------
@@ -164,11 +153,11 @@ public class Playing_Phase_6 extends AppCompatActivity {
                     label_num_of_guessed_words.setText(Integer.toString(guessed_amount));
                     Main.game.getCurrentlyPlayingTeam().updatePoints(1);
 
-                    if(game_word_list.size() > 0)
+                    if(Main.game.getGameWordsCount() > 0)
                     {
-                        int random_num = random.nextInt(game_word_list.size());
-                        word.setText(game_word_list.get(random_num));
-                        game_word_list.remove(random_num);
+                        int random_num = random.nextInt(Main.game.getGameWordsCount());
+                        word.setText(Main.game.getGameWord(random_num));
+                        Main.game.removeGameWord(random_num);
                     }
                     else{
                         word.setText("OutOfWords:(");
@@ -200,11 +189,11 @@ public class Playing_Phase_6 extends AppCompatActivity {
                     if(Main.game.getIsSkipPenalty())
                         Main.game.getCurrentlyPlayingTeam().updatePoints(-1);
 
-                    if(game_word_list.size() > 0)
+                    if(Main.game.getGameWordsCount() > 0)
                     {
-                        int random_num = random.nextInt(game_word_list.size());
-                        word.setText(game_word_list.get(random_num));
-                        game_word_list.remove(random_num);
+                        int random_num = random.nextInt(Main.game.getGameWordsCount());
+                        word.setText(Main.game.getGameWord(random_num));
+                        Main.game.removeGameWord(random_num);
                     }
                     else{
                         word.setText("OutOfWords:(");
@@ -233,11 +222,11 @@ public class Playing_Phase_6 extends AppCompatActivity {
                     sound_effect.start();
                 }
 
-                if(game_word_list.size()>0)
+                if(Main.game.getGameWordsCount() > 0)
                 {
-                    int random_num = random.nextInt(game_word_list.size());
-                    word.setText(game_word_list.get(random_num));
-                    game_word_list.remove(random_num);
+                    int random_num = random.nextInt(Main.game.getGameWordsCount());
+                    word.setText(Main.game.getGameWord(random_num));
+                    Main.game.removeGameWord(random_num);
                 }
                 else word.setText("OutOfWords:(");
 
@@ -366,13 +355,16 @@ public class Playing_Phase_6 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
-    public void addWordsToArrayList(String[]words)
-    {
-        for(int i = 0; i < words.length; i++)
-        {
-            game_word_list.add(words[i]);
-        }
-    }
+
+
+//    public void addWordsToArrayList(String[]words)
+//    {
+//        for(int i = 0; i < words.length; i++)
+//        {
+//            game_word_list.add(words[i]);
+//        }
+//    }
 
 }

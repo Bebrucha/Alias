@@ -1,8 +1,12 @@
 package com.example.alias;
 
 import android.media.MediaPlayer;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Game {
     /// CONTAINER VARIABLES ------------------------------------------------------------------------
@@ -21,6 +25,7 @@ public class Game {
     private ArrayList<Team> all_teams_current_round;
     private MediaPlayer music_effect;
     private Boolean visited_fragment_6=false;
+    private ArrayList<String> game_words; // copy of words, so that already seen could be removed
 
     /// CONSTRUCTORS -------------------------------------------------------------------------------
     Game() {
@@ -83,6 +88,8 @@ public class Game {
     public void setGameCreatedForTheFirstTime(boolean gameCreatedForTheFirstTime) {
         this.game_created_for_the_first_time = gameCreatedForTheFirstTime;
     }
+    public void setGameWords(String[] gameWords) {
+        this.game_words = new ArrayList<String>(Arrays.asList(gameWords)); }
 
     /// GET methods --------------------------------------------------------------------------------
     public Team getTeam(int id) { return this.all_teams.get(id); }
@@ -110,8 +117,11 @@ public class Game {
     public int getMaxPointsToWinGame() { return this.max_points_to_win_game; }
     public boolean getIsSkipPenalty() { return this.is_skip_penalty; }
     public boolean getGameCreatedForTheFirstTime() { return this.game_created_for_the_first_time; }
+    public String getGameWord(int index) { return this.game_words.get(index); }
+    public int getGameWordsCount() { return this.game_words.size(); }
 
     /// ADDITIONAL methods -------------------------------------------------------------------------
+    public void removeGameWord(int index) { this.game_words.remove(index); }
     public void updateCurrentRoundNum()
     {
         this.current_round_num++;

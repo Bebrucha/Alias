@@ -28,7 +28,7 @@ public class Team_Count_3 extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if (Main.game.getMusic() != null){
+        if (Main.game.getMusic() != null) {
             Main.game.getMusic().pause();
             if (isFinishing()){
                 Main.game.getMusic().pause();
