@@ -14,13 +14,15 @@
         android:layout_height="wrap_content"
         android:layout_weight="3"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textSize="46sp"
+        android:fontFamily="@font/just_another_hand" />
 
     <TextView
         android:id="@+id/team_points"
         android:layout_width="10dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="24sp" />
+        android:textSize="46sp"
+        android:fontFamily="@font/just_another_hand" />
 
 </LinearLayout>
